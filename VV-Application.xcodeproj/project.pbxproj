@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C65C100161EE5B0003A3823 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C65C0FF161EE5B0003A3823 /* ViewController.m */; };
 		6CE17835161EDE60007A6004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE17834161EDE60007A6004 /* UIKit.framework */; };
 		6CE17837161EDE60007A6004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE17836161EDE60007A6004 /* Foundation.framework */; };
 		6CE17839161EDE60007A6004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE17838161EDE60007A6004 /* CoreGraphics.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C65C0FE161EE5B0003A3823 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6C65C0FF161EE5B0003A3823 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6CE17830161EDE60007A6004 /* VV-Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VV-Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE17834161EDE60007A6004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6CE17836161EDE60007A6004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -191,6 +194,8 @@
 			children = (
 				6CE17852161EDE60007A6004 /* HomescreenViewController.h */,
 				6CE17853161EDE60007A6004 /* HomescreenViewController.m */,
+				6C65C0FE161EE5B0003A3823 /* ViewController.h */,
+				6C65C0FF161EE5B0003A3823 /* ViewController.m */,
 			);
 			name = HomescreenViews;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				6CE17845161EDE60007A6004 /* AppDelegate.m in Sources */,
 				6CE17854161EDE60007A6004 /* HomescreenViewController.m in Sources */,
 				6CE17874161EDF6C007A6004 /* IntermediateViewController.m in Sources */,
+				6C65C100161EE5B0003A3823 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +521,7 @@
 				6CE1786E161EDE60007A6004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6CE1786F161EDE60007A6004 /* Build configuration list for PBXNativeTarget "VV-ApplicationTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +530,7 @@
 				6CE17871161EDE60007A6004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
