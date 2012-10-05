@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 Nicholas Gordon. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomescreenViewController.h"
 
-@interface ViewController ()
+@interface HomescreenViewController ()
 
 @end
 
-@implementation ViewController
+@implementation HomescreenViewController
 
 - (void)viewDidLoad
 {
