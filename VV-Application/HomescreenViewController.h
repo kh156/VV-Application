@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomescreenViewController : UIViewController {
-    IBOutlet UIScrollView *scroll;
-}
+@interface HomescreenViewController : UIViewController
 
-@property(nonatomic, retain)UIScrollView *scroll;
+@property(nonatomic, weak) IBOutlet UIScrollView *scroller;
+@property(nonatomic, weak) IBOutlet UIView *scrollerContent;
 
 
 
