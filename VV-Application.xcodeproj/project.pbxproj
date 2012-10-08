@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6C65C100161EE5B0003A3823 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C65C0FF161EE5B0003A3823 /* ViewController.m */; };
 		6CC704D9162264AB007003C7 /* LandmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC704D8162264AB007003C7 /* LandmarkViewController.m */; };
+		6CC704E116237F83007003C7 /* InsulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC704E016237F83007003C7 /* InsulaViewController.m */; };
 		6CE17835161EDE60007A6004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE17834161EDE60007A6004 /* UIKit.framework */; };
 		6CE17837161EDE60007A6004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE17836161EDE60007A6004 /* Foundation.framework */; };
 		6CE17839161EDE60007A6004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE17838161EDE60007A6004 /* CoreGraphics.framework */; };
@@ -48,6 +49,8 @@
 		6C65C0FF161EE5B0003A3823 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6CC704D7162264AB007003C7 /* LandmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkViewController.h; sourceTree = "<group>"; };
 		6CC704D8162264AB007003C7 /* LandmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandmarkViewController.m; sourceTree = "<group>"; };
+		6CC704DF16237F83007003C7 /* InsulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsulaViewController.h; sourceTree = "<group>"; };
+		6CC704E016237F83007003C7 /* InsulaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsulaViewController.m; sourceTree = "<group>"; };
 		6CE17830161EDE60007A6004 /* VV-Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VV-Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE17834161EDE60007A6004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6CE17836161EDE60007A6004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,6 +118,15 @@
 			name = LandmarkViews;
 			sourceTree = "<group>";
 		};
+		6CC704E316237F8A007003C7 /* InsulaViews */ = {
+			isa = PBXGroup;
+			children = (
+				6CC704DF16237F83007003C7 /* InsulaViewController.h */,
+				6CC704E016237F83007003C7 /* InsulaViewController.m */,
+			);
+			name = InsulaViews;
+			sourceTree = "<group>";
+		};
 		6CE17825161EDE60007A6004 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +165,7 @@
 			children = (
 				6CE17843161EDE60007A6004 /* AppDelegate.h */,
 				6CE17844161EDE60007A6004 /* AppDelegate.m */,
+				6CC704E316237F8A007003C7 /* InsulaViews */,
 				6CC704DA162264B4007003C7 /* LandmarkViews */,
 				6CE17875161EDF73007A6004 /* IntermediateViews */,
 				6CE17876161EDF82007A6004 /* HomescreenViews */,
@@ -351,6 +364,7 @@
 				6CE17874161EDF6C007A6004 /* IntermediateViewController.m in Sources */,
 				6C65C100161EE5B0003A3823 /* ViewController.m in Sources */,
 				6CC704D9162264AB007003C7 /* LandmarkViewController.m in Sources */,
+				6CC704E116237F83007003C7 /* InsulaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
