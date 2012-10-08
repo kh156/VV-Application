@@ -13,12 +13,16 @@
 @end
 
 @implementation HomescreenViewController
-@synthesize scroll;
+@synthesize scroller, scrollerContent;
+
+
 
 - (void)viewDidLoad
 {
-    scroll.contentSize = CGSizeMake(2000,2000);
+
+    self.scroller.contentSize = scrollerContent.frame.size;
     [super viewDidLoad];
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
