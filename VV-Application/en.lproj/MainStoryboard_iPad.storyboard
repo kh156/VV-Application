@@ -36,6 +36,10 @@
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="insula_button_touch:" destination="2" eventType="touchUpInside" id="IOE-dw-0k5"/>
+                                                    <segue destination="4Jl-kq-jZQ" kind="modal" id="1ob-im-VRz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TPd-x2-BQy">
                                                 <rect key="frame" x="0.0" y="438" width="244" height="44"/>
@@ -151,7 +155,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4Jl-kq-jZQ" kind="modal" id="FWr-hy-cg8"/>
+                                    <segue destination="4Jl-kq-jZQ" kind="modal" id="ygA-ac-g2y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,12 +164,13 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="HSButton" destination="M7e-Ve-Av4" id="2sy-JZ-wok"/>
-                        <outlet property="HSMapView" destination="8tR-sE-6kw" id="04Y-QZ-d6A"/>
-                        <outlet property="HSScroller" destination="y07-A0-50F" id="xO0-XB-ZAi"/>
-                        <outlet property="HSScrollerContent" destination="nAx-v2-MXD" id="I6r-K7-DQx"/>
-                        <outlet property="HSSearchBar" destination="9Ms-Cs-3qk" id="aFx-MC-m9Y"/>
-                        <outlet property="HSSummary" destination="7Gw-qP-uux" id="U8A-8z-TgP"/>
+                        <outlet property="HSButton" destination="M7e-Ve-Av4" id="3qh-zs-OmM"/>
+                        <outlet property="HSMapView" destination="8tR-sE-6kw" id="Uhe-IR-97t"/>
+                        <outlet property="HSScroller" destination="y07-A0-50F" id="MqL-Ix-6z8"/>
+                        <outlet property="HSScrollerContent" destination="nAx-v2-MXD" id="Df1-lc-KfU"/>
+                        <outlet property="HSSearchBar" destination="9Ms-Cs-3qk" id="LcB-cF-JLu"/>
+                        <outlet property="HSSlider" destination="Ecg-0e-gTf" id="PQz-YJ-jFq"/>
+                        <outlet property="HSSummary" destination="7Gw-qP-uux" id="a52-fu-ZYS"/>
                         <outlet property="view" destination="5" id="Btu-mt-IsV"/>
                     </connections>
                 </viewController>
@@ -311,6 +316,7 @@
                         <outlet property="IVScroller" destination="ewq-an-wm4" id="GIO-bB-5kv"/>
                         <outlet property="IVScrollerContent" destination="BcX-6f-Oak" id="fS9-8G-WqK"/>
                         <outlet property="IVSearchBar" destination="0o2-gb-6N9" id="bpf-2L-sPB"/>
+                        <outlet property="IVSlider" destination="y1F-Xn-4hu" id="y7t-Sk-feM"/>
                         <outlet property="IVSummary" destination="waT-mm-uFV" id="H6p-kR-YGX"/>
                         <outlet property="view" destination="PGF-0a-x36" id="MSe-L8-OfE"/>
                     </connections>
@@ -407,12 +413,15 @@
         <class className="HomescreenViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomescreenViewController.h"/>
             <relationships>
+                <relationship kind="action" name="insula_button_touch:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="HSButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="HSMapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="HSScroller" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="HSScrollerContent" candidateClass="UIView"/>
                 <relationship kind="outlet" name="HSSearchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="HSSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="HSSummary" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="insulaViewController" candidateClass="InsulaViewController"/>
             </relationships>
         </class>
         <class className="InsulaViewController" superclassName="UIViewController">
@@ -423,6 +432,7 @@
                 <relationship kind="outlet" name="IVScroller" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="IVScrollerContent" candidateClass="UIView"/>
                 <relationship kind="outlet" name="IVSearchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="IVSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="IVSummary" candidateClass="UITextView"/>
             </relationships>
         </class>
@@ -439,7 +449,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="ygA-ac-g2y"/>
         <segue reference="ZAD-RN-vfP"/>
-        <segue reference="FWr-hy-cg8"/>
     </inferredMetricsTieBreakers>
 </document>
