@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+
 
 @interface HomescreenViewController : UIViewController
 
-@property(nonatomic, weak) IBOutlet UIScrollView *scroller;
-@property(nonatomic, weak) IBOutlet UIView *scrollerContent;
+@property(nonatomic, weak) IBOutlet UIScrollView *HSScroller;
+@property(nonatomic, weak) IBOutlet UIView *HSScrollerContent;
+@property(nonatomic, weak) IBOutlet UITextView *HSSummary;
+@property(nonatomic, weak) IBOutlet UIButton *HSButton;
+@property(nonatomic, weak) IBOutlet UISearchBar *HSSearchBar;
+@property(nonatomic, weak) IBOutlet MKMapView *HSMapView;
 
 
 

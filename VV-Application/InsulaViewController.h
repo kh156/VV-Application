@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/Mapkit.h>
 
 @interface InsulaViewController : UIViewController
 
-@property(nonatomic, weak) IBOutlet UIScrollView *insulaScroller;
-@property(nonatomic, weak) IBOutlet UIView *insulaScrollerContent;
+@property(nonatomic, weak) IBOutlet UIScrollView *IVScroller;
+@property(nonatomic, weak) IBOutlet UIView *IVScrollerContent;
+@property(nonatomic, weak) IBOutlet UITextView *IVSummary;
+@property(nonatomic, weak) IBOutlet UIButton *IVButton;
+@property(nonatomic, weak) IBOutlet MKMapView *IVMapView;
+@property(nonatomic, weak) IBOutlet UISearchBar *IVSearchBar;
 
 
 @end

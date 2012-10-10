@@ -14,7 +14,11 @@
 
 @implementation InsulaViewController
 
-@synthesize insulaScroller, insulaScrollerContent;
+@synthesize IVScroller, IVScrollerContent;
+@synthesize IVMapView;
+@synthesize IVSummary;
+@synthesize IVButton;
+@synthesize IVSearchBar;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +31,7 @@
 
 - (void)viewDidLoad
 {
-    self.insulaScroller.contentSize = insulaScrollerContent.frame.size;
+    self.IVScroller.contentSize = IVScrollerContent.frame.size;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }

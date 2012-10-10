@@ -12,15 +12,18 @@
 
 @end
 
-@implementation HomescreenViewController
-@synthesize scroller, scrollerContent;
-
+@implementation HomescreenViewController;
+@synthesize HSScroller, HSScrollerContent;
+@synthesize HSSummary;
+@synthesize HSButton;
+@synthesize HSMapView;
+@synthesize HSSearchBar;
 
 
 - (void)viewDidLoad
 {
 
-    self.scroller.contentSize = scrollerContent.frame.size;
+    self.HSScroller.contentSize = HSScrollerContent.frame.size;
     [super viewDidLoad];
 
 	// Do any additional setup after loading the view, typically from a nib.
