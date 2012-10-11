@@ -12,6 +12,11 @@
 
 @end
 
+
+//TODO: find better design solution to this global variable.....
+NSString* insulaName;
+NSString* landmarkName;
+
 @implementation HomescreenViewController;
 @synthesize HSScroller, HSScrollerContent;
 @synthesize HSSummary;
@@ -19,27 +24,33 @@
 @synthesize HSMapView;
 @synthesize HSSearchBar;
 @synthesize HSSlider;
-@synthesize insulaViewController; 
 
-- (void)viewDidLoad
-{
-
+- (void)viewDidLoad {
     self.HSScroller.contentSize = HSScrollerContent.frame.size;
+    [self setInitialMapRegion];
     [super viewDidLoad];
 
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 
 -(IBAction)insula_button_touch:(UIButton *)sender {
-    insulaViewController.insulaName = sender.currentTitle;
-    NSLog(@"%@",insulaViewController.insulaName);
+   insulaName = sender.currentTitle;
+   NSLog(@"%@",insulaName);
+}
+
+-(void)setInitialMapRegion {
+    MKCoordinateRegion mapRegion;
+    mapRegion.center.latitude = 45.4333;
+    mapRegion.center.longitude = 12.3167;
+    mapRegion.span.latitudeDelta = 0.035;
+    mapRegion.span.longitudeDelta = 0.035;
+    [HSMapView setRegion:mapRegion animated: YES];
 }
 
 

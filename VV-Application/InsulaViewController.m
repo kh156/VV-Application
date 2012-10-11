@@ -12,6 +12,8 @@
 
 @end
 
+
+
 @implementation InsulaViewController
 
 @synthesize IVScroller, IVScrollerContent;
@@ -20,7 +22,6 @@
 @synthesize IVButton;
 @synthesize IVSearchBar;
 @synthesize IVSlider;
-@synthesize insulaName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,6 +43,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)landmark_button_touch:(UIButton *)sender {
+    landmarkName = sender.currentTitle;
+    NSLog(@"%@",landmarkName);
 }
 
 @end

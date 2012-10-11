@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
+#import "HomescreenViewcontroller.h"
 
 @interface InsulaViewController : UIViewController
+
+
 
 @property(nonatomic, weak) IBOutlet UIScrollView *IVScroller;
 @property(nonatomic, weak) IBOutlet UIView *IVScrollerContent;
@@ -18,7 +21,8 @@
 @property(nonatomic, weak) IBOutlet MKMapView *IVMapView;
 @property(nonatomic, weak) IBOutlet UISearchBar *IVSearchBar;
 @property(nonatomic, weak) IBOutlet UISlider *IVSlider;
-@property(nonatomic, strong) NSString *insulaName;
+
+-(IBAction)landmark_button_touch:(UIButton *)sender;
 
 
 @end

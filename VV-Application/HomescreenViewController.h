@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import "InsulaViewController.h"
 
 
 @interface HomescreenViewController : UIViewController
+
+//TODO: find better design solution to global variables....
+extern NSString* insulaName;
+extern NSString* landmarkName;
 
 @property(nonatomic, weak) IBOutlet UIScrollView *HSScroller;
 @property(nonatomic, weak) IBOutlet UIView *HSScrollerContent;
@@ -20,9 +23,9 @@
 @property(nonatomic, weak) IBOutlet UISearchBar *HSSearchBar;
 @property(nonatomic, weak) IBOutlet MKMapView *HSMapView;
 @property(nonatomic, weak) IBOutlet UISlider *HSSlider;
-@property(nonatomic, weak) IBOutlet InsulaViewController* insulaViewController;
 
 -(IBAction)insula_button_touch:(UIButton *)sender;
+
  
 
 @end
