@@ -26,8 +26,10 @@ NSString* landmarkName;
 @synthesize HSSlider;
 
 - (void)viewDidLoad {
+    HSSlider.value = 0.34;
     self.HSScroller.contentSize = HSScrollerContent.frame.size;
     [self setInitialMapRegion];
+    
     [super viewDidLoad];
 
 	// Do any additional setup after loading the view, typically from a nib.
@@ -42,6 +44,15 @@ NSString* landmarkName;
 -(IBAction)insula_button_touch:(UIButton *)sender {
    insulaName = sender.currentTitle;
    NSLog(@"%@",insulaName);
+}
+
+-(IBAction) slider_moved:(UISlider *) sender {
+    MKCoordinateRegion mapRegion;
+    mapRegion.center.latitude = HSMapView.region.center.latitude;
+    mapRegion.center.longitude = HSMapView.region.center.longitude;
+    mapRegion.span.latitudeDelta = 0.1 * sender.value + 0.01;
+    mapRegion.span.longitudeDelta = 0.1 * sender.value + 0.01;
+    [HSMapView setRegion:mapRegion animated: YES];
 }
 
 -(void)setInitialMapRegion {
