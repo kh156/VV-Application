@@ -32,6 +32,7 @@
 		6CE1787F161EE1AD007A6004 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE1787D161EE1AD007A6004 /* CoreImage.framework */; };
 		6CE17880161EE1AD007A6004 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE1787E161EE1AD007A6004 /* ImageIO.framework */; };
 		6CECA0F016262A09002C4A4D /* VisualizingVeniceLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CECA0EF16262A09002C4A4D /* VisualizingVeniceLogo.jpg */; };
+		E7F2A3E3162672C800948EBD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F2A3E2162672C800948EBD /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		6CE1787D161EE1AD007A6004 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		6CE1787E161EE1AD007A6004 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		6CECA0EF16262A09002C4A4D /* VisualizingVeniceLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VisualizingVeniceLogo.jpg; sourceTree = "<group>"; };
+		E7F2A3E2162672C800948EBD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F2A3E3162672C800948EBD /* CoreData.framework in Frameworks */,
 				6CE1787F161EE1AD007A6004 /* CoreImage.framework in Frameworks */,
 				6CE17880161EE1AD007A6004 /* ImageIO.framework in Frameworks */,
 				6CE1787C161EE1A8007A6004 /* MapKit.framework in Frameworks */,
@@ -149,6 +152,7 @@
 		6CE17833161EDE60007A6004 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7F2A3E2162672C800948EBD /* CoreData.framework */,
 				6CE1787D161EE1AD007A6004 /* CoreImage.framework */,
 				6CE1787E161EE1AD007A6004 /* ImageIO.framework */,
 				6CE1787B161EE1A8007A6004 /* MapKit.framework */,
