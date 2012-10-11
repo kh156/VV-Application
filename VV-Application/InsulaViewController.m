@@ -19,6 +19,8 @@
 @synthesize IVSummary;
 @synthesize IVButton;
 @synthesize IVSearchBar;
+@synthesize IVSlider;
+@synthesize insulaName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -17,6 +17,8 @@
 @property(nonatomic, weak) IBOutlet UIButton *IVButton;
 @property(nonatomic, weak) IBOutlet MKMapView *IVMapView;
 @property(nonatomic, weak) IBOutlet UISearchBar *IVSearchBar;
+@property(nonatomic, weak) IBOutlet UISlider *IVSlider;
+@property(nonatomic, strong) NSString *insulaName;
 
 
 @end

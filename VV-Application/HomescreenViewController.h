@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "InsulaViewController.h"
 
 
 @interface HomescreenViewController : UIViewController
@@ -18,7 +19,10 @@
 @property(nonatomic, weak) IBOutlet UIButton *HSButton;
 @property(nonatomic, weak) IBOutlet UISearchBar *HSSearchBar;
 @property(nonatomic, weak) IBOutlet MKMapView *HSMapView;
+@property(nonatomic, weak) IBOutlet UISlider *HSSlider;
+@property(nonatomic, weak) IBOutlet InsulaViewController* insulaViewController;
 
-
+-(IBAction)insula_button_touch:(UIButton *)sender;
+ 
 
 @end

@@ -18,7 +18,8 @@
 @synthesize HSButton;
 @synthesize HSMapView;
 @synthesize HSSearchBar;
-
+@synthesize HSSlider;
+@synthesize insulaViewController; 
 
 - (void)viewDidLoad
 {
@@ -34,5 +35,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+-(IBAction)insula_button_touch:(UIButton *)sender {
+    insulaViewController.insulaName = sender.currentTitle;
+    NSLog(@"%@",insulaViewController.insulaName);
+}
+
+
 
 @end
