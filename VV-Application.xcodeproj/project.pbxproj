@@ -32,6 +32,8 @@
 		6CE1787F161EE1AD007A6004 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE1787D161EE1AD007A6004 /* CoreImage.framework */; };
 		6CE17880161EE1AD007A6004 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE1787E161EE1AD007A6004 /* ImageIO.framework */; };
 		6CECA0F016262A09002C4A4D /* VisualizingVeniceLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CECA0EF16262A09002C4A4D /* VisualizingVeniceLogo.jpg */; };
+		E7F2A3E3162672C800948EBD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F2A3E2162672C800948EBD /* CoreData.framework */; };
+		E7F2A3E6162678FF00948EBD /* VV-Application.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = E7F2A3E5162678FF00948EBD /* VV-Application.xcdatamodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		6CE1787D161EE1AD007A6004 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		6CE1787E161EE1AD007A6004 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		6CECA0EF16262A09002C4A4D /* VisualizingVeniceLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VisualizingVeniceLogo.jpg; sourceTree = "<group>"; };
+		E7F2A3E2162672C800948EBD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E7F2A3E5162678FF00948EBD /* VV-Application.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = "VV-Application.xcdatamodel"; path = "../../../../Desktop/new Files/VV-Application.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F2A3E3162672C800948EBD /* CoreData.framework in Frameworks */,
 				6CE1787F161EE1AD007A6004 /* CoreImage.framework in Frameworks */,
 				6CE17880161EE1AD007A6004 /* ImageIO.framework in Frameworks */,
 				6CE1787C161EE1A8007A6004 /* MapKit.framework in Frameworks */,
@@ -149,6 +154,7 @@
 		6CE17833161EDE60007A6004 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7F2A3E2162672C800948EBD /* CoreData.framework */,
 				6CE1787D161EE1AD007A6004 /* CoreImage.framework */,
 				6CE1787E161EE1AD007A6004 /* ImageIO.framework */,
 				6CE1787B161EE1A8007A6004 /* MapKit.framework */,
@@ -179,6 +185,7 @@
 		6CE1783B161EDE60007A6004 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7F2A3E5162678FF00948EBD /* VV-Application.xcdatamodel */,
 				6CE1783C161EDE60007A6004 /* VV-Application-Info.plist */,
 				6CE1783D161EDE60007A6004 /* InfoPlist.strings */,
 				6CE17840161EDE60007A6004 /* main.m */,
@@ -365,6 +372,7 @@
 				6C65C100161EE5B0003A3823 /* ViewController.m in Sources */,
 				6CC704D9162264AB007003C7 /* LandmarkViewController.m in Sources */,
 				6CC704E116237F83007003C7 /* InsulaViewController.m in Sources */,
+				E7F2A3E6162678FF00948EBD /* VV-Application.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
