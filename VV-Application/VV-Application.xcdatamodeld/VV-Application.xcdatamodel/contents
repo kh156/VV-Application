@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Building" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Cathedral" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Cistern" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Monument" representedClassName="Monument" syncable="YES">
         <attribute name="image_intro" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image_panelsAndProcession" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text_history" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text_intro" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text_panelsAndProcession" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,6 +21,9 @@
         <attribute name="video_virtualSpaceConstruct" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Monument" positionX="-72" positionY="-225" width="128" height="163"/>
+        <element name="Monument" positionX="-72" positionY="-225" width="128" height="180"/>
+        <element name="Building" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Cistern" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Cathedral" positionX="160" positionY="192" width="128" height="60"/>
     </elements>
 </model>
