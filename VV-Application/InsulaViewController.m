@@ -22,12 +22,16 @@
 @synthesize IVButton;
 @synthesize IVSearchBar;
 @synthesize IVSlider;
+@synthesize coreData = _coreData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        self.coreData = ((AppDelegate *)UIApplication.sharedApplication.delegate).coreData;
+        
     }
     return self;
 }

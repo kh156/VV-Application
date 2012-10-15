@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		087DF440162BAE69005FCC78 /* VV-Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 087DF43E162BAE69005FCC78 /* VV-Application.xcdatamodeld */; };
+		087DF44E162BD227005FCC78 /* Monument.m in Sources */ = {isa = PBXBuildFile; fileRef = 087DF44D162BD227005FCC78 /* Monument.m */; };
+		087DF452162BD38D005FCC78 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 087DF451162BD38D005FCC78 /* CoreData.m */; };
 		6C65C100161EE5B0003A3823 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C65C0FF161EE5B0003A3823 /* ViewController.m */; };
 		6CC704D9162264AB007003C7 /* LandmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC704D8162264AB007003C7 /* LandmarkViewController.m */; };
 		6CC704E116237F83007003C7 /* InsulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC704E016237F83007003C7 /* InsulaViewController.m */; };
@@ -46,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		087DF43F162BAE69005FCC78 /* VV-Application.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "VV-Application.xcdatamodel"; sourceTree = "<group>"; };
+		087DF44C162BD227005FCC78 /* Monument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monument.h; sourceTree = "<group>"; };
+		087DF44D162BD227005FCC78 /* Monument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monument.m; sourceTree = "<group>"; };
+		087DF450162BD38D005FCC78 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
+		087DF451162BD38D005FCC78 /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreData.m; sourceTree = "<group>"; };
 		6C65C0FE161EE5B0003A3823 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6C65C0FF161EE5B0003A3823 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6CC704D7162264AB007003C7 /* LandmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkViewController.h; sourceTree = "<group>"; };
@@ -112,6 +120,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		087DF44F162BD2BC005FCC78 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				087DF43E162BAE69005FCC78 /* VV-Application.xcdatamodeld */,
+				087DF44C162BD227005FCC78 /* Monument.h */,
+				087DF44D162BD227005FCC78 /* Monument.m */,
+				087DF450162BD38D005FCC78 /* CoreData.h */,
+				087DF451162BD38D005FCC78 /* CoreData.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		6CC704DA162264B4007003C7 /* LandmarkViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +189,7 @@
 			children = (
 				6CE17843161EDE60007A6004 /* AppDelegate.h */,
 				6CE17844161EDE60007A6004 /* AppDelegate.m */,
+				087DF44F162BD2BC005FCC78 /* CoreData */,
 				6CC704E316237F8A007003C7 /* InsulaViews */,
 				6CC704DA162264B4007003C7 /* LandmarkViews */,
 				6CE17875161EDF73007A6004 /* IntermediateViews */,
@@ -369,6 +390,9 @@
 				6C65C100161EE5B0003A3823 /* ViewController.m in Sources */,
 				6CC704D9162264AB007003C7 /* LandmarkViewController.m in Sources */,
 				6CC704E116237F83007003C7 /* InsulaViewController.m in Sources */,
+				087DF440162BAE69005FCC78 /* VV-Application.xcdatamodeld in Sources */,
+				087DF44E162BD227005FCC78 /* Monument.m in Sources */,
+				087DF452162BD38D005FCC78 /* CoreData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +589,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		087DF43E162BAE69005FCC78 /* VV-Application.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				087DF43F162BAE69005FCC78 /* VV-Application.xcdatamodel */,
+			);
+			currentVersion = 087DF43F162BAE69005FCC78 /* VV-Application.xcdatamodel */;
+			path = "VV-Application.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6CE17827161EDE60007A6004 /* Project object */;
 }

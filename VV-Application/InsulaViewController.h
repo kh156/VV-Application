@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
 #import "HomescreenViewcontroller.h"
+#import "CoreData.h"
+#import "AppDelegate.h"
 
 @interface InsulaViewController : UIViewController
 
@@ -21,6 +23,8 @@
 @property(nonatomic, weak) IBOutlet MKMapView *IVMapView;
 @property(nonatomic, weak) IBOutlet UISearchBar *IVSearchBar;
 @property(nonatomic, weak) IBOutlet UISlider *IVSlider;
+
+@property(nonatomic, weak) CoreData *coreData;
 
 -(IBAction)landmark_button_touch:(UIButton *)sender;
 
