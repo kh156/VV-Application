@@ -10,7 +10,7 @@
 #import <MapKit/Mapkit.h>
 #import "HomescreenViewcontroller.h"
 
-@interface InsulaViewController : UIViewController
+@interface InsulaViewController : UIViewController 
 
 @property(nonatomic, weak) IBOutlet UIScrollView *IVScroller;
 @property(nonatomic, weak) IBOutlet UIView *IVScrollerContent;

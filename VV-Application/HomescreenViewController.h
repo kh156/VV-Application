@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 
 
-@interface HomescreenViewController : UIViewController
+@interface HomescreenViewController : UIViewController 
 
 //TODO: find better design solution to global variables....
 extern NSString* insulaName;

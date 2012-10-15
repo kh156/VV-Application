@@ -26,6 +26,7 @@ NSString* landmarkName;
 @synthesize HSSearchBar;
 @synthesize HSSlider;
 
+
 - (void)viewDidLoad {
     //HSSearchBar.prompt = @"Search for an insula";
     HSSlider.value = 0.34;

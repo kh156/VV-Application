@@ -8,8 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		6C65C100161EE5B0003A3823 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C65C0FF161EE5B0003A3823 /* ViewController.m */; };
+		6C6BED06162BD3E5002CB6D5 /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6BED05162BD3E5002CB6D5 /* NinevehGL.framework */; };
+		6C6BF1AA162BD481002CB6D5 /* cube.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1A2162BD481002CB6D5 /* cube.mtl */; };
+		6C6BF1AB162BD481002CB6D5 /* cube.obj in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1A3162BD481002CB6D5 /* cube.obj */; };
+		6C6BF1AC162BD481002CB6D5 /* cube_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1A4162BD481002CB6D5 /* cube_back.jpg */; };
+		6C6BF1AD162BD481002CB6D5 /* cube_bottom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1A5162BD481002CB6D5 /* cube_bottom.jpg */; };
+		6C6BF1AE162BD481002CB6D5 /* cube_front.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1A6162BD481002CB6D5 /* cube_front.jpg */; };
+		6C6BF1AF162BD481002CB6D5 /* cube_left.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1A7162BD481002CB6D5 /* cube_left.jpg */; };
+		6C6BF1B0162BD481002CB6D5 /* cube_right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1A8162BD481002CB6D5 /* cube_right.jpg */; };
+		6C6BF1B1162BD481002CB6D5 /* cube_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1A9162BD481002CB6D5 /* cube_top.jpg */; };
+		6C6BF1B8162BDC29002CB6D5 /* house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1B3162BDC29002CB6D5 /* house.mtl */; };
+		6C6BF1B9162BDC29002CB6D5 /* house.obj in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1B4162BDC29002CB6D5 /* house.obj */; };
+		6C6BF1BA162BDC29002CB6D5 /* house_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1B5162BDC29002CB6D5 /* house_diffuse.jpg */; };
+		6C6BF1BB162BDC29002CB6D5 /* house_normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1B6162BDC29002CB6D5 /* house_normal.jpg */; };
+		6C6BF1BC162BDC29002CB6D5 /* house_spec.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1B7162BDC29002CB6D5 /* house_spec.jpg */; };
 		6CC704D9162264AB007003C7 /* LandmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC704D8162264AB007003C7 /* LandmarkViewController.m */; };
 		6CC704E116237F83007003C7 /* InsulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC704E016237F83007003C7 /* InsulaViewController.m */; };
+		6CDFD69E162BCC2B0018676A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDFD69D162BCC2B0018676A /* OpenGLES.framework */; };
+		6CDFD6A1162BCC310018676A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDFD6A0162BCC310018676A /* QuartzCore.framework */; };
 		6CE17835161EDE60007A6004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE17834161EDE60007A6004 /* UIKit.framework */; };
 		6CE17837161EDE60007A6004 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE17836161EDE60007A6004 /* Foundation.framework */; };
 		6CE17839161EDE60007A6004 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE17838161EDE60007A6004 /* CoreGraphics.framework */; };
@@ -48,10 +64,26 @@
 /* Begin PBXFileReference section */
 		6C65C0FE161EE5B0003A3823 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6C65C0FF161EE5B0003A3823 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6C6BED05162BD3E5002CB6D5 /* NinevehGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NinevehGL.framework; path = "/Library/Developer/Xcode/Templates/Project Templates/NinevehGL/NinevehGL Base.xctemplate/Frameworks/NinevehGL.framework"; sourceTree = "<absolute>"; };
+		6C6BF1A2162BD481002CB6D5 /* cube.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cube.mtl; sourceTree = "<group>"; };
+		6C6BF1A3162BD481002CB6D5 /* cube.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cube.obj; sourceTree = "<group>"; };
+		6C6BF1A4162BD481002CB6D5 /* cube_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_back.jpg; sourceTree = "<group>"; };
+		6C6BF1A5162BD481002CB6D5 /* cube_bottom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_bottom.jpg; sourceTree = "<group>"; };
+		6C6BF1A6162BD481002CB6D5 /* cube_front.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_front.jpg; sourceTree = "<group>"; };
+		6C6BF1A7162BD481002CB6D5 /* cube_left.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_left.jpg; sourceTree = "<group>"; };
+		6C6BF1A8162BD481002CB6D5 /* cube_right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_right.jpg; sourceTree = "<group>"; };
+		6C6BF1A9162BD481002CB6D5 /* cube_top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_top.jpg; sourceTree = "<group>"; };
+		6C6BF1B3162BDC29002CB6D5 /* house.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = house.mtl; sourceTree = "<group>"; };
+		6C6BF1B4162BDC29002CB6D5 /* house.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = house.obj; sourceTree = "<group>"; };
+		6C6BF1B5162BDC29002CB6D5 /* house_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_diffuse.jpg; sourceTree = "<group>"; };
+		6C6BF1B6162BDC29002CB6D5 /* house_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_normal.jpg; sourceTree = "<group>"; };
+		6C6BF1B7162BDC29002CB6D5 /* house_spec.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_spec.jpg; sourceTree = "<group>"; };
 		6CC704D7162264AB007003C7 /* LandmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkViewController.h; sourceTree = "<group>"; };
 		6CC704D8162264AB007003C7 /* LandmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandmarkViewController.m; sourceTree = "<group>"; };
 		6CC704DF16237F83007003C7 /* InsulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsulaViewController.h; sourceTree = "<group>"; };
 		6CC704E016237F83007003C7 /* InsulaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsulaViewController.m; sourceTree = "<group>"; };
+		6CDFD69D162BCC2B0018676A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6CDFD6A0162BCC310018676A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6CE17830161EDE60007A6004 /* VV-Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VV-Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE17834161EDE60007A6004 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6CE17836161EDE60007A6004 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +121,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6BED06162BD3E5002CB6D5 /* NinevehGL.framework in Frameworks */,
+				6CDFD6A1162BCC310018676A /* QuartzCore.framework in Frameworks */,
+				6CDFD69E162BCC2B0018676A /* OpenGLES.framework in Frameworks */,
 				E7F2A3E3162672C800948EBD /* CoreData.framework in Frameworks */,
 				6CE1787F161EE1AD007A6004 /* CoreImage.framework in Frameworks */,
 				6CE17880161EE1AD007A6004 /* ImageIO.framework in Frameworks */,
@@ -112,6 +147,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C6BF1A1162BD481002CB6D5 /* Cube */ = {
+			isa = PBXGroup;
+			children = (
+				6C6BF1A2162BD481002CB6D5 /* cube.mtl */,
+				6C6BF1A3162BD481002CB6D5 /* cube.obj */,
+				6C6BF1A4162BD481002CB6D5 /* cube_back.jpg */,
+				6C6BF1A5162BD481002CB6D5 /* cube_bottom.jpg */,
+				6C6BF1A6162BD481002CB6D5 /* cube_front.jpg */,
+				6C6BF1A7162BD481002CB6D5 /* cube_left.jpg */,
+				6C6BF1A8162BD481002CB6D5 /* cube_right.jpg */,
+				6C6BF1A9162BD481002CB6D5 /* cube_top.jpg */,
+			);
+			name = Cube;
+			path = "../../../ninevehgl_beta_0/NinevehGL_0_9_3/NinevehGL Lessons/Basics/Importing/Resources/3D/Cube";
+			sourceTree = "<group>";
+		};
+		6C6BF1B2162BDC29002CB6D5 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				6C6BF1B3162BDC29002CB6D5 /* house.mtl */,
+				6C6BF1B4162BDC29002CB6D5 /* house.obj */,
+				6C6BF1B5162BDC29002CB6D5 /* house_diffuse.jpg */,
+				6C6BF1B6162BDC29002CB6D5 /* house_normal.jpg */,
+				6C6BF1B7162BDC29002CB6D5 /* house_spec.jpg */,
+			);
+			name = House;
+			path = "../../../ninevehgl_beta_0/NinevehGL_0_9_3/NinevehGL Lessons/Basics/Globals/Resources/3D/House";
+			sourceTree = "<group>";
+		};
 		6CC704DA162264B4007003C7 /* LandmarkViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +216,9 @@
 		6CE17833161EDE60007A6004 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C6BED05162BD3E5002CB6D5 /* NinevehGL.framework */,
+				6CDFD6A0162BCC310018676A /* QuartzCore.framework */,
+				6CDFD69D162BCC2B0018676A /* OpenGLES.framework */,
 				E7F2A3E2162672C800948EBD /* CoreData.framework */,
 				6CE1787D161EE1AD007A6004 /* CoreImage.framework */,
 				6CE1787E161EE1AD007A6004 /* ImageIO.framework */,
@@ -242,6 +309,8 @@
 		6CE17878161EDF92007A6004 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6C6BF1B2162BDC29002CB6D5 /* House */,
+				6C6BF1A1162BD481002CB6D5 /* Cube */,
 				6CECA0EF16262A09002C4A4D /* VisualizingVeniceLogo.jpg */,
 				6CE17846161EDE60007A6004 /* Default.png */,
 				6CE17848161EDE60007A6004 /* Default@2x.png */,
@@ -328,6 +397,19 @@
 				6CE1784E161EDE60007A6004 /* MainStoryboard_iPhone.storyboard in Resources */,
 				6CE17851161EDE60007A6004 /* MainStoryboard_iPad.storyboard in Resources */,
 				6CECA0F016262A09002C4A4D /* VisualizingVeniceLogo.jpg in Resources */,
+				6C6BF1AA162BD481002CB6D5 /* cube.mtl in Resources */,
+				6C6BF1AB162BD481002CB6D5 /* cube.obj in Resources */,
+				6C6BF1AC162BD481002CB6D5 /* cube_back.jpg in Resources */,
+				6C6BF1AD162BD481002CB6D5 /* cube_bottom.jpg in Resources */,
+				6C6BF1AE162BD481002CB6D5 /* cube_front.jpg in Resources */,
+				6C6BF1AF162BD481002CB6D5 /* cube_left.jpg in Resources */,
+				6C6BF1B0162BD481002CB6D5 /* cube_right.jpg in Resources */,
+				6C6BF1B1162BD481002CB6D5 /* cube_top.jpg in Resources */,
+				6C6BF1B8162BDC29002CB6D5 /* house.mtl in Resources */,
+				6C6BF1B9162BDC29002CB6D5 /* house.obj in Resources */,
+				6C6BF1BA162BDC29002CB6D5 /* house_diffuse.jpg in Resources */,
+				6C6BF1BB162BDC29002CB6D5 /* house_normal.jpg in Resources */,
+				6C6BF1BC162BDC29002CB6D5 /* house_spec.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,9 +563,17 @@
 		6CE1786D161EDE60007A6004 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(LOCAL_DEVELOPER_DIR)/Xcode/Templates/Project Templates/NinevehGL/NinevehGL Base.xctemplate/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VV-Application/VV-Application-Prefix.pch";
 				INFOPLIST_FILE = "VV-Application/VV-Application-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ninevehgl_beta_0/NinevehGL_0_9_3/NinevehGL Samples/Augmented Reality/Externals/Qualcomm\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -492,9 +582,17 @@
 		6CE1786E161EDE60007A6004 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(LOCAL_DEVELOPER_DIR)/Xcode/Templates/Project Templates/NinevehGL/NinevehGL Base.xctemplate/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VV-Application/VV-Application-Prefix.pch";
 				INFOPLIST_FILE = "VV-Application/VV-Application-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../ninevehgl_beta_0/NinevehGL_0_9_3/NinevehGL Samples/Augmented Reality/Externals/Qualcomm\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
