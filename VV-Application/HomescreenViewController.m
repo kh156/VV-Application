@@ -8,6 +8,7 @@
 
 #import "HomescreenViewController.h"
 
+
 @interface HomescreenViewController ()
 
 @end
@@ -26,10 +27,10 @@ NSString* landmarkName;
 @synthesize HSSlider;
 
 - (void)viewDidLoad {
+    //HSSearchBar.prompt = @"Search for an insula";
     HSSlider.value = 0.34;
-    self.HSScroller.contentSize = HSScrollerContent.frame.size;
+    [self.HSScroller setContentSize: HSScrollerContent.frame.size];
     [self setInitialMapRegion];
-    
     [super viewDidLoad];
 
 	// Do any additional setup after loading the view, typically from a nib.
@@ -46,7 +47,7 @@ NSString* landmarkName;
    NSLog(@"%@",insulaName);
 }
 
--(IBAction) slider_moved:(UISlider *) sender {
+-(IBAction) slider_moved:(UISlider *)sender {
     MKCoordinateRegion mapRegion;
     mapRegion.center.latitude = HSMapView.region.center.latitude;
     mapRegion.center.longitude = HSMapView.region.center.longitude;
@@ -62,6 +63,15 @@ NSString* landmarkName;
     mapRegion.span.latitudeDelta = 0.035;
     mapRegion.span.longitudeDelta = 0.035;
     [HSMapView setRegion:mapRegion animated: YES];
+}
+
+-(IBAction)insulaSearch: (UIButton *)sender {
+    // if sender.text matches name of insula....
+    [HSButton setTitle: HSSearchBar.text forState: UIControlStateNormal];
+    //pull overview description from core data and load it into textview
+    NSString* description = @"";
+    //zoom in on insula in mapview!
+    [HSSummary setText: description];
 }
 
 

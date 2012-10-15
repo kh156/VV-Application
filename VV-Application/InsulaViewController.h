@@ -14,8 +14,6 @@
 
 @interface InsulaViewController : UIViewController
 
-
-
 @property(nonatomic, weak) IBOutlet UIScrollView *IVScroller;
 @property(nonatomic, weak) IBOutlet UIView *IVScrollerContent;
 @property(nonatomic, weak) IBOutlet UITextView *IVSummary;
@@ -27,6 +25,8 @@
 @property(nonatomic, weak) CoreData *coreData;
 
 -(IBAction)landmark_button_touch:(UIButton *)sender;
+-(IBAction) slider_moved:(UISlider *)sender;
+-(void)setInitialMapRegion;
 
 
 @end

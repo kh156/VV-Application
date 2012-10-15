@@ -25,6 +25,11 @@ extern NSString* landmarkName;
 @property(nonatomic, weak) IBOutlet UISlider *HSSlider;
 
 -(IBAction)insula_button_touch:(UIButton *)sender;
+-(IBAction) slider_moved:(UISlider *)sender;
+-(void)setInitialMapRegion;
+-(IBAction) insulaSearch: (UIBarButtonItem *)sender;
+
+
 
  
 
