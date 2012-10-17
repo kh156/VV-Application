@@ -21,9 +21,9 @@
         <attribute name="video_virtualSpaceConstruct" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Monument" positionX="-72" positionY="-225" width="128" height="180"/>
         <element name="Building" positionX="160" positionY="192" width="128" height="60"/>
-        <element name="Cistern" positionX="160" positionY="192" width="128" height="60"/>
-        <element name="Cathedral" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="Cathedral" positionX="-144" positionY="9" width="128" height="60"/>
+        <element name="Cistern" positionX="135" positionY="72" width="128" height="60"/>
+        <element name="Monument" positionX="-72" positionY="-225" width="128" height="180"/>
     </elements>
 </model>
