@@ -22,6 +22,9 @@
 		6C6BF1BA162BDC29002CB6D5 /* house_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1B5162BDC29002CB6D5 /* house_diffuse.jpg */; };
 		6C6BF1BB162BDC29002CB6D5 /* house_normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1B6162BDC29002CB6D5 /* house_normal.jpg */; };
 		6C6BF1BC162BDC29002CB6D5 /* house_spec.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1B7162BDC29002CB6D5 /* house_spec.jpg */; };
+		6C6D32D2162BF4BE00B9FABB /* sketchupModel.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 6C6D32D0162BF4BE00B9FABB /* sketchupModel.mtl */; };
+		6C6D32D3162BF4BE00B9FABB /* sketchupModel.obj in Resources */ = {isa = PBXBuildFile; fileRef = 6C6D32D1162BF4BE00B9FABB /* sketchupModel.obj */; };
+		6C6D32D6162BF53F00B9FABB /* insula.dae in Resources */ = {isa = PBXBuildFile; fileRef = 6C6D32D5162BF53F00B9FABB /* insula.dae */; };
 		6CC704D9162264AB007003C7 /* LandmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC704D8162264AB007003C7 /* LandmarkViewController.m */; };
 		6CC704E116237F83007003C7 /* InsulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC704E016237F83007003C7 /* InsulaViewController.m */; };
 		6CDFD69E162BCC2B0018676A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDFD69D162BCC2B0018676A /* OpenGLES.framework */; };
@@ -78,6 +81,9 @@
 		6C6BF1B5162BDC29002CB6D5 /* house_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_diffuse.jpg; sourceTree = "<group>"; };
 		6C6BF1B6162BDC29002CB6D5 /* house_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_normal.jpg; sourceTree = "<group>"; };
 		6C6BF1B7162BDC29002CB6D5 /* house_spec.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_spec.jpg; sourceTree = "<group>"; };
+		6C6D32D0162BF4BE00B9FABB /* sketchupModel.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sketchupModel.mtl; sourceTree = "<group>"; };
+		6C6D32D1162BF4BE00B9FABB /* sketchupModel.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sketchupModel.obj; sourceTree = "<group>"; };
+		6C6D32D5162BF53F00B9FABB /* insula.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = insula.dae; path = ../insula.dae; sourceTree = "<group>"; };
 		6CC704D7162264AB007003C7 /* LandmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkViewController.h; sourceTree = "<group>"; };
 		6CC704D8162264AB007003C7 /* LandmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandmarkViewController.m; sourceTree = "<group>"; };
 		6CC704DF16237F83007003C7 /* InsulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsulaViewController.h; sourceTree = "<group>"; };
@@ -174,6 +180,17 @@
 			);
 			name = House;
 			path = "../../../ninevehgl_beta_0/NinevehGL_0_9_3/NinevehGL Lessons/Basics/Globals/Resources/3D/House";
+			sourceTree = "<group>";
+		};
+		6C6D32CF162BF4BE00B9FABB /* insula */ = {
+			isa = PBXGroup;
+			children = (
+				6C6D32D5162BF53F00B9FABB /* insula.dae */,
+				6C6D32D0162BF4BE00B9FABB /* sketchupModel.mtl */,
+				6C6D32D1162BF4BE00B9FABB /* sketchupModel.obj */,
+			);
+			name = insula;
+			path = ../../../insula;
 			sourceTree = "<group>";
 		};
 		6CC704DA162264B4007003C7 /* LandmarkViews */ = {
@@ -309,6 +326,7 @@
 		6CE17878161EDF92007A6004 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6C6D32CF162BF4BE00B9FABB /* insula */,
 				6C6BF1B2162BDC29002CB6D5 /* House */,
 				6C6BF1A1162BD481002CB6D5 /* Cube */,
 				6CECA0EF16262A09002C4A4D /* VisualizingVeniceLogo.jpg */,
@@ -410,6 +428,9 @@
 				6C6BF1BA162BDC29002CB6D5 /* house_diffuse.jpg in Resources */,
 				6C6BF1BB162BDC29002CB6D5 /* house_normal.jpg in Resources */,
 				6C6BF1BC162BDC29002CB6D5 /* house_spec.jpg in Resources */,
+				6C6D32D2162BF4BE00B9FABB /* sketchupModel.mtl in Resources */,
+				6C6D32D3162BF4BE00B9FABB /* sketchupModel.obj in Resources */,
+				6C6D32D6162BF53F00B9FABB /* insula.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
