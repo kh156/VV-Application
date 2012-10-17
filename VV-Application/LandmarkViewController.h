@@ -15,5 +15,6 @@
     NGLMesh *mesh;
     NGLCamera *camera;
 }
+-(void) initNGL:(NSString *) fileName;
 
 @end

@@ -8,7 +8,6 @@
 
 #import "LandmarkViewController.h"
 
-
 @interface LandmarkViewController ()
 
 @end
@@ -28,21 +27,22 @@
 - (void) viewDidLoad {
 	// Must call super to agree with the UIKit rules.
 	[super viewDidLoad];
-    
+    [self initNGL: @"house.obj"];
+}
+
+-(void) initNGL: (NSString *) fileName {
     NGLView *theView = [[NGLView alloc] initWithFrame:CGRectMake(185, 50, 650, 650)];
     theView.delegate = self;
     [self.view addSubview: theView];
     theView.contentScaleFactor = [[UIScreen mainScreen] scale];
     
-	// Setting the loading process parameters. To take advantage of the NGL Binary feature,
-	// remove the line "kNGLMeshOriginalYes, kNGLMeshKeyOriginal,". Your mesh will be loaded 950% faster.
 	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys: kNGLMeshCentralizeYes, kNGLMeshKeyCentralize, @"0.3", kNGLMeshKeyNormalize, nil];
 	
-	mesh = [[NGLMesh alloc] initWithFile:@"house.obj" settings:settings delegate:nil];
+	mesh = [[NGLMesh alloc] initWithFile:fileName settings:settings delegate:nil];
+    //mesh = [[NGLMesh alloc] initWithFile:@"insula.dae" settings:settings delegate:nil];
 	camera = [[NGLCamera alloc] initWithMeshes:mesh, nil];
 	[camera autoAdjustAspectRatio:YES animated:YES];
-    
-	// Starts the debug monitor.
+    // Starts the debug monitor.
     [[NGLDebug debugMonitor] startWithView:theView];
 }
 
@@ -53,8 +53,8 @@
 
 -(void) drawView {
     mesh.rotateY += 1;
-    mesh.rotateX += 0.5;
-    mesh.rotateZ += 0.25;
+    //mesh.rotateX += 2.5;
+    //mesh.rotateZ += 1.25;
     [camera drawCamera];
     //NSLog(@"camera drawn");
     
