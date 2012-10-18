@@ -30,7 +30,8 @@ NSString* landmarkName;
 
 - (void)viewDidLoad {
     //HSSearchBar.prompt = @"Search for an insula";
-    HSSlider.value = 0.34;
+    //[HSSlider setMaximumValue:10];
+    [HSSlider setValue: 0.34];
     [self plotMapAnnotation:@"Venice" address:@"address" latitude:45.4333 longitude:12.3167];
     [self.HSScroller setContentSize: HSScrollerContent.frame.size];
     [self setInitialMapRegion];

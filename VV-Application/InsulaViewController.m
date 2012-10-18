@@ -13,8 +13,6 @@
 
 @end
 
-
-
 @implementation InsulaViewController
 
 @synthesize IVScroller, IVScrollerContent;

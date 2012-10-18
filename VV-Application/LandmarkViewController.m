@@ -13,6 +13,9 @@
 @end
 
 @implementation LandmarkViewController
+@synthesize LVSliderX;
+@synthesize LVSliderY;
+@synthesize LVSliderZ;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,8 +29,18 @@
 
 - (void) viewDidLoad {
 	// Must call super to agree with the UIKit rules.
+    [self initSliders];
 	[super viewDidLoad];
     [self initNGL: @"house.obj"];
+}
+
+-(void) initSliders {
+    [LVSliderX setMaximumValue:500];
+    [LVSliderY setMaximumValue:500];
+    [LVSliderZ setMaximumValue:500];
+    [LVSliderX setValue: 0.5*LVSliderX.maximumValue];
+    [LVSliderY setValue: 0.5*LVSliderY.maximumValue];
+    [LVSliderZ setValue: 0.5*LVSliderZ.maximumValue];
 }
 
 -(void) initNGL: (NSString *) fileName {
@@ -52,9 +65,11 @@
 }
 
 -(void) drawView {
-    mesh.rotateY += 1;
-    //mesh.rotateX += 2.5;
-    //mesh.rotateZ += 1.25;
+    //NSLog(@"%f", LVSliderX.maximumValue);
+    
+    mesh.rotateY = LVSliderY.value - 0.5*LVSliderY.maximumValue;
+    mesh.rotateX = LVSliderX.value - 0.5*LVSliderX.maximumValue;
+    mesh.rotateZ = LVSliderZ.value - 0.5*LVSliderZ.maximumValue;
     [camera drawCamera];
     //NSLog(@"camera drawn");
     

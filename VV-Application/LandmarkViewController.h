@@ -14,6 +14,11 @@
     NGLMesh *mesh;
     NGLCamera *camera;
 }
+
+@property(nonatomic, weak) IBOutlet UISlider *LVSliderX;
+@property(nonatomic, weak) IBOutlet UISlider *LVSliderY;
+@property(nonatomic, weak) IBOutlet UISlider *LVSliderZ;
+
 -(void) initNGL:(NSString *) fileName;
 
 @end
