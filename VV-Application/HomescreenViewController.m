@@ -7,6 +7,7 @@
 //
 
 #import "HomescreenViewController.h"
+#import "MapAnnotation.h"
 
 
 @interface HomescreenViewController ()
@@ -30,6 +31,7 @@ NSString* landmarkName;
 - (void)viewDidLoad {
     //HSSearchBar.prompt = @"Search for an insula";
     HSSlider.value = 0.34;
+    [self plotMapAnnotation:@"Venice" address:@"address" latitude:45.4333 longitude:12.3167];
     [self.HSScroller setContentSize: HSScrollerContent.frame.size];
     [self setInitialMapRegion];
     [super viewDidLoad];
@@ -40,6 +42,11 @@ NSString* landmarkName;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude {
+    MapAnnotation *annotation = [[MapAnnotation alloc] initWithName:name address:address latitude:latitude longitude:longitude];
+    [HSMapView addAnnotation:annotation];
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "IntermediateViewController.h"
+#import "MapAnnotation.h"
 
 @interface IntermediateViewController ()
 
@@ -34,5 +35,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end

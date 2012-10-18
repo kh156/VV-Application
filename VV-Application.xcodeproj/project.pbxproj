@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C462C7C162F828C006C451F /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C462C7B162F828C006C451F /* NinevehGL.framework */; };
+		6C462C7F162FC4B1006C451F /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C462C7E162FC4B1006C451F /* MapAnnotation.m */; };
 		6C65C100161EE5B0003A3823 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C65C0FF161EE5B0003A3823 /* ViewController.m */; };
 		6C6BF1AA162BD481002CB6D5 /* cube.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1A2162BD481002CB6D5 /* cube.mtl */; };
 		6C6BF1AB162BD481002CB6D5 /* cube.obj in Resources */ = {isa = PBXBuildFile; fileRef = 6C6BF1A3162BD481002CB6D5 /* cube.obj */; };
@@ -66,6 +67,8 @@
 
 /* Begin PBXFileReference section */
 		6C462C7B162F828C006C451F /* NinevehGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NinevehGL.framework; sourceTree = "<group>"; };
+		6C462C7D162FC4B1006C451F /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		6C462C7E162FC4B1006C451F /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		6C65C0FE161EE5B0003A3823 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6C65C0FF161EE5B0003A3823 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6C6BF1A2162BD481002CB6D5 /* cube.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cube.mtl; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 				6CE17853161EDE60007A6004 /* HomescreenViewController.m */,
 				6C65C0FE161EE5B0003A3823 /* ViewController.h */,
 				6C65C0FF161EE5B0003A3823 /* ViewController.m */,
+				6C462C7D162FC4B1006C451F /* MapAnnotation.h */,
+				6C462C7E162FC4B1006C451F /* MapAnnotation.m */,
 			);
 			name = HomescreenViews;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 				6C65C100161EE5B0003A3823 /* ViewController.m in Sources */,
 				6CC704D9162264AB007003C7 /* LandmarkViewController.m in Sources */,
 				6CC704E116237F83007003C7 /* InsulaViewController.m in Sources */,
+				6C462C7F162FC4B1006C451F /* MapAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

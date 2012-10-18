@@ -28,6 +28,7 @@ extern NSString* landmarkName;
 -(IBAction) slider_moved:(UISlider *)sender;
 -(void)setInitialMapRegion;
 -(IBAction) insulaSearch: (UIBarButtonItem *)sender;
+-(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude;
 
 
 
