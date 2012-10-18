@@ -10,7 +10,6 @@
 #import <NinevehGL/NinevehGL.h>
 
 
-
 @interface LandmarkViewController : UIViewController <NGLViewDelegate> {
     NGLMesh *mesh;
     NGLCamera *camera;
