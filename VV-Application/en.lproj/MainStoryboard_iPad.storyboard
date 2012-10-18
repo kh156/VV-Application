@@ -444,74 +444,90 @@
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="qPd-If-2aO">
-                                <rect key="frame" x="0.0" y="704" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Back" id="SU6-zk-oAz">
-                                        <connections>
-                                            <segue destination="jea-Ud-xDz" kind="modal" id="zU0-zB-WXU"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <navigationBar contentMode="scaleToFill" id="zrG-0L-uWo">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="VV - Virtual Space" id="iDt-fs-Gbb"/>
-                                </items>
-                            </navigationBar>
-                            <view contentMode="scaleToFill" id="alZ-sg-w4s" customClass="NGLView">
-                                <rect key="frame" x="187" y="50" width="650" height="650"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="iFe-pY-V8G">
+                                <rect key="frame" x="861" y="376" width="118" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="XGB-jl-qIr">
+                                <rect key="frame" x="861" y="433" width="118" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Kxo-Vc-yGh">
+                                <rect key="frame" x="861" y="495" width="118" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rotate X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gjK-Fv-IyP">
+                                <rect key="frame" x="899" y="347" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rotate Y" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Gi-Gq-NnX">
+                                <rect key="frame" x="899" y="406" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rotate Z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZJh-uf-VD2">
+                                <rect key="frame" x="899" y="463" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="V3n-1U-AnC">
+                                <rect key="frame" x="379" y="282" width="324" height="247"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="tRi-IO-7zJ">
-                                <rect key="frame" x="862" y="116" width="118" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="xEa-6t-3UU">
-                                <rect key="frame" x="862" y="178" width="118" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="LwD-x8-fRg">
-                                <rect key="frame" x="862" y="240" width="118" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rotate X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qOl-Ck-JLA">
-                                <rect key="frame" x="892" y="79" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rotate Y" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jDF-b9-VZC">
-                                <rect key="frame" x="892" y="149" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rotate Z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PBu-hx-CBF">
-                                <rect key="frame" x="892" y="211" width="66" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Kb1-ch-lDR" appends="YES" id="DZN-Pj-yWI"/>
+                            <outletCollection property="gestureRecognizers" destination="v6B-f8-c26" appends="YES" id="zeD-qX-yxa"/>
+                            <outletCollection property="gestureRecognizers" destination="9g0-Zr-YwC" appends="YES" id="7uJ-qD-jkk"/>
+                            <outletCollection property="gestureRecognizers" destination="dm0-G9-vuw" appends="YES" id="5QR-bj-xaD"/>
+                            <outletCollection property="gestureRecognizers" destination="NFD-ww-92c" appends="YES" id="cEn-Hd-Xgg"/>
+                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="LVSliderX" destination="tRi-IO-7zJ" id="F0h-En-j5p"/>
-                        <outlet property="LVSliderY" destination="xEa-6t-3UU" id="LHD-YL-9Py"/>
-                        <outlet property="LVSliderZ" destination="LwD-x8-fRg" id="Hq0-ST-Ixd"/>
+                        <outlet property="LVSliderX" destination="iFe-pY-V8G" id="1mq-vJ-PiM"/>
+                        <outlet property="LVSliderY" destination="XGB-jl-qIr" id="7xo-ep-l60"/>
+                        <outlet property="LVSliderZ" destination="Kxo-Vc-yGh" id="OS1-oB-YBW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zb-dC-C7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Kb1-ch-lDR" userLabel="Right Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="handleSwipeRight:" destination="uon-Db-xCE" id="9XZ-Pg-S4M"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="v6B-f8-c26" userLabel="Left Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="handleSwipeLeft:" destination="uon-Db-xCE" id="0BP-aN-nJz"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="9g0-Zr-YwC" userLabel="Up Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="handleSwipeUp:" destination="uon-Db-xCE" id="I6W-6n-qa0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="dm0-G9-vuw" userLabel="Down Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="handleSwipeDown:" destination="uon-Db-xCE" id="fs9-HJ-aTS"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <rotationGestureRecognizer id="NFD-ww-92c">
+                    <connections>
+                        <action selector="twoFingerRotate:" destination="uon-Db-xCE" id="mwd-pg-B5V"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2546" y="-577"/>
         </scene>
@@ -523,44 +539,26 @@
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N7t-EP-6ag">
-                                <rect key="frame" x="469" y="645" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="uon-Db-xCE" kind="modal" id="h36-je-Bvu"/>
-                                </connections>
-                            </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0m7-6y-CfD">
                                 <rect key="frame" x="0.0" y="704" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Insula Screen" id="pJl-N1-IFQ">
                                         <connections>
-                                            <segue destination="4Jl-kq-jZQ" kind="modal" id="moV-U1-6eP"/>
+                                            <segue destination="4Jl-kq-jZQ" kind="modal" id="xXK-Me-J8E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="3D Virtual Space" id="tVN-NU-dke">
+                                        <connections>
+                                            <segue destination="uon-Db-xCE" kind="modal" id="VXo-nb-P7H"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="vUs-Si-I4D">
-                                <rect key="frame" x="0.0" y="44" width="265" height="250"/>
+                                <rect key="frame" x="0.0" y="44" width="1024" height="622"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="1dx-F6-ONO">
-                                <rect key="frame" x="79" y="522" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <navigationBar contentMode="scaleToFill" id="Nic-cO-8cV">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -568,6 +566,10 @@
                                     <navigationItem title="VV - Landmark Screen" id="ZEn-AJ-Sao"/>
                                 </items>
                             </navigationBar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="OcG-kZ-S1k">
+                                <rect key="frame" x="207" y="674" width="369" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -618,15 +620,13 @@
         <class className="LandmarkViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LandmarkViewController.h"/>
             <relationships>
+                <relationship kind="action" name="handleSwipeDown:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="handleSwipeLeft:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="handleSwipeRight:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="handleSwipeUp:" candidateClass="UISwipeGestureRecognizer"/>
                 <relationship kind="outlet" name="LVSliderX" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="LVSliderY" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="LVSliderZ" candidateClass="UISlider"/>
-            </relationships>
-        </class>
-        <class className="NGLView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NGLView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="delegate"/>
             </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">
@@ -639,8 +639,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="moV-U1-6eP"/>
-        <segue reference="zU0-zB-WXU"/>
         <segue reference="44L-Qm-mBa"/>
+        <segue reference="xXK-Me-J8E"/>
+        <segue reference="jKQ-wf-zaH"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -72,7 +72,28 @@
     mesh.rotateZ = LVSliderZ.value - 0.5*LVSliderZ.maximumValue;
     [camera drawCamera];
     //NSLog(@"camera drawn");
-    
 }
 
-@end
+-(IBAction) handleSwipeRight:(UISwipeGestureRecognizer *) sender {
+    LVSliderY.value +=25;
+    NSLog(@"swiperight");
+}
+-(IBAction) handleSwipeLeft:(UISwipeGestureRecognizer *) sender {
+    LVSliderY.value -=25;
+    NSLog(@"swipeleft");
+}
+-(IBAction) handleSwipeUp:(UISwipeGestureRecognizer *) sender {
+    LVSliderX.value +=25;
+    
+    NSLog(@"swipeup");
+}
+-(IBAction) handleSwipeDown:(UISwipeGestureRecognizer *) sender {
+    LVSliderX.value -= 25;
+    NSLog(@"swipedown");
+}
+-(IBAction) twoFingerRotate:(UIRotationGestureRecognizer *) sender {
+    LVSliderZ.value = [sender rotation] * 180/3.14;
+    //NSLog(@"rotate");
+}
+
+ @end 
