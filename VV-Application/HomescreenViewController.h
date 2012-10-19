@@ -27,8 +27,9 @@ extern NSString* landmarkName;
 -(IBAction)insula_button_touch:(UIButton *)sender;
 -(IBAction) slider_moved:(UISlider *)sender;
 -(void)setInitialMapRegion;
--(IBAction) insulaSearch: (UIBarButtonItem *)sender;
--(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude;
+-(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude;
+-(IBAction)insulaSearch:(UIBarButtonItem *) sender;
+-(void) zoomOnAnnotation;
 
 
 

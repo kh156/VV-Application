@@ -36,12 +36,10 @@
     [self.IVScroller setContentSize: IVScrollerContent.frame.size];
     [self setInitialMapRegion];
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude {
@@ -70,6 +68,33 @@
     mapRegion.span.latitudeDelta = 0.035;
     mapRegion.span.longitudeDelta = 0.035;
     [IVMapView setRegion:mapRegion animated: YES];
+}
+
+-(IBAction)landmarkSearch: (UIBarButtonItem *)sender {
+    // if sender.text matches name of insula....
+    [IVButton setTitle: IVSearchBar.text forState: UIControlStateNormal];
+    //pull overview description from core data and load it into textview
+    NSString* description = @"";
+    [IVSummary setText: description];
+    [self zoomOnAnnotation];
+}
+
+-(void) zoomOnAnnotation {
+    for  (MapAnnotation *annotation in IVMapView.annotations) {
+        NSString *name = [annotation title];
+        if ([name isEqualToString: IVSearchBar.text]) {
+            //TODO: MAKE SURE NAME NOT EQUAL TO Current Location!
+            NSLog(@"%@", @"match!");
+            MKCoordinateRegion mapRegion;
+            mapRegion.center.latitude = annotation.coordinate.latitude;
+            mapRegion.center.longitude = annotation.coordinate.longitude;
+            mapRegion.span.latitudeDelta = 0.0005;
+            mapRegion.span.longitudeDelta = 0.0005;
+            [IVSlider setValue: 0.0005/0.1];
+            [IVMapView setRegion:mapRegion animated: YES];
+            
+        }
+    }
 }
 
 @end

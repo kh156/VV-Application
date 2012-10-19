@@ -328,11 +328,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="VV - Insula Name" id="k4e-ea-q2B"/>
+                                    <navigationItem title="VV - Insula Name" id="k4e-ea-q2B">
+                                        <barButtonItem key="rightBarButtonItem" title="Search" id="zfm-MQ-7xr">
+                                            <connections>
+                                                <action selector="landmarkSearch:" destination="4Jl-kq-jZQ" id="zME-Wf-HHp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <searchBar contentMode="redraw" id="0o2-gb-6N9">
-                                <rect key="frame" x="786" y="0.0" width="238" height="44"/>
+                                <rect key="frame" x="678.5" y="0.0" width="275" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -532,7 +538,7 @@
         <class className="HomescreenViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomescreenViewController.h"/>
             <relationships>
-                <relationship kind="action" name="insulaSearch:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="insulaSearch:" candidateClass="UIButton"/>
                 <relationship kind="action" name="insula_button_touch:" candidateClass="UIButton"/>
                 <relationship kind="action" name="slider_moved:" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="HSButton" candidateClass="UIButton"/>
@@ -547,6 +553,7 @@
         <class className="InsulaViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InsulaViewController.h"/>
             <relationships>
+                <relationship kind="action" name="landmarkSearch:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="action" name="landmark_button_touch:" candidateClass="UIButton"/>
                 <relationship kind="action" name="slider_moved:" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="IVButton" candidateClass="UIButton"/>
