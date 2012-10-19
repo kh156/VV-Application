@@ -444,39 +444,6 @@
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="iFe-pY-V8G">
-                                <rect key="frame" x="861" y="376" width="118" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="XGB-jl-qIr">
-                                <rect key="frame" x="861" y="433" width="118" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Kxo-Vc-yGh">
-                                <rect key="frame" x="861" y="495" width="118" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rotate X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gjK-Fv-IyP">
-                                <rect key="frame" x="899" y="347" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rotate Y" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Gi-Gq-NnX">
-                                <rect key="frame" x="899" y="406" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rotate Z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZJh-uf-VD2">
-                                <rect key="frame" x="899" y="463" width="66" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" id="V3n-1U-AnC">
                                 <rect key="frame" x="379" y="282" width="324" height="247"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -488,46 +455,23 @@
                         <gestureRecognizers/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="Kb1-ch-lDR" appends="YES" id="DZN-Pj-yWI"/>
-                            <outletCollection property="gestureRecognizers" destination="v6B-f8-c26" appends="YES" id="zeD-qX-yxa"/>
-                            <outletCollection property="gestureRecognizers" destination="9g0-Zr-YwC" appends="YES" id="7uJ-qD-jkk"/>
-                            <outletCollection property="gestureRecognizers" destination="dm0-G9-vuw" appends="YES" id="5QR-bj-xaD"/>
                             <outletCollection property="gestureRecognizers" destination="NFD-ww-92c" appends="YES" id="cEn-Hd-Xgg"/>
+                            <outletCollection property="gestureRecognizers" destination="4T7-zm-GOg" appends="YES" id="khw-KS-OY7"/>
                         </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="LVSliderX" destination="iFe-pY-V8G" id="1mq-vJ-PiM"/>
-                        <outlet property="LVSliderY" destination="XGB-jl-qIr" id="7xo-ep-l60"/>
-                        <outlet property="LVSliderZ" destination="Kxo-Vc-yGh" id="OS1-oB-YBW"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zb-dC-C7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="Kb1-ch-lDR" userLabel="Right Swipe Gesture Recognizer">
-                    <connections>
-                        <action selector="handleSwipeRight:" destination="uon-Db-xCE" id="9XZ-Pg-S4M"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="v6B-f8-c26" userLabel="Left Swipe Gesture Recognizer">
-                    <connections>
-                        <action selector="handleSwipeLeft:" destination="uon-Db-xCE" id="0BP-aN-nJz"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="up" id="9g0-Zr-YwC" userLabel="Up Swipe Gesture Recognizer">
-                    <connections>
-                        <action selector="handleSwipeUp:" destination="uon-Db-xCE" id="I6W-6n-qa0"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="down" id="dm0-G9-vuw" userLabel="Down Swipe Gesture Recognizer">
-                    <connections>
-                        <action selector="handleSwipeDown:" destination="uon-Db-xCE" id="fs9-HJ-aTS"/>
-                    </connections>
-                </swipeGestureRecognizer>
                 <rotationGestureRecognizer id="NFD-ww-92c">
                     <connections>
                         <action selector="twoFingerRotate:" destination="uon-Db-xCE" id="mwd-pg-B5V"/>
                     </connections>
                 </rotationGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="4T7-zm-GOg">
+                    <connections>
+                        <action selector="panHorizontal:" destination="uon-Db-xCE" id="Wa5-VG-kly"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2546" y="-577"/>
         </scene>
@@ -620,13 +564,8 @@
         <class className="LandmarkViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LandmarkViewController.h"/>
             <relationships>
-                <relationship kind="action" name="handleSwipeDown:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="action" name="handleSwipeLeft:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="action" name="handleSwipeRight:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="action" name="handleSwipeUp:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="outlet" name="LVSliderX" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="LVSliderY" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="LVSliderZ" candidateClass="UISlider"/>
+                <relationship kind="action" name="panHorizontal:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="action" name="twoFingerRotate:" candidateClass="UIRotationGestureRecognizer"/>
             </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">

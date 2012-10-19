@@ -15,9 +15,9 @@
     NGLCamera *camera;
 }
 
-@property(nonatomic, weak) IBOutlet UISlider *LVSliderX;
-@property(nonatomic, weak) IBOutlet UISlider *LVSliderY;
-@property(nonatomic, weak) IBOutlet UISlider *LVSliderZ;
+@property float rotateX;
+@property float rotateY;
+@property float rotateZ;
 
 -(void) initNGL:(NSString *) fileName;
 
