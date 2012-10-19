@@ -214,6 +214,26 @@
 			name = InsulaViews;
 			sourceTree = "<group>";
 		};
+		6CCF209F1630F1B600FA13CF /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				6CE17843161EDE60007A6004 /* AppDelegate.h */,
+				6CE17844161EDE60007A6004 /* AppDelegate.m */,
+				6C462C7D162FC4B1006C451F /* MapAnnotation.h */,
+				6C462C7E162FC4B1006C451F /* MapAnnotation.m */,
+			);
+			name = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		6CCF20A11630F1D300FA13CF /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				6C65C0FE161EE5B0003A3823 /* ViewController.h */,
+				6C65C0FF161EE5B0003A3823 /* ViewController.m */,
+			);
+			name = Credits;
+			sourceTree = "<group>";
+		};
 		6CE17825161EDE60007A6004 = {
 			isa = PBXGroup;
 			children = (
@@ -254,8 +274,7 @@
 		6CE1783A161EDE60007A6004 /* VV-Application */ = {
 			isa = PBXGroup;
 			children = (
-				6CE17843161EDE60007A6004 /* AppDelegate.h */,
-				6CE17844161EDE60007A6004 /* AppDelegate.m */,
+				6CCF209F1630F1B600FA13CF /* Miscellaneous */,
 				6CC704E316237F8A007003C7 /* InsulaViews */,
 				6CC704DA162264B4007003C7 /* LandmarkViews */,
 				6CE17875161EDF73007A6004 /* IntermediateViews */,
@@ -311,10 +330,7 @@
 			children = (
 				6CE17852161EDE60007A6004 /* HomescreenViewController.h */,
 				6CE17853161EDE60007A6004 /* HomescreenViewController.m */,
-				6C65C0FE161EE5B0003A3823 /* ViewController.h */,
-				6C65C0FF161EE5B0003A3823 /* ViewController.m */,
-				6C462C7D162FC4B1006C451F /* MapAnnotation.h */,
-				6C462C7E162FC4B1006C451F /* MapAnnotation.m */,
+				6CCF20A11630F1D300FA13CF /* Credits */,
 			);
 			name = HomescreenViews;
 			sourceTree = "<group>";

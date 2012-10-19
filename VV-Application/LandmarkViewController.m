@@ -30,7 +30,6 @@
     [self initNGL: @"house.obj"];
 }
 
-
 -(void) initNGL: (NSString *) fileName {
     NGLView *theView = [[NGLView alloc] initWithFrame:CGRectMake(185, 50, 650, 650)];
     theView.delegate = self;
@@ -45,7 +44,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void) drawView {
@@ -57,8 +55,8 @@
 
 -(IBAction) twoFingerRotate:(UIRotationGestureRecognizer *) sender {
     rotateZ = [sender rotation] * 180/3.14;
-    //NSLog(@"rotate");
 }
+
 -(IBAction) panHorizontal:(UIPanGestureRecognizer *) sender {
     rotateY += [sender velocityInView: self.view].x / 100.0;
     rotateX += [sender velocityInView: self.view].y / 100.0;
