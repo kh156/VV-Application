@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		088D39C1163404D0003EA63D /* VV-Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 088D39BF163404D0003EA63D /* VV-Application.xcdatamodeld */; };
+		088D39C516340558003EA63D /* Monument.m in Sources */ = {isa = PBXBuildFile; fileRef = 088D39C416340558003EA63D /* Monument.m */; };
+		088D39C81634059B003EA63D /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 088D39C71634059B003EA63D /* CoreData.m */; };
 		6C462C7C162F828C006C451F /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C462C7B162F828C006C451F /* NinevehGL.framework */; };
 		6C462C7F162FC4B1006C451F /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C462C7E162FC4B1006C451F /* MapAnnotation.m */; };
 		6C65C100161EE5B0003A3823 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C65C0FF161EE5B0003A3823 /* ViewController.m */; };
@@ -66,6 +69,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		088D39C0163404D0003EA63D /* VV-Application.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "VV-Application.xcdatamodel"; sourceTree = "<group>"; };
+		088D39C316340558003EA63D /* Monument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monument.h; sourceTree = "<group>"; };
+		088D39C416340558003EA63D /* Monument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monument.m; sourceTree = "<group>"; };
+		088D39C71634059B003EA63D /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreData.m; sourceTree = "<group>"; };
+		088D39CD163405C0003EA63D /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
 		6C462C7B162F828C006C451F /* NinevehGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NinevehGL.framework; sourceTree = "<group>"; };
 		6C462C7D162FC4B1006C451F /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 		6C462C7E162FC4B1006C451F /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
@@ -156,6 +164,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		088D39C616340564003EA63D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				088D39CD163405C0003EA63D /* CoreData.h */,
+				088D39C71634059B003EA63D /* CoreData.m */,
+				088D39C316340558003EA63D /* Monument.h */,
+				088D39C416340558003EA63D /* Monument.m */,
+				088D39BF163404D0003EA63D /* VV-Application.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		6C6BF1A1162BD481002CB6D5 /* Cube */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +294,7 @@
 		6CE1783A161EDE60007A6004 /* VV-Application */ = {
 			isa = PBXGroup;
 			children = (
+				088D39C616340564003EA63D /* CoreData */,
 				6CCF209F1630F1B600FA13CF /* Miscellaneous */,
 				6CC704E316237F8A007003C7 /* InsulaViews */,
 				6CC704DA162264B4007003C7 /* LandmarkViews */,
@@ -494,6 +515,9 @@
 				6CC704D9162264AB007003C7 /* LandmarkViewController.m in Sources */,
 				6CC704E116237F83007003C7 /* InsulaViewController.m in Sources */,
 				6C462C7F162FC4B1006C451F /* MapAnnotation.m in Sources */,
+				088D39C1163404D0003EA63D /* VV-Application.xcdatamodeld in Sources */,
+				088D39C516340558003EA63D /* Monument.m in Sources */,
+				088D39C81634059B003EA63D /* CoreData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +736,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		088D39BF163404D0003EA63D /* VV-Application.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				088D39C0163404D0003EA63D /* VV-Application.xcdatamodel */,
+			);
+			currentVersion = 088D39C0163404D0003EA63D /* VV-Application.xcdatamodel */;
+			path = "VV-Application.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6CE17827161EDE60007A6004 /* Project object */;
 }
