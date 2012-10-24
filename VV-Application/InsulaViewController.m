@@ -83,8 +83,7 @@
     for  (MapAnnotation *annotation in IVMapView.annotations) {
         NSString *name = [annotation title];
         if ([name isEqualToString: IVSearchBar.text]) {
-            //TODO: MAKE SURE NAME NOT EQUAL TO Current Location!
-            NSLog(@"%@", @"match!");
+            //TODO: MAKE SURE NAME NOT EQUAL TO "Current Location"!
             MKCoordinateRegion mapRegion;
             mapRegion.center.latitude = annotation.coordinate.latitude;
             mapRegion.center.longitude = annotation.coordinate.longitude;

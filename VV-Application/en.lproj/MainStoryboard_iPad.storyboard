@@ -456,6 +456,24 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                             </view>
+                            <navigationBar contentMode="scaleToFill" id="EBK-HT-yNW">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="VV - 3D Virtual Space" id="PKf-iN-2di"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6IV-I6-7eZ">
+                                <rect key="frame" x="0.0" y="704" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Back" id="lAN-pf-Tru">
+                                        <connections>
+                                            <segue destination="jea-Ud-xDz" kind="modal" id="bwr-V0-23C"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.29803921570000003" green="0.40000000000000002" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -538,7 +556,7 @@
         <class className="HomescreenViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomescreenViewController.h"/>
             <relationships>
-                <relationship kind="action" name="insulaSearch:" candidateClass="UIButton"/>
+                <relationship kind="action" name="insulaSearch:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="action" name="insula_button_touch:" candidateClass="UIButton"/>
                 <relationship kind="action" name="slider_moved:" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="HSButton" candidateClass="UIButton"/>
@@ -587,6 +605,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="44L-Qm-mBa"/>
         <segue reference="xXK-Me-J8E"/>
-        <segue reference="jKQ-wf-zaH"/>
+        <segue reference="bwr-V0-23C"/>
     </inferredMetricsTieBreakers>
 </document>

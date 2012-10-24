@@ -83,7 +83,6 @@ NSString* landmarkName;
         NSString *name = [annotation title];
         if ([name isEqualToString: HSSearchBar.text]) {
             //TODO: MAKE SURE NAME NOT EQUAL TO Current Location!
-            NSLog(@"%@", @"match!");
             MKCoordinateRegion mapRegion;
             mapRegion.center.latitude = annotation.coordinate.latitude;
             mapRegion.center.longitude = annotation.coordinate.longitude;
