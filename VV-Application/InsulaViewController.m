@@ -26,6 +26,37 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        self.coreData = ((AppDelegate *)UIApplication.sharedApplication.delegate).coreData;
+        
+        // Sample code for insert and fetch data
+
+/*
+        // insert query
+        Monument *entity = (Monument *)[NSEntityDescription insertNewObjectForEntityForName:@"Monument"
+                                                                     inManagedObjectContext:self.coreData.managedObjectContext];
+        [entity setText_intro:@"blabla"];
+        [entity setImage_intro:@"imageDirectory"];
+        
+        // fetch query
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        NSEntityDescription *des = [NSEntityDescription entityForName:@"Monument"
+                                               inManagedObjectContext:self.coreData.managedObjectContext];
+        [request setEntity:des];
+        NSPredicate *query = [NSPredicate predicateWithFormat:@"text_intro == %@", @"blabla"];
+        [request setPredicate:query];
+        NSError *error = nil;
+        NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:&error];
+        if (fetchResults == nil) {
+            NSLog(@"Error retrieving Reminders");
+        }
+        else if([fetchResults count] > 0) {
+            NSLog(@"%@", ((Monument *)[fetchResults objectAtIndex:0]).text_intro);
+        }
+        else {
+            NSLog(@"Did not fetch anything");
+        }
+*/
     }
     return self;
 }
