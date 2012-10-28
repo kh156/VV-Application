@@ -588,10 +588,6 @@
         </class>
         <class className="LandmarkViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LandmarkViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="panHorizontal:" candidateClass="UIPanGestureRecognizer"/>
-                <relationship kind="action" name="twoFingerRotate:" candidateClass="UIRotationGestureRecognizer"/>
-            </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
