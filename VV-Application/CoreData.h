@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Monument.h"
+#import "Landmark.h"
 
 @interface CoreData : NSObject
 
