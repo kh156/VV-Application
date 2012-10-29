@@ -26,12 +26,15 @@ NSString* landmarkName;
 @synthesize HSMapView;
 @synthesize HSSearchBar;
 @synthesize HSSlider;
+@synthesize HSButton1, HSButton2, HSButton3, HSButton4, HSButton5, HSButton6, HSButton7, HSButton8, HSButton9, HSButton10;
 
 - (void)viewDidLoad {
     //HSSearchBar.prompt = @"Search for an insula";
     //[HSSlider setMaximumValue:10];
     [HSSlider setValue: 0.34];
     [self plotMapAnnotation:@"Venice" address:@"description of Venice blah blah blah" latitude:45.4333 longitude:12.3167];
+    //[self plotMapAnnotations];
+    //[self initInsulaButtons];
     [self.HSScroller setContentSize: HSScrollerContent.frame.size];
     [self setInitialMapRegion];
     [super viewDidLoad];
@@ -40,6 +43,25 @@ NSString* landmarkName;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+-(NSArray *) insulaButtonArray {
+    NSArray *insulaButtons =  [[NSArray alloc] initWithObjects: HSButton1, HSButton2, HSButton3, HSButton4, HSButton5, HSButton5, HSButton6, HSButton7, HSButton8, HSButton9, HSButton10, nil];
+    return insulaButtons;
+}
+
+/*-(void) initInsulaButtons {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName: @"Insula" inManagedObjectContext: self.coreData.managedObjectContext];
+    [request setEntity:des];
+    NSError *error = nil;
+    NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    int count = 0;
+    NSArray *insulaButtons = [self insulaButtonArray];
+    for (Landmark *lmark in fetchResults) {
+        //Add error thing here if array size too small or big....
+        [insulaButtons[count] setTitle: [lmark getInsulaName] forState:UIControlStateNormal];
+    }
+}*/
 
 /*-(void) plotMapAnnotations {
  NSFetchRequest *request = [[NSFetchRequest alloc] init];
