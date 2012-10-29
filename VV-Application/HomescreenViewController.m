@@ -41,6 +41,19 @@ NSString* landmarkName;
     [super didReceiveMemoryWarning];
 }
 
+/*-(void) plotMapAnnotations {
+ NSFetchRequest *request = [[NSFetchRequest alloc] init];
+ NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.coreData.managedObjectContext];
+ [request setEntity:des];
+ //    NSPredicate *query = [NSPredicate predicateWithFormat:@""];
+ //    [request setPredicate:NULL];
+ NSError *error = nil;
+ NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:&error];
+ for (Landmark *lmark in fetchResults) {
+ plotMapAnnotation: [lmark getName] address: [lmark getDescription] latitude: [lmark getLatitude] longitude: [lmark getLongitude];
+ }
+ } */
+
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude {
     MapAnnotation *annotation = [[MapAnnotation alloc] initWithName:name address:address latitude:latitude longitude:longitude];
     [HSMapView addAnnotation:annotation];

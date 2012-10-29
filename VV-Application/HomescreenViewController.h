@@ -30,6 +30,7 @@ extern NSString* landmarkName;
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude;
 -(IBAction)insulaSearch:(UIBarButtonItem *) sender;
 -(void) zoomOnAnnotation;
+//-(void) plotMapAnnotations
 
 
 
