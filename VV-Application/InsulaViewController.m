@@ -21,52 +21,51 @@
 @synthesize IVButton;
 @synthesize IVSearchBar;
 @synthesize IVSlider;
+@synthesize coreData = _coreData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
         
-        self.coreData = ((AppDelegate *)UIApplication.sharedApplication.delegate).coreData;
         
         // Sample code for insert and fetch data
-
-/*
-        // insert query
-        Monument *entity = (Monument *)[NSEntityDescription insertNewObjectForEntityForName:@"Monument"
-                                                                     inManagedObjectContext:self.coreData.managedObjectContext];
-        [entity setText_intro:@"blabla"];
-        [entity setImage_intro:@"imageDirectory"];
         
         // fetch query
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
-        NSEntityDescription *des = [NSEntityDescription entityForName:@"Monument"
+        NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark"
                                                inManagedObjectContext:self.coreData.managedObjectContext];
         [request setEntity:des];
-        NSPredicate *query = [NSPredicate predicateWithFormat:@"text_intro == %@", @"blabla"];
+        NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", @"XXXXX"];
         [request setPredicate:query];
-        NSError *error = nil;
-        NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:&error];
+        NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:NULL];
         if (fetchResults == nil) {
             NSLog(@"Error retrieving Reminders");
         }
         else if([fetchResults count] > 0) {
-            NSLog(@"%@", ((Monument *)[fetchResults objectAtIndex:0]).text_intro);
+            NSLog(@"%@", ((Landmark *)[fetchResults objectAtIndex:0]).landmark_name);
         }
         else {
             NSLog(@"Did not fetch anything");
         }
-*/
+
     }
     return self;
 }
 
+- (CoreData *)coreData {
+    if (_coreData == NULL) {
+        _coreData = ((AppDelegate *)UIApplication.sharedApplication.delegate).coreData;
+    }
+    return _coreData;
+}
+
 - (void)viewDidLoad {
+    [super viewDidLoad];
     [self.IVSlider setValue: 0.34];
     [self plotMapAnnotation:@"Venice" address:@"address" latitude:45.4333 longitude:12.3167];
     [self.IVScroller setContentSize: IVScrollerContent.frame.size];
     [self setInitialMapRegion];
-    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
