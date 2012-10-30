@@ -63,7 +63,8 @@ NSString* landmarkName;
     }
 }*/
 
-/*-(void) plotMapAnnotations {
+/*
+-(void) plotMapAnnotations {
  NSFetchRequest *request = [[NSFetchRequest alloc] init];
  NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.coreData.managedObjectContext];
  [request setEntity:des];
@@ -106,11 +107,26 @@ NSString* landmarkName;
 
 -(IBAction)insulaSearch: (UIBarButtonItem *)sender {
     // if sender.text matches name of insula....
-    [HSButton setTitle: HSSearchBar.text forState: UIControlStateNormal];
-    //pull overview description from core data and load it into textview
-    NSString* description = @"";
-    [HSSummary setText: description];
-    [self zoomOnAnnotation];
+    for (MapAnnotation *annotation in HSMapView.annotations) {
+        NSString *name = [annotation title];
+        if ([name isEqualToString: HSSearchBar.text]) {
+            [HSButton setTitle: HSSearchBar.text forState: UIControlStateNormal];
+    
+            /* NSFetchRequest *request = [[NSFetchRequest alloc] init];
+            NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula"inManagedObjectContext:self.coreData.managedObjectContext];
+            [request setEntity:des];
+            NSPredicate *query = [NSPredicate predicateWithFormat:name];
+            [request setPredicate:query;
+            NSError *error = nil;
+            NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:&error];
+            
+            //pull overview description from core data and load it into textview
+            NSString* description = [fetchResults[0] getDescription]; */
+            //[HSSummary setText: description];
+            [self zoomOnAnnotation];
+            
+        }
+    }
 }
 
 -(void) zoomOnAnnotation {
