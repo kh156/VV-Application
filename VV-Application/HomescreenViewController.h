@@ -36,7 +36,7 @@ extern NSString* landmarkName;
 @property(nonatomic, weak) IBOutlet UIButton *HSButton9;
 @property(nonatomic, weak) IBOutlet UIButton *HSButton10;
 
-@property(nonatomic, weak) CoreData *coreData;
+@property(nonatomic, weak) AppDelegate *myApp;
 
 
 -(IBAction)insula_button_touch:(UIButton *)sender;

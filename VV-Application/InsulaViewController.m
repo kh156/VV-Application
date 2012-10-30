@@ -62,9 +62,9 @@
         [self plotMapAnnotation:lmark.landmark_name address:lmark.landmark_annotation_description latitude:lmark.latitude.doubleValue longitude:lmark.longitude.doubleValue];
     }
     
-    lmark = [fetchResults objectAtIndex:0];
-    UIImage* image = [self.myApp.lib getImageFromFile:lmark.landmark_general_picture];
-    NSString* string = [self.myApp.lib getStringFromFile:lmark.landmark_general_description];
+    //lmark = [fetchResults objectAtIndex:0];
+   // UIImage* image = [self.myApp.lib getImageFromFile:lmark.landmark_general_picture];
+    //NSString* string = [self.myApp.lib getStringFromFile:lmark.landmark_general_description];
 } 
 
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude {

@@ -8,6 +8,7 @@
 
 #import "HomescreenViewController.h"
 #import "MapAnnotation.h"
+#import "Insula.h"
 
 
 @interface HomescreenViewController ()
@@ -40,6 +41,13 @@ NSString* landmarkName;
     [super viewDidLoad];
 }
 
+- (AppDelegate *)myApp {
+    if (_myApp == NULL) {
+        _myApp = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    }
+    return _myApp;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -63,19 +71,19 @@ NSString* landmarkName;
     }
 }*/
 
-/*
 -(void) plotMapAnnotations {
- NSFetchRequest *request = [[NSFetchRequest alloc] init];
- NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.coreData.managedObjectContext];
- [request setEntity:des];
- //    NSPredicate *query = [NSPredicate predicateWithFormat:@""];
- //    [request setPredicate:NULL];
- NSError *error = nil;
- NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:&error];
- for (Landmark *lmark in fetchResults) {
- plotMapAnnotation: [lmark getName] address: [lmark getDescription] latitude: [lmark getLatitude] longitude: [lmark getLongitude];
- }
- } */
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    [request setEntity:des];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", @"XXXXX"];
+    [request setPredicate:query];
+    NSError *error = nil;
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    Insula *insulaData;
+    for (insulaData in fetchResults) {
+        [self plotMapAnnotation:insulaData.insula_name address:insulaData.insula_annotation_description latitude:insulaData.latitude.doubleValue longitude:insulaData.longitude.doubleValue];
+    }
+}
 
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude {
     MapAnnotation *annotation = [[MapAnnotation alloc] initWithName:name address:address latitude:latitude longitude:longitude];
