@@ -81,7 +81,7 @@ NSString* landmarkName;
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     if (fetchResults == nil) {
-        //do nothing
+        //handle error?
     }
     Insula *insulaData;
     for (insulaData in fetchResults) {
