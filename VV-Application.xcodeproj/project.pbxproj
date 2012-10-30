@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0803A709163FB7D80018474F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0803A708163FB7D70018474F /* MediaPlayer.framework */; };
+		0803A70C163FB8000018474F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0803A70B163FB8000018474F /* AudioToolbox.framework */; };
 		088118F5163DCB30002916E7 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 088118F0163DCB30002916E7 /* CoreData.m */; };
 		088118F7163DCB30002916E7 /* VV-Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 088118F3163DCB30002916E7 /* VV-Application.xcdatamodeld */; };
+		08B2CAE7163F9F230004F2EA /* PublicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2CAE6163F9F230004F2EA /* PublicLibrary.m */; };
 		08F659A6163E3C8C00ACFAB6 /* Insula.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659A5163E3C8C00ACFAB6 /* Insula.m */; };
 		08F659A9163E516600ACFAB6 /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659A8163E516500ACFAB6 /* Landmark.m */; };
 		08F659AC163E516C00ACFAB6 /* Clickables.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659AB163E516C00ACFAB6 /* Clickables.m */; };
@@ -73,9 +76,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0803A708163FB7D70018474F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0803A70B163FB8000018474F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		088118EF163DCB30002916E7 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
 		088118F0163DCB30002916E7 /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreData.m; sourceTree = "<group>"; };
 		088118F4163DCB30002916E7 /* VV-Application.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "VV-Application.xcdatamodel"; sourceTree = "<group>"; };
+		08B2CAE5163F9F230004F2EA /* PublicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicLibrary.h; sourceTree = "<group>"; };
+		08B2CAE6163F9F230004F2EA /* PublicLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicLibrary.m; sourceTree = "<group>"; };
 		08F659A4163E3C8C00ACFAB6 /* Insula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insula.h; sourceTree = "<group>"; };
 		08F659A5163E3C8C00ACFAB6 /* Insula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insula.m; sourceTree = "<group>"; };
 		08F659A7163E516500ACFAB6 /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
@@ -148,6 +155,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0803A70C163FB8000018474F /* AudioToolbox.framework in Frameworks */,
+				0803A709163FB7D80018474F /* MediaPlayer.framework in Frameworks */,
 				6C462C7C162F828C006C451F /* NinevehGL.framework in Frameworks */,
 				6CDFD6A1162BCC310018676A /* QuartzCore.framework in Frameworks */,
 				6CDFD69E162BCC2B0018676A /* OpenGLES.framework in Frameworks */,
@@ -250,6 +259,8 @@
 		6CCF209F1630F1B600FA13CF /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
+				08B2CAE5163F9F230004F2EA /* PublicLibrary.h */,
+				08B2CAE6163F9F230004F2EA /* PublicLibrary.m */,
 				6CE17843161EDE60007A6004 /* AppDelegate.h */,
 				6CE17844161EDE60007A6004 /* AppDelegate.m */,
 				6C462C7D162FC4B1006C451F /* MapAnnotation.h */,
@@ -289,6 +300,8 @@
 		6CE17833161EDE60007A6004 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0803A70B163FB8000018474F /* AudioToolbox.framework */,
+				0803A708163FB7D70018474F /* MediaPlayer.framework */,
 				6C462C7B162F828C006C451F /* NinevehGL.framework */,
 				6CDFD6A0162BCC310018676A /* QuartzCore.framework */,
 				6CDFD69D162BCC2B0018676A /* OpenGLES.framework */,
@@ -535,6 +548,7 @@
 				08F659A6163E3C8C00ACFAB6 /* Insula.m in Sources */,
 				08F659A9163E516600ACFAB6 /* Landmark.m in Sources */,
 				08F659AC163E516C00ACFAB6 /* Clickables.m in Sources */,
+				08B2CAE7163F9F230004F2EA /* PublicLibrary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +671,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VV-Application/VV-Application-Prefix.pch";
 				INFOPLIST_FILE = "VV-Application/VV-Application-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../ninevehgl_beta_0/NinevehGL_0_9_3/NinevehGL Samples/Augmented Reality/Externals/Qualcomm\"",
@@ -679,6 +694,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VV-Application/VV-Application-Prefix.pch";
 				INFOPLIST_FILE = "VV-Application/VV-Application-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../ninevehgl_beta_0/NinevehGL_0_9_3/NinevehGL Samples/Augmented Reality/Externals/Qualcomm\"",

@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import "AppDelegate.h"
 
 @interface IntermediateViewController : UIViewController
+
+@property (weak, nonatomic) AppDelegate *myApp;
+
+#pragma mark -
+#pragma mark play video
+-(void) playVideo:(NSString *) filename;
+- (void) playbackDidFinish:(NSNotification*)aNotification;
 
 @end

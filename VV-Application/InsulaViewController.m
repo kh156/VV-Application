@@ -21,7 +21,7 @@
 @synthesize IVButton;
 @synthesize IVSearchBar;
 @synthesize IVSlider;
-@synthesize coreData = _coreData;
+@synthesize myApp = _myApp;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,11 +30,11 @@
     return self;
 }
 
-- (CoreData *)coreData {
-    if (_coreData == NULL) {
-        _coreData = ((AppDelegate *)UIApplication.sharedApplication.delegate).coreData;
+- (AppDelegate *)myApp {
+    if (_myApp == NULL) {
+        _myApp = (AppDelegate *)[UIApplication sharedApplication].delegate;
     }
-    return _coreData;
+    return _myApp;
 }
 
 - (void)viewDidLoad {
@@ -51,15 +51,20 @@
 
 -(void) plotMapAnnotations {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.coreData.managedObjectContext];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
     NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", @"XXXXX"];
     [request setPredicate:query];
     NSError *error = nil;
-    NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:&error];
-    for (Landmark *lmark in fetchResults) { 
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    Landmark *lmark;
+    for (lmark in fetchResults) {
         [self plotMapAnnotation:lmark.landmark_name address:lmark.landmark_annotation_description latitude:lmark.latitude.doubleValue longitude:lmark.longitude.doubleValue];
     }
+    
+    lmark = [fetchResults objectAtIndex:0];
+    UIImage* image = [self.myApp.lib getImageFromFile:lmark.landmark_general_picture];
+    NSString* string = [self.myApp.lib getStringFromFile:lmark.landmark_general_description];
 } 
 
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude {

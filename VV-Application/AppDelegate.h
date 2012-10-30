@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreData.h"
+#import "PublicLibrary.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) CoreData *coreData;
-
+@property (strong, nonatomic) PublicLibrary *lib;
 @end

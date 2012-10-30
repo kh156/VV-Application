@@ -11,13 +11,14 @@
 @implementation AppDelegate
 
 @synthesize window;
-@synthesize coreData = _coreData;
+@synthesize coreData, lib;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     
-    self.coreData = [[CoreData alloc] init];
+    coreData = [[CoreData alloc] init];
+    lib = [[PublicLibrary alloc] init];
     
     return YES;
 }
