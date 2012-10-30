@@ -35,8 +35,8 @@
         <relationship name="insula" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Insula" inverseName="landmarks" inverseEntity="Insula" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Landmark" positionX="-362" positionY="-9" width="128" height="253"/>
-        <element name="Insula" positionX="-117" positionY="135" width="128" height="148"/>
         <element name="Clickables" positionX="160" positionY="-72" width="128" height="148"/>
+        <element name="Insula" positionX="-117" positionY="135" width="189" height="148"/>
+        <element name="Landmark" positionX="-362" positionY="-9" width="200" height="253"/>
     </elements>
 </model>

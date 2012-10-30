@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Landmark.h"
+#import "Insula.h"
 
 @interface CoreData : NSObject
 
@@ -15,6 +16,9 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+- (void)initializeData;
+- (void)initializeInsula;
+- (void)initializeLandmark:(Insula *)myInsula;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 

@@ -15,8 +15,53 @@
 
 - (id)init {
     if (self = [super init]) {
+        [self initializeData];
     }
     return self;
+}
+
+- (void)initializeData {
+    [self initializeInsula];
+}
+
+- (void)initializeInsula {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.managedObjectContext];
+    [request setEntity:des];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", @"Gesuiti"];
+    [request setPredicate:query];
+    NSArray *fetchResults = [self.managedObjectContext executeFetchRequest:request error:NULL];
+    if (fetchResults.count == 0) {
+        Insula *gesuiti = (Insula *)[NSEntityDescription insertNewObjectForEntityForName:@"Insula"
+                                                                  inManagedObjectContext:self.managedObjectContext];
+        [gesuiti setInsula_name:@"Gesuiti"];
+        [gesuiti setInsula_annotation_description:@"Gesuiti_annotation_description.txt"];
+        [gesuiti setInsula_general_description:@"Gesuiti_general_description.txt"];
+        [gesuiti setInsula_general_picture:@"Gesuiti_general_picture.jpg"];
+        [gesuiti setLatitude:[NSNumber numberWithDouble:0]];
+        [gesuiti setLongitude:[NSNumber numberWithDouble:0]];
+        [self initializeLandmark:gesuiti];
+    }
+}
+
+- (void)initializeLandmark:(Insula *)myInsula {
+    Landmark *scuola = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
+                                                                 inManagedObjectContext:self.managedObjectContext];
+    [scuola setLandmark_name:@"Scuola Grande di San Marco"];
+    [scuola setInsula_name:myInsula.insula_name];
+    [scuola setLandmark_3d:@"house.obj"];
+    [scuola setLandmark_annotation_description:@"Scuola_annotation_description.txt"];
+    [scuola setLandmark_general_description:@"Scuola_general_description.txt"];
+    [scuola setLandmark_general_picture:@"Scuola_general_picture.png"];
+    [scuola setLandmark_intermediate1:@""];
+        [scuola setLandmark_intermediate2:@""];
+        [scuola setLandmark_intermediate3:@""];
+        [scuola setLandmark_intermediate4:@""];
+        [scuola setLandmark_intermediate5:@""];
+    [scuola setLatitude:[NSNumber numberWithDouble:0]];
+    [scuola setLongitude:[NSNumber numberWithDouble:0]];
+    [scuola setInsula:myInsula];
+    [myInsula addLandmarksObject:scuola];
 }
 
 - (void)saveContext
