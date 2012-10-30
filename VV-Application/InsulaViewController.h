@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
-#import "HomescreenViewcontroller.h"
+#import "HomescreenViewController.h"
 #import "CoreData.h"
 #import "AppDelegate.h"
 
@@ -30,6 +30,7 @@
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude;
 -(IBAction)landmarkSearch: (UIBarButtonItem *)sender;
 -(void) zoomOnAnnotation;
+//-(void) plotMapAnnotations
 
 
 @end
