@@ -33,8 +33,7 @@ NSString* landmarkName;
     //HSSearchBar.prompt = @"Search for an insula";
     //[HSSlider setMaximumValue:10];
     [HSSlider setValue: 0.34];
-    [self plotMapAnnotation:@"Venice" address:@"description of Venice blah blah blah" latitude:45.4333 longitude:12.3167];
-    //[self plotMapAnnotations];
+    [self plotMapAnnotations];
     //[self initInsulaButtons];
     [self.HSScroller setContentSize: HSScrollerContent.frame.size];
     [self setInitialMapRegion];
@@ -57,19 +56,21 @@ NSString* landmarkName;
     return insulaButtons;
 }
 
-/*-(void) initInsulaButtons {
+-(void) initInsulaButtons {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName: @"Insula" inManagedObjectContext: self.coreData.managedObjectContext];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", @"XXXXX"];
+    [request setPredicate:query];
     NSError *error = nil;
-    NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     int count = 0;
     NSArray *insulaButtons = [self insulaButtonArray];
-    for (Landmark *lmark in fetchResults) {
-        //Add error thing here if array size too small or big....
-        [insulaButtons[count] setTitle: [lmark getInsulaName] forState:UIControlStateNormal];
+    for (Insula *insulaData in fetchResults) {
+        //TODO: Add error thing here if array size too small or big....
+        [insulaButtons[count] setTitle: insulaData.insula_name forState:UIControlStateNormal];
     }
-}*/
+}
 
 -(void) plotMapAnnotations {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -79,9 +80,15 @@ NSString* landmarkName;
     [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    if (fetchResults == nil) {
+        //do nothing
+    }
     Insula *insulaData;
     for (insulaData in fetchResults) {
-        [self plotMapAnnotation:insulaData.insula_name address:insulaData.insula_annotation_description latitude:insulaData.latitude.doubleValue longitude:insulaData.longitude.doubleValue];
+        if (insulaData != NULL) {
+            NSLog(@"object NULL");
+            [self plotMapAnnotation:insulaData.insula_name address:insulaData.insula_annotation_description latitude:insulaData.latitude.doubleValue longitude:insulaData.longitude.doubleValue];
+        }
     }
 }
 
@@ -114,25 +121,21 @@ NSString* landmarkName;
 }
 
 -(IBAction)insulaSearch: (UIBarButtonItem *)sender {
-    // if sender.text matches name of insula....
     for (MapAnnotation *annotation in HSMapView.annotations) {
         NSString *name = [annotation title];
         if ([name isEqualToString: HSSearchBar.text]) {
             [HSButton setTitle: HSSearchBar.text forState: UIControlStateNormal];
-    
-            /* NSFetchRequest *request = [[NSFetchRequest alloc] init];
-            NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula"inManagedObjectContext:self.coreData.managedObjectContext];
+            NSFetchRequest *request = [[NSFetchRequest alloc] init];
+            NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
             [request setEntity:des];
-            NSPredicate *query = [NSPredicate predicateWithFormat:name];
-            [request setPredicate:query;
+            NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", name];
+            [request setPredicate:query];
             NSError *error = nil;
-            NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:&error];
-            
-            //pull overview description from core data and load it into textview
-            NSString* description = [fetchResults[0] getDescription]; */
-            //[HSSummary setText: description];
+             NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+            //TODO: check if results is null
+            NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
+            [HSSummary setText: description];
             [self zoomOnAnnotation];
-            
         }
     }
 }
@@ -149,7 +152,6 @@ NSString* landmarkName;
             mapRegion.span.longitudeDelta = 0.0005;
             [HSSlider setValue: 0.0005/0.1];
             [HSMapView setRegion:mapRegion animated: YES];
-            
         }
     }
 }

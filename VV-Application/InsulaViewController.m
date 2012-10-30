@@ -22,6 +22,7 @@
 @synthesize IVSearchBar;
 @synthesize IVSlider;
 @synthesize myApp = _myApp;
+@synthesize IVButton1, IVButton2, IVButton3, IVButton4, IVButton5, IVButton6, IVButton7, IVButton8, IVButton9, IVButton10;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -40,7 +41,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.IVSlider setValue: 0.34];
-    [self plotMapAnnotation:@"Venice" address:@"address" latitude:45.4333 longitude:12.3167];
+    //[self initLandmarkButtons];
+    //[self plotMapAnnotations];
     [self.IVScroller setContentSize: IVScrollerContent.frame.size];
     [self setInitialMapRegion];
 }
@@ -61,11 +63,11 @@
     for (lmark in fetchResults) {
         [self plotMapAnnotation:lmark.landmark_name address:lmark.landmark_annotation_description latitude:lmark.latitude.doubleValue longitude:lmark.longitude.doubleValue];
     }
+}
     
     //lmark = [fetchResults objectAtIndex:0];
    // UIImage* image = [self.myApp.lib getImageFromFile:lmark.landmark_general_picture];
-    //NSString* string = [self.myApp.lib getStringFromFile:lmark.landmark_general_description];
-} 
+    //NSString* string = [self.myApp.lib getStringFromFile:lmark.landmark_general_description]; 
 
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude {
     MapAnnotation *annotation = [[MapAnnotation alloc] initWithName:name address:address latitude:latitude longitude:longitude];
@@ -94,6 +96,29 @@
     mapRegion.span.longitudeDelta = 0.035;
     [IVMapView setRegion:mapRegion animated: YES];
 }
+
+
+-(NSArray *) landmarkButtonArray {
+    NSArray *landmarkButtons =  [[NSArray alloc] initWithObjects: IVButton1, IVButton2, IVButton3, IVButton4, IVButton5, IVButton5, IVButton6, IVButton7, IVButton8, IVButton9, IVButton10, nil];
+    return landmarkButtons;
+}
+
+-(void) initLandmarkButtons {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    [request setEntity:des];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", insulaName];
+    [request setPredicate:query];
+    NSError *error = nil;
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    int count = 0;
+    NSArray *landmarkButtons = [self landmarkButtonArray];
+    for (Landmark *lmark in fetchResults) {
+        //TODO: Add error thing here if array size too small or big....
+        [landmarkButtons[count] setTitle: lmark.landmark_name forState:UIControlStateNormal];
+    }
+}
+
 
 -(IBAction)landmarkSearch: (UIBarButtonItem *)sender {
     // if sender.text matches name of insula....
