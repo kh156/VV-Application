@@ -26,29 +26,6 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
-        
-        
-        // Sample code for insert and fetch data
-        
-        // fetch query
-        NSFetchRequest *request = [[NSFetchRequest alloc] init];
-        NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark"
-                                               inManagedObjectContext:self.coreData.managedObjectContext];
-        [request setEntity:des];
-        NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", @"XXXXX"];
-        [request setPredicate:query];
-        NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:NULL];
-        if (fetchResults == nil) {
-            NSLog(@"Error retrieving Reminders");
-        }
-        else if([fetchResults count] > 0) {
-            NSLog(@"%@", ((Landmark *)[fetchResults objectAtIndex:0]).landmark_name);
-        }
-        else {
-            NSLog(@"Did not fetch anything");
-        }
-
     }
     return self;
 }
@@ -72,18 +49,18 @@
     [super didReceiveMemoryWarning];
 }
 
-/*-(void) plotMapAnnotations {
+-(void) plotMapAnnotations {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.coreData.managedObjectContext];
     [request setEntity:des];
-//    NSPredicate *query = [NSPredicate predicateWithFormat:@""];
-//    [request setPredicate:NULL];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", @"XXXXX"];
+    [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.coreData.managedObjectContext executeFetchRequest:request error:&error];
     for (Landmark *lmark in fetchResults) { 
-        plotMapAnnotation: [lmark getName] address: [lmark getDescription] latitude: [lmark getLatitude] longitude: [lmark getLongitude];
+        [self plotMapAnnotation:lmark.landmark_name address:lmark.landmark_annotation_description latitude:lmark.latitude.doubleValue longitude:lmark.longitude.doubleValue];
     }
-} */
+} 
 
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude {
     MapAnnotation *annotation = [[MapAnnotation alloc] initWithName:name address:address latitude:latitude longitude:longitude];

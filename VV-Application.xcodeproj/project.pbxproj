@@ -177,8 +177,6 @@
 		088118ED163DCAE8002916E7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				08F659AA163E516C00ACFAB6 /* Clickables.h */,
-				08F659AB163E516C00ACFAB6 /* Clickables.m */,
 				088118EF163DCB30002916E7 /* CoreData.h */,
 				088118F0163DCB30002916E7 /* CoreData.m */,
 				088118F3163DCB30002916E7 /* VV-Application.xcdatamodeld */,
@@ -186,6 +184,8 @@
 				08F659A8163E516500ACFAB6 /* Landmark.m */,
 				08F659A4163E3C8C00ACFAB6 /* Insula.h */,
 				08F659A5163E3C8C00ACFAB6 /* Insula.m */,
+				08F659AA163E516C00ACFAB6 /* Clickables.h */,
+				08F659AB163E516C00ACFAB6 /* Clickables.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
