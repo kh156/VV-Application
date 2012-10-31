@@ -27,6 +27,7 @@ NSString* landmarkName;
 @synthesize HSMapView;
 @synthesize HSSearchBar;
 @synthesize HSSlider;
+@synthesize myLibrary;
 @synthesize HSButton1, HSButton2, HSButton3, HSButton4, HSButton5, HSButton6, HSButton7, HSButton8, HSButton9, HSButton10;
 
 - (void)viewDidLoad {
@@ -80,6 +81,8 @@ NSString* landmarkName;
     Insula *insulaData;
     for (insulaData in fetchResults) {
         NSLog(@"object NULL");
+        NSString *generalDes = [myLibrary getStringFromFile:insulaData.insula_annotation_description];
+        //TODO: generalDes = NULL?
         [self plotMapAnnotation:insulaData.insula_name address:insulaData.insula_annotation_description latitude:insulaData.latitude.doubleValue longitude:insulaData.longitude.doubleValue];
     }
 }
