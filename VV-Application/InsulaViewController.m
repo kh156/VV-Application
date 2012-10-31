@@ -62,7 +62,7 @@
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     Landmark *lmark;
     for (lmark in fetchResults) {
-        [self plotMapAnnotation:lmark.landmark_name address:lmark.landmark_annotation_description latitude:lmark.latitude.doubleValue longitude:lmark.longitude.doubleValue];
+        [self plotMapAnnotation:lmark.landmark_name address:[self.myApp.lib getStringFromFile:lmark.landmark_annotation_description] latitude:lmark.latitude.doubleValue longitude:lmark.longitude.doubleValue];
     }
 }
     
@@ -134,7 +134,7 @@
             NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
             //TODO: check if results is null
             NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
-            [IVSummary setText: description];
+            [IVSummary setText: [self.myApp.lib getStringFromFile:description]];
             [self zoomOnAnnotation];
         }
     }

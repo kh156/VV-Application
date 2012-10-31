@@ -71,7 +71,7 @@ NSString* landmarkName;
         [insulaButtons[count] setTitle: insulaData.insula_name forState:UIControlStateNormal];
     }
 }
-
+ 
 -(void) plotMapAnnotations {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
@@ -130,7 +130,7 @@ NSString* landmarkName;
             //TODO: check if results is null
             NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
             NSString* generalDes = [self.myApp.lib getStringFromFile:description];
-            [HSSummary setText: description];
+            [HSSummary setText: generalDes];
             [self zoomOnAnnotation];
         }
     }
