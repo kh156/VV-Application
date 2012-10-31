@@ -82,8 +82,9 @@ NSString* landmarkName;
     for (insulaData in fetchResults) {
         NSLog(@"object NULL");
         NSString *generalDes = [myLibrary getStringFromFile:insulaData.insula_annotation_description];
+        NSLog(@"%@", generalDes);
         //TODO: generalDes = NULL?
-        [self plotMapAnnotation:insulaData.insula_name address:insulaData.insula_annotation_description latitude:insulaData.latitude.doubleValue longitude:insulaData.longitude.doubleValue];
+        [self plotMapAnnotation:insulaData.insula_name address:generalDes latitude:insulaData.latitude.doubleValue longitude:insulaData.longitude.doubleValue];
     }
 }
 
@@ -129,6 +130,7 @@ NSString* landmarkName;
              NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
             //TODO: check if results is null
             NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
+            NSString* generalDes = [myLibrary getStringFromFile:description];
             [HSSummary setText: description];
             [self zoomOnAnnotation];
         }
