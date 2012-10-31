@@ -37,9 +37,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self loadLandmarkImage];
+    [self loadLandmarkImage];
 
-//    [self playVideo:@"DummyVideo.m4v"];
+    [self playVideo:@"DummyVideo.m4v"];
 }
 
 - (void)didReceiveMemoryWarning
