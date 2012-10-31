@@ -17,6 +17,7 @@
 @implementation IntermediateViewController
 @synthesize myApp = _myApp;
 @synthesize landmarkImage;
+@synthesize myLibrary;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -58,7 +59,7 @@
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     NSString *description = ((Landmark *) [fetchResults objectAtIndex:0]).landmark_general_picture;
     NSLog(@"%@", description);
-    [self.landmarkImage setImage:[UIImage imageNamed:description]];
+    [self.landmarkImage setImage:[myLibrary getImageFromFile:description]];
     NSLog(@"landmarkImage set");
 }
 
