@@ -17,7 +17,6 @@
 @implementation IntermediateViewController
 @synthesize myApp = _myApp;
 @synthesize landmarkImage;
-@synthesize myLibrary;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,7 +39,7 @@
     [super viewDidLoad];
     //[self loadLandmarkImage];
 
-    //[self playVideo:@"DummyVideo.m4v"];
+//    [self playVideo:@"DummyVideo.m4v"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +65,7 @@
     UIImage *image = [self imageWithImage:[myLibrary getImageFromFile:description] scaledToSize:size];*/
     
      
-    UIImage *image = [myLibrary getImageFromFile:description];
+    UIImage *image = [self.myApp.lib getImageFromFile:description];
     [self.landmarkImage setImage:image];
     NSLog(@"landmarkImage set");
 }
@@ -91,7 +90,7 @@
     NSURL* url = [NSURL fileURLWithPath:path];
     NSLog(@"url = %@", url);
     
-    NSLog(@"system version = %f", [[[UIDevice currentDevice] systemVersion] doubleValue]);
+//    NSLog(@"system version = %f", [[[UIDevice currentDevice] systemVersion] doubleValue]);
 	if (url)
     {
         MPMoviePlayerViewController* theMovie=[[MPMoviePlayerViewController alloc] initWithContentURL:url];

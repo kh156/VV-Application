@@ -16,8 +16,7 @@
 //init Data
 - (id)init{
 	if (self=[super init]) {
-        _resourceFolderPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Resources"];
-//        NSLog(@"%@", self.documentPath);
+        _resourceFolderPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Materials"];
 	}
 	return self;
 }
@@ -28,16 +27,15 @@
 
 - (BOOL)checkFileExists:(NSString *)fileName
                   under:(NSString *)directory {
-	NSFileManager *fm=[NSFileManager defaultManager];
-	return [fm fileExistsAtPath:[directory stringByAppendingPathComponent:fileName]];
+	return [[NSFileManager defaultManager] fileExistsAtPath:[directory stringByAppendingPathComponent:fileName]];
 }
 
 
 - (void)createFolder:(NSString *)folderName
                under:(NSString *)directory {
 	if ([self checkFileExists:folderName under:directory]) {
-		NSFileManager *FmTemp=[NSFileManager defaultManager];
-		[FmTemp createDirectoryAtPath:[directory stringByAppendingPathComponent:folderName]
+		NSFileManager *fm=[NSFileManager defaultManager];
+		[fm createDirectoryAtPath:[directory stringByAppendingPathComponent:folderName]
 		  withIntermediateDirectories:YES
 						   attributes:nil
 								error:NULL];
@@ -90,7 +88,13 @@
 }
 
 - (NSData *)getDataFromFile:(NSString *) fileName {
-	return [NSData dataWithContentsOfURL:[NSURL URLWithString:[[self getResourceFilepath:fileName] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+    if ([self checkFileExists:fileName under:self.resourceFolderPath]) {
+        return [NSData dataWithContentsOfFile:[self getResourceFilepath:fileName]];
+    }
+    else {
+        NSLog(@"%@ does not exist", fileName);
+        return NULL;
+    }
 }
 
 - (void)saveData:(NSData*)data toFile:(NSString *)fileName {

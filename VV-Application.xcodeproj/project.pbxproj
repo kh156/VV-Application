@@ -12,17 +12,11 @@
 		088118F5163DCB30002916E7 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 088118F0163DCB30002916E7 /* CoreData.m */; };
 		088118F7163DCB30002916E7 /* VV-Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 088118F3163DCB30002916E7 /* VV-Application.xcdatamodeld */; };
 		08B2CAE7163F9F230004F2EA /* PublicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2CAE6163F9F230004F2EA /* PublicLibrary.m */; };
+		08CB734F1640CDCF00204214 /* Materials in Resources */ = {isa = PBXBuildFile; fileRef = 08CB734E1640CDCF00204214 /* Materials */; };
+		08D10F881640CCF0007D0F62 /* cube_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AEA16388F770038A5A0 /* cube_top.jpg */; };
 		08F659A6163E3C8C00ACFAB6 /* Insula.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659A5163E3C8C00ACFAB6 /* Insula.m */; };
 		08F659A9163E516600ACFAB6 /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659A8163E516500ACFAB6 /* Landmark.m */; };
 		08F659AC163E516C00ACFAB6 /* Clickables.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659AB163E516C00ACFAB6 /* Clickables.m */; };
-		6C163F001640A15F008936F7 /* DSC_0517.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EF81640A15F008936F7 /* DSC_0517.JPG */; };
-		6C163F011640A15F008936F7 /* DummyVideo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EF91640A15F008936F7 /* DummyVideo.m4v */; };
-		6C163F021640A15F008936F7 /* Gesuiti_annotation_description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFA1640A15F008936F7 /* Gesuiti_annotation_description.txt */; };
-		6C163F031640A15F008936F7 /* Gesuiti_general_description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFB1640A15F008936F7 /* Gesuiti_general_description.txt */; };
-		6C163F041640A15F008936F7 /* Gesuiti_general_picture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFC1640A15F008936F7 /* Gesuiti_general_picture.jpg */; };
-		6C163F051640A15F008936F7 /* Scuola_annotation_description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFD1640A15F008936F7 /* Scuola_annotation_description.txt */; };
-		6C163F061640A15F008936F7 /* Scuola_general_description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFE1640A15F008936F7 /* Scuola_general_description.txt */; };
-		6C163F071640A15F008936F7 /* Scuola_general_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFF1640A15F008936F7 /* Scuola_general_picture.png */; };
 		6C3C9AEB16388F770038A5A0 /* chapel_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD716388F770038A5A0 /* chapel_diffuse.jpg */; };
 		6C3C9AEC16388F770038A5A0 /* GoundDiffuseMap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD816388F770038A5A0 /* GoundDiffuseMap.jpg */; };
 		6C3C9AED16388F770038A5A0 /* house_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD916388F770038A5A0 /* house_diffuse.jpg */; };
@@ -40,7 +34,6 @@
 		6C3C9AF916388F770038A5A0 /* cube_front.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE716388F770038A5A0 /* cube_front.jpg */; };
 		6C3C9AFA16388F770038A5A0 /* cube_left.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE816388F770038A5A0 /* cube_left.jpg */; };
 		6C3C9AFB16388F770038A5A0 /* cube_right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE916388F770038A5A0 /* cube_right.jpg */; };
-		6C3C9AFC16388F770038A5A0 /* cube_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AEA16388F770038A5A0 /* cube_top.jpg */; };
 		6C462C7C162F828C006C451F /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C462C7B162F828C006C451F /* NinevehGL.framework */; };
 		6C462C7F162FC4B1006C451F /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C462C7E162FC4B1006C451F /* MapAnnotation.m */; };
 		6C65C100161EE5B0003A3823 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C65C0FF161EE5B0003A3823 /* ViewController.m */; };
@@ -91,20 +84,13 @@
 		088118F4163DCB30002916E7 /* VV-Application.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "VV-Application.xcdatamodel"; sourceTree = "<group>"; };
 		08B2CAE5163F9F230004F2EA /* PublicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicLibrary.h; sourceTree = "<group>"; };
 		08B2CAE6163F9F230004F2EA /* PublicLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicLibrary.m; sourceTree = "<group>"; };
+		08CB734E1640CDCF00204214 /* Materials */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Materials; sourceTree = "<group>"; };
 		08F659A4163E3C8C00ACFAB6 /* Insula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insula.h; sourceTree = "<group>"; };
 		08F659A5163E3C8C00ACFAB6 /* Insula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insula.m; sourceTree = "<group>"; };
 		08F659A7163E516500ACFAB6 /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
 		08F659A8163E516500ACFAB6 /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
 		08F659AA163E516C00ACFAB6 /* Clickables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clickables.h; sourceTree = "<group>"; };
 		08F659AB163E516C00ACFAB6 /* Clickables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clickables.m; sourceTree = "<group>"; };
-		6C163EF81640A15F008936F7 /* DSC_0517.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = DSC_0517.JPG; path = Resources/DSC_0517.JPG; sourceTree = "<group>"; };
-		6C163EF91640A15F008936F7 /* DummyVideo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = DummyVideo.m4v; path = Resources/DummyVideo.m4v; sourceTree = "<group>"; };
-		6C163EFA1640A15F008936F7 /* Gesuiti_annotation_description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Gesuiti_annotation_description.txt; path = Resources/Gesuiti_annotation_description.txt; sourceTree = "<group>"; };
-		6C163EFB1640A15F008936F7 /* Gesuiti_general_description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Gesuiti_general_description.txt; path = Resources/Gesuiti_general_description.txt; sourceTree = "<group>"; };
-		6C163EFC1640A15F008936F7 /* Gesuiti_general_picture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Gesuiti_general_picture.jpg; path = Resources/Gesuiti_general_picture.jpg; sourceTree = "<group>"; };
-		6C163EFD1640A15F008936F7 /* Scuola_annotation_description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Scuola_annotation_description.txt; path = Resources/Scuola_annotation_description.txt; sourceTree = "<group>"; };
-		6C163EFE1640A15F008936F7 /* Scuola_general_description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Scuola_general_description.txt; path = Resources/Scuola_general_description.txt; sourceTree = "<group>"; };
-		6C163EFF1640A15F008936F7 /* Scuola_general_picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Scuola_general_picture.png; path = Resources/Scuola_general_picture.png; sourceTree = "<group>"; };
 		6C3C9AD716388F770038A5A0 /* chapel_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chapel_diffuse.jpg; sourceTree = "<group>"; };
 		6C3C9AD816388F770038A5A0 /* GoundDiffuseMap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoundDiffuseMap.jpg; sourceTree = "<group>"; };
 		6C3C9AD916388F770038A5A0 /* house_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_diffuse.jpg; sourceTree = "<group>"; };
@@ -410,14 +396,7 @@
 		6CE17878161EDF92007A6004 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6C163EF81640A15F008936F7 /* DSC_0517.JPG */,
-				6C163EF91640A15F008936F7 /* DummyVideo.m4v */,
-				6C163EFA1640A15F008936F7 /* Gesuiti_annotation_description.txt */,
-				6C163EFB1640A15F008936F7 /* Gesuiti_general_description.txt */,
-				6C163EFC1640A15F008936F7 /* Gesuiti_general_picture.jpg */,
-				6C163EFD1640A15F008936F7 /* Scuola_annotation_description.txt */,
-				6C163EFE1640A15F008936F7 /* Scuola_general_description.txt */,
-				6C163EFF1640A15F008936F7 /* Scuola_general_picture.png */,
+				08CB734E1640CDCF00204214 /* Materials */,
 				6C3C9AD616388F770038A5A0 /* Medieval */,
 				6C3C9ADC16388F770038A5A0 /* House */,
 				6C3C9AE216388F770038A5A0 /* Cube */,
@@ -500,6 +479,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D10F881640CCF0007D0F62 /* cube_top.jpg in Resources */,
 				6CE1783F161EDE60007A6004 /* InfoPlist.strings in Resources */,
 				6CE17847161EDE60007A6004 /* Default.png in Resources */,
 				6CE17849161EDE60007A6004 /* Default@2x.png in Resources */,
@@ -524,7 +504,7 @@
 				6C3C9AF916388F770038A5A0 /* cube_front.jpg in Resources */,
 				6C3C9AFA16388F770038A5A0 /* cube_left.jpg in Resources */,
 				6C3C9AFB16388F770038A5A0 /* cube_right.jpg in Resources */,
-				6C3C9AFC16388F770038A5A0 /* cube_top.jpg in Resources */,
+				08CB734F1640CDCF00204214 /* Materials in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,14 +513,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CE17866161EDE60007A6004 /* InfoPlist.strings in Resources */,
-				6C163F001640A15F008936F7 /* DSC_0517.JPG in Resources */,
-				6C163F011640A15F008936F7 /* DummyVideo.m4v in Resources */,
-				6C163F021640A15F008936F7 /* Gesuiti_annotation_description.txt in Resources */,
-				6C163F031640A15F008936F7 /* Gesuiti_general_description.txt in Resources */,
-				6C163F041640A15F008936F7 /* Gesuiti_general_picture.jpg in Resources */,
-				6C163F051640A15F008936F7 /* Scuola_annotation_description.txt in Resources */,
-				6C163F061640A15F008936F7 /* Scuola_general_description.txt in Resources */,
-				6C163F071640A15F008936F7 /* Scuola_general_picture.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
