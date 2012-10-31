@@ -71,7 +71,7 @@ NSString* landmarkName;
         [insulaButtons[count] setTitle: insulaData.insula_name forState:UIControlStateNormal];
     }
 }
-
+ 
 -(void) plotMapAnnotations {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
