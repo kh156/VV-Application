@@ -14,6 +14,7 @@
 
 @implementation LandmarkViewController
 @synthesize rotateX, rotateY, rotateZ;
+@synthesize myApp = _myApp;
 
 - (AppDelegate *)myApp {
     if (_myApp == NULL) {

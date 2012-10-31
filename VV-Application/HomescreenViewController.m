@@ -29,6 +29,7 @@ NSString* landmarkName;
 @synthesize HSSlider;
 @synthesize myLibrary;
 @synthesize HSButton1, HSButton2, HSButton3, HSButton4, HSButton5, HSButton6, HSButton7, HSButton8, HSButton9, HSButton10;
+@synthesize myApp = _myApp;
 
 - (void)viewDidLoad {
     //HSSearchBar.prompt = @"Search for an insula";

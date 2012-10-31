@@ -17,20 +17,6 @@
 - (id)init{
 	if (self=[super init]) {
         _resourceFolderPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Materials"];
-//        NSArray *ArrPath=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-//		NSString * StrPathDocument=[ArrPath objectAtIndex:0];
-
-//        NSLog(@"%@", self.resourceFolderPath);
-//        NSLog(@"%@", StrPathDocument);
-  
-//        if ([self checkFileExists:@"Gesuiti_annotation_description.txt" under:self.resourceFolderPath]) {
-//            NSLog(@"file founded!!!");
-//        }
-//        else {
-//            NSLog(@"file not found!!!!");
-//        }
-        NSLog(@"string loaded: %@", [self getStringFromFile:@"Gesuiti_annotation_description.txt"]);
-        NSLog(@"image loaded: %@", [self getImageFromFile:@"Gesuiti_general_picture.jpg"]);
 	}
 	return self;
 }
