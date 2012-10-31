@@ -17,7 +17,6 @@
 @implementation IntermediateViewController
 @synthesize myApp = _myApp;
 @synthesize landmarkImage;
-@synthesize myLibrary;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -66,7 +65,7 @@
     UIImage *image = [self imageWithImage:[myLibrary getImageFromFile:description] scaledToSize:size];*/
     
      
-    UIImage *image = [myLibrary getImageFromFile:description];
+    UIImage *image = [self.myApp.lib getImageFromFile:description];
     [self.landmarkImage setImage:image];
     NSLog(@"landmarkImage set");
 }

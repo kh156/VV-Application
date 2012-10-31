@@ -15,7 +15,6 @@
 
 @property (weak, nonatomic) AppDelegate *myApp;
 @property (nonatomic, weak) IBOutlet UIImageView *landmarkImage;
-@property (weak, nonatomic) PublicLibrary *myLibrary;
 
 #pragma mark -
 #pragma mark play video

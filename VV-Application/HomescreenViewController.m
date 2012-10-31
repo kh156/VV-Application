@@ -27,7 +27,6 @@ NSString* landmarkName;
 @synthesize HSMapView;
 @synthesize HSSearchBar;
 @synthesize HSSlider;
-@synthesize myLibrary;
 @synthesize HSButton1, HSButton2, HSButton3, HSButton4, HSButton5, HSButton6, HSButton7, HSButton8, HSButton9, HSButton10;
 @synthesize myApp = _myApp;
 
@@ -77,13 +76,12 @@ NSString* landmarkName;
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
-    NSError *error = nil;
-    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:NULL];
     Insula *insulaData;
     for (insulaData in fetchResults) {
-        NSLog(@"object NULL");
-        NSString *generalDes = [myLibrary getStringFromFile:insulaData.insula_annotation_description];
-        NSLog(@"%@", generalDes);
+//        NSLog(@"%@", insulaData);
+        NSString *generalDes = [self.myApp.lib getStringFromFile:insulaData.insula_annotation_description];
+        NSLog(@"generalDes = %@", generalDes);
         //TODO: generalDes = NULL?
         [self plotMapAnnotation:insulaData.insula_name address:generalDes latitude:insulaData.latitude.doubleValue longitude:insulaData.longitude.doubleValue];
     }
@@ -131,7 +129,7 @@ NSString* landmarkName;
              NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
             //TODO: check if results is null
             NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
-            NSString* generalDes = [myLibrary getStringFromFile:description];
+            NSString* generalDes = [self.myApp.lib getStringFromFile:description];
             [HSSummary setText: description];
             [self zoomOnAnnotation];
         }

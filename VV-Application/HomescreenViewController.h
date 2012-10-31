@@ -25,7 +25,6 @@ extern NSString* landmarkName;
 @property(nonatomic, weak) IBOutlet UIButton *HSButton;
 @property(nonatomic, weak) IBOutlet UISearchBar *HSSearchBar;
 @property(nonatomic, weak) IBOutlet MKMapView *HSMapView;
-@property(nonatomic, weak) PublicLibrary *myLibrary;
 @property(nonatomic, weak) IBOutlet UISlider *HSSlider;
 @property(nonatomic, weak) IBOutlet UIButton *HSButton1;
 @property(nonatomic, weak) IBOutlet UIButton *HSButton2;
