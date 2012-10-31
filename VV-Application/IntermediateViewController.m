@@ -59,9 +59,26 @@
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     NSString *description = ((Landmark *) [fetchResults objectAtIndex:0]).landmark_general_picture;
     NSLog(@"%@", description);
-    [self.landmarkImage setImage:[myLibrary getImageFromFile:description]];
+    /*CGSize size;
+    size.height = 600;
+    size.width = 1000;
+    
+    UIImage *image = [self imageWithImage:[myLibrary getImageFromFile:description] scaledToSize:size];*/
+    
+     
+    UIImage *image = [myLibrary getImageFromFile:description];
+    [self.landmarkImage setImage:image];
     NSLog(@"landmarkImage set");
 }
+
+/*- (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    //UIGraphicsBeginImageContext(newSize);
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}*/
 
 
 
