@@ -38,7 +38,6 @@
 {
     [super viewDidLoad];
     [self loadLandmarkImage];
-
 }
 
 - (void)didReceiveMemoryWarning
