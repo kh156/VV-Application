@@ -57,12 +57,12 @@
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     NSString *description = ((Landmark *) [fetchResults objectAtIndex:0]).landmark_general_picture;
-    NSLog(@"%@", description);
-    /*CGSize size;
+//    NSLog(@"image = %@", description);
+    CGSize size;
     size.height = 600;
     size.width = 1000;
     
-    UIImage *image = [self imageWithImage:[myLibrary getImageFromFile:description] scaledToSize:size];*/
+//    UIImage *image = [self imageWithImage:[self.myApp.lib getImageFromFile:description] scaledToSize:size];
     
      
     UIImage *image = [self.myApp.lib getImageFromFile:description];
@@ -88,7 +88,7 @@
 {
     NSString *path = [self.myApp.lib getResourceFilepath:filename];
     NSURL* url = [NSURL fileURLWithPath:path];
-    NSLog(@"url = %@", url);
+    NSLog(@"video url = %@", url);
     
 //    NSLog(@"system version = %f", [[[UIDevice currentDevice] systemVersion] doubleValue]);
 	if (url)
