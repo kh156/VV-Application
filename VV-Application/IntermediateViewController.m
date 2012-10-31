@@ -39,7 +39,7 @@
     [super viewDidLoad];
     //[self loadLandmarkImage];
 
-//    [self playVideo:@"DummyVideo.m4v"];
+    [self playVideo:@"DummyVideo.m4v"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,7 +88,7 @@
 {
     NSString *path = [self.myApp.lib getResourceFilepath:filename];
     NSURL* url = [NSURL fileURLWithPath:path];
-    NSLog(@"url = %@", url);
+    NSLog(@"video url = %@", url);
     
 //    NSLog(@"system version = %f", [[[UIDevice currentDevice] systemVersion] doubleValue]);
 	if (url)
