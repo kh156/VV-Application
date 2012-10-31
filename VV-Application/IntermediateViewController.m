@@ -57,7 +57,7 @@
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     NSString *description = ((Landmark *) [fetchResults objectAtIndex:0]).landmark_general_picture;
-    NSLog(@"image = %@", description);
+//    NSLog(@"image = %@", description);
     CGSize size;
     size.height = 600;
     size.width = 1000;
