@@ -7,6 +7,7 @@
 //
 
 #import "IntermediateViewController.h"
+#import "HomescreenViewController.h"
 #import "MapAnnotation.h"
 
 @interface IntermediateViewController ()
@@ -15,6 +16,7 @@
 
 @implementation IntermediateViewController
 @synthesize myApp = _myApp;
+@synthesize landmarkImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,18 +34,32 @@
     return _myApp;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[self loadLandmarkImage];
 
-    [self playVideo:@"DummyVideo.m4v"];
+    //[self playVideo:@"DummyVideo.m4v"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) loadLandmarkImage {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    [request setEntity:des];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", landmarkName];
+    [request setPredicate:query];
+    NSError *error = nil;
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    NSString *description = ((Landmark *) [fetchResults objectAtIndex:0]).landmark_general_picture;
+    NSLog(@"%@", description);
+    [self.landmarkImage setImage:[UIImage imageNamed:description]];
+    NSLog(@"landmarkImage set");
 }
 
 

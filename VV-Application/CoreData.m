@@ -38,17 +38,17 @@
         [gesuiti setInsula_annotation_description:@"Gesuiti_annotation_description.txt"];
         [gesuiti setInsula_general_description:@"Gesuiti_general_description.txt"];
         [gesuiti setInsula_general_picture:@"Gesuiti_general_picture.jpg"];
-        [gesuiti setLatitude:[NSNumber numberWithDouble:0]];
-        [gesuiti setLongitude:[NSNumber numberWithDouble:0]];
+        [gesuiti setLatitude:[NSNumber numberWithDouble:45.4333]];
+        [gesuiti setLongitude:[NSNumber numberWithDouble:12.3167]];
         [self initializeLandmark:gesuiti];
     }
 }
 
 - (void)initializeLandmark:(Insula *)myInsula {
     Landmark *scuola = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
-                                                                 inManagedObjectContext:self.managedObjectContext];
+            inManagedObjectContext:self.managedObjectContext];
     [scuola setLandmark_name:@"Scuola Grande di San Marco"];
-    [scuola setInsula_name:myInsula.insula_name];
+    [scuola setInsula_name: @"Gesuiti"];
     [scuola setLandmark_3d:@"house.obj"];
     [scuola setLandmark_annotation_description:@"Scuola_annotation_description.txt"];
     [scuola setLandmark_general_description:@"Scuola_general_description.txt"];
@@ -58,8 +58,8 @@
         [scuola setLandmark_intermediate3:@""];
         [scuola setLandmark_intermediate4:@""];
         [scuola setLandmark_intermediate5:@""];
-    [scuola setLatitude:[NSNumber numberWithDouble:0]];
-    [scuola setLongitude:[NSNumber numberWithDouble:0]];
+    [scuola setLatitude:[NSNumber numberWithDouble:45.433]];
+    [scuola setLongitude:[NSNumber numberWithDouble:12.316]];
     [scuola setInsula:myInsula];
     [myInsula addLandmarksObject:scuola];
 }

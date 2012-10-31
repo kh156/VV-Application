@@ -34,7 +34,7 @@ NSString* landmarkName;
     //[HSSlider setMaximumValue:10];
     [HSSlider setValue: 0.34];
     [self plotMapAnnotations];
-    //[self initInsulaButtons];
+    [self initInsulaButtons];
     [self.HSScroller setContentSize: HSScrollerContent.frame.size];
     [self setInitialMapRegion];
     [super viewDidLoad];
@@ -60,10 +60,9 @@ NSString* landmarkName;
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", @"XXXXX"];
-    [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    NSLog(@"%@", fetchResults);
     int count = 0;
     NSArray *insulaButtons = [self insulaButtonArray];
     for (Insula *insulaData in fetchResults) {
@@ -76,19 +75,12 @@ NSString* landmarkName;
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", @"XXXXX"];
-    [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
-    if (fetchResults == nil) {
-        //handle error?
-    }
     Insula *insulaData;
     for (insulaData in fetchResults) {
-        if (insulaData != NULL) {
-            NSLog(@"object NULL");
-            [self plotMapAnnotation:insulaData.insula_name address:insulaData.insula_annotation_description latitude:insulaData.latitude.doubleValue longitude:insulaData.longitude.doubleValue];
-        }
+        NSLog(@"object NULL");
+        [self plotMapAnnotation:insulaData.insula_name address:insulaData.insula_annotation_description latitude:insulaData.latitude.doubleValue longitude:insulaData.longitude.doubleValue];
     }
 }
 

@@ -29,7 +29,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="262" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" title="Gesuiti">
+                                                <state key="normal" title="Insula #1">
                                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -378,6 +378,90 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CCu-II-62Q">
+                                                <rect key="frame" x="0.0" y="129" width="73" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8pM-hn-e07">
+                                                <rect key="frame" x="0.0" y="171" width="73" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dp9-1p-58J">
+                                                <rect key="frame" x="0.0" y="213" width="73" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Cj7-LB-sY7">
+                                                <rect key="frame" x="0.0" y="297" width="73" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DVb-Qg-Sq0">
+                                                <rect key="frame" x="0.0" y="338" width="73" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qoe-fM-oLH">
+                                                <rect key="frame" x="73" y="129" width="73" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h5Q-I8-Gcz">
+                                                <rect key="frame" x="0.0" y="255" width="73" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -449,6 +533,16 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="IVButton" destination="4bi-p6-hY7" id="fCV-e3-vzb"/>
+                        <outlet property="IVButton1" destination="XJR-mO-gPQ" id="2pP-TB-8Oa"/>
+                        <outlet property="IVButton10" destination="Qoe-fM-oLH" id="5cN-1o-iKP"/>
+                        <outlet property="IVButton2" destination="7xJ-5m-Sk7" id="gfh-5e-NsT"/>
+                        <outlet property="IVButton3" destination="CV0-Ez-zd6" id="L5h-uq-ijx"/>
+                        <outlet property="IVButton4" destination="CCu-II-62Q" id="Beq-0r-O3p"/>
+                        <outlet property="IVButton5" destination="8pM-hn-e07" id="e0C-Oz-ADA"/>
+                        <outlet property="IVButton6" destination="dp9-1p-58J" id="vQV-Id-YHD"/>
+                        <outlet property="IVButton7" destination="h5Q-I8-Gcz" id="0gC-ok-nfY"/>
+                        <outlet property="IVButton8" destination="Cj7-LB-sY7" id="PLJ-7G-KBC"/>
+                        <outlet property="IVButton9" destination="DVb-Qg-Sq0" id="uil-yo-sJ1"/>
                         <outlet property="IVMapView" destination="1IY-0D-rsy" id="jjz-h2-AII"/>
                         <outlet property="IVScroller" destination="ewq-an-wm4" id="GIO-bB-5kv"/>
                         <outlet property="IVScrollerContent" destination="BcX-6f-Oak" id="fS9-8G-WqK"/>
@@ -616,6 +710,9 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="landmarkImage" destination="vUs-Si-I4D" id="7LY-Tj-xoh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qi5-C8-mjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -658,6 +755,16 @@
                 <relationship kind="action" name="landmark_button_touch:" candidateClass="UIButton"/>
                 <relationship kind="action" name="slider_moved:" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="IVButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="IVButton1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="IVButton10" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="IVButton2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="IVButton3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="IVButton4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="IVButton5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="IVButton6" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="IVButton7" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="IVButton8" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="IVButton9" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="IVMapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="IVScroller" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="IVScrollerContent" candidateClass="UIView"/>
@@ -668,6 +775,9 @@
         </class>
         <class className="IntermediateViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IntermediateViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="landmarkImage" candidateClass="UIImageView"/>
+            </relationships>
         </class>
         <class className="LandmarkViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LandmarkViewController.h"/>
@@ -682,8 +792,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oNM-4i-GQz"/>
-        <segue reference="ygA-ac-g2y"/>
-        <segue reference="bwr-V0-23C"/>
+        <segue reference="44L-Qm-mBa"/>
+        <segue reference="xXK-Me-J8E"/>
+        <segue reference="jKQ-wf-zaH"/>
     </inferredMetricsTieBreakers>
 </document>

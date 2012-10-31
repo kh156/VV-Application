@@ -15,6 +15,13 @@
 @implementation LandmarkViewController
 @synthesize rotateX, rotateY, rotateZ;
 
+- (AppDelegate *)myApp {
+    if (_myApp == NULL) {
+        _myApp = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    }
+    return _myApp;
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +34,19 @@
 
 - (void) viewDidLoad {
 	[super viewDidLoad];
-    [self initNGL: @"house.obj"];
+    [self initNGL: [self retrieveFileName]];
+}
+
+-(NSString *) retrieveFileName {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    [request setEntity:des];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", landmarkName];
+    [request setPredicate:query];
+    NSError *error = nil;
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    NSString *description = ((Landmark *) [fetchResults objectAtIndex:0]).landmark_3d;
+    return description;
 }
 
 -(void) initNGL: (NSString *) fileName {

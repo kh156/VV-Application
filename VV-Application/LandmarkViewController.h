@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <NinevehGL/NinevehGL.h>
+#import "HomescreenViewController.h"
+#import "AppDelegate.h"
 
 
 @interface LandmarkViewController : UIViewController <NGLViewDelegate> {
@@ -18,6 +20,9 @@
 @property float rotateX;
 @property float rotateY;
 @property float rotateZ;
+
+@property(nonatomic, weak) AppDelegate *myApp;
+
 
 -(void) initNGL:(NSString *) fileName;
 

@@ -15,6 +15,14 @@
 		08F659A6163E3C8C00ACFAB6 /* Insula.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659A5163E3C8C00ACFAB6 /* Insula.m */; };
 		08F659A9163E516600ACFAB6 /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659A8163E516500ACFAB6 /* Landmark.m */; };
 		08F659AC163E516C00ACFAB6 /* Clickables.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659AB163E516C00ACFAB6 /* Clickables.m */; };
+		6C163F001640A15F008936F7 /* DSC_0517.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EF81640A15F008936F7 /* DSC_0517.JPG */; };
+		6C163F011640A15F008936F7 /* DummyVideo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EF91640A15F008936F7 /* DummyVideo.m4v */; };
+		6C163F021640A15F008936F7 /* Gesuiti_annotation_description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFA1640A15F008936F7 /* Gesuiti_annotation_description.txt */; };
+		6C163F031640A15F008936F7 /* Gesuiti_general_description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFB1640A15F008936F7 /* Gesuiti_general_description.txt */; };
+		6C163F041640A15F008936F7 /* Gesuiti_general_picture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFC1640A15F008936F7 /* Gesuiti_general_picture.jpg */; };
+		6C163F051640A15F008936F7 /* Scuola_annotation_description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFD1640A15F008936F7 /* Scuola_annotation_description.txt */; };
+		6C163F061640A15F008936F7 /* Scuola_general_description.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFE1640A15F008936F7 /* Scuola_general_description.txt */; };
+		6C163F071640A15F008936F7 /* Scuola_general_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C163EFF1640A15F008936F7 /* Scuola_general_picture.png */; };
 		6C3C9AEB16388F770038A5A0 /* chapel_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD716388F770038A5A0 /* chapel_diffuse.jpg */; };
 		6C3C9AEC16388F770038A5A0 /* GoundDiffuseMap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD816388F770038A5A0 /* GoundDiffuseMap.jpg */; };
 		6C3C9AED16388F770038A5A0 /* house_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD916388F770038A5A0 /* house_diffuse.jpg */; };
@@ -89,6 +97,14 @@
 		08F659A8163E516500ACFAB6 /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
 		08F659AA163E516C00ACFAB6 /* Clickables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clickables.h; sourceTree = "<group>"; };
 		08F659AB163E516C00ACFAB6 /* Clickables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clickables.m; sourceTree = "<group>"; };
+		6C163EF81640A15F008936F7 /* DSC_0517.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = DSC_0517.JPG; path = Resources/DSC_0517.JPG; sourceTree = "<group>"; };
+		6C163EF91640A15F008936F7 /* DummyVideo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = DummyVideo.m4v; path = Resources/DummyVideo.m4v; sourceTree = "<group>"; };
+		6C163EFA1640A15F008936F7 /* Gesuiti_annotation_description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Gesuiti_annotation_description.txt; path = Resources/Gesuiti_annotation_description.txt; sourceTree = "<group>"; };
+		6C163EFB1640A15F008936F7 /* Gesuiti_general_description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Gesuiti_general_description.txt; path = Resources/Gesuiti_general_description.txt; sourceTree = "<group>"; };
+		6C163EFC1640A15F008936F7 /* Gesuiti_general_picture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Gesuiti_general_picture.jpg; path = Resources/Gesuiti_general_picture.jpg; sourceTree = "<group>"; };
+		6C163EFD1640A15F008936F7 /* Scuola_annotation_description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Scuola_annotation_description.txt; path = Resources/Scuola_annotation_description.txt; sourceTree = "<group>"; };
+		6C163EFE1640A15F008936F7 /* Scuola_general_description.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Scuola_general_description.txt; path = Resources/Scuola_general_description.txt; sourceTree = "<group>"; };
+		6C163EFF1640A15F008936F7 /* Scuola_general_picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Scuola_general_picture.png; path = Resources/Scuola_general_picture.png; sourceTree = "<group>"; };
 		6C3C9AD716388F770038A5A0 /* chapel_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chapel_diffuse.jpg; sourceTree = "<group>"; };
 		6C3C9AD816388F770038A5A0 /* GoundDiffuseMap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoundDiffuseMap.jpg; sourceTree = "<group>"; };
 		6C3C9AD916388F770038A5A0 /* house_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_diffuse.jpg; sourceTree = "<group>"; };
@@ -394,6 +410,14 @@
 		6CE17878161EDF92007A6004 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6C163EF81640A15F008936F7 /* DSC_0517.JPG */,
+				6C163EF91640A15F008936F7 /* DummyVideo.m4v */,
+				6C163EFA1640A15F008936F7 /* Gesuiti_annotation_description.txt */,
+				6C163EFB1640A15F008936F7 /* Gesuiti_general_description.txt */,
+				6C163EFC1640A15F008936F7 /* Gesuiti_general_picture.jpg */,
+				6C163EFD1640A15F008936F7 /* Scuola_annotation_description.txt */,
+				6C163EFE1640A15F008936F7 /* Scuola_general_description.txt */,
+				6C163EFF1640A15F008936F7 /* Scuola_general_picture.png */,
 				6C3C9AD616388F770038A5A0 /* Medieval */,
 				6C3C9ADC16388F770038A5A0 /* House */,
 				6C3C9AE216388F770038A5A0 /* Cube */,
@@ -509,6 +533,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CE17866161EDE60007A6004 /* InfoPlist.strings in Resources */,
+				6C163F001640A15F008936F7 /* DSC_0517.JPG in Resources */,
+				6C163F011640A15F008936F7 /* DummyVideo.m4v in Resources */,
+				6C163F021640A15F008936F7 /* Gesuiti_annotation_description.txt in Resources */,
+				6C163F031640A15F008936F7 /* Gesuiti_general_description.txt in Resources */,
+				6C163F041640A15F008936F7 /* Gesuiti_general_picture.jpg in Resources */,
+				6C163F051640A15F008936F7 /* Scuola_annotation_description.txt in Resources */,
+				6C163F061640A15F008936F7 /* Scuola_general_description.txt in Resources */,
+				6C163F071640A15F008936F7 /* Scuola_general_picture.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

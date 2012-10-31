@@ -13,6 +13,7 @@
 @interface IntermediateViewController : UIViewController
 
 @property (weak, nonatomic) AppDelegate *myApp;
+@property (nonatomic, weak) IBOutlet UIImageView *landmarkImage;
 
 #pragma mark -
 #pragma mark play video

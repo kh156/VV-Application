@@ -41,8 +41,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.IVSlider setValue: 0.34];
-    //[self initLandmarkButtons];
-    //[self plotMapAnnotations];
+    [self initLandmarkButtons];
+    [self plotMapAnnotations];
     [self.IVScroller setContentSize: IVScrollerContent.frame.size];
     [self setInitialMapRegion];
 }
@@ -52,10 +52,11 @@
 }
 
 -(void) plotMapAnnotations {
+   // NSLog(@"plotting map annotations insula");
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", @"XXXXX"];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", insulaName];
     [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
@@ -119,14 +120,24 @@
     }
 }
 
-
 -(IBAction)landmarkSearch: (UIBarButtonItem *)sender {
-    // if sender.text matches name of insula....
-    [IVButton setTitle: IVSearchBar.text forState: UIControlStateNormal];
-    //pull overview description from core data and load it into textview
-    NSString* description = @"";
-    [IVSummary setText: description];
-    [self zoomOnAnnotation];
+    for (MapAnnotation *annotation in IVMapView.annotations) {
+        NSString *name = [annotation title];
+        if ([name isEqualToString: IVSearchBar.text]) {
+            [IVButton setTitle: IVSearchBar.text forState: UIControlStateNormal];
+            NSFetchRequest *request = [[NSFetchRequest alloc] init];
+            NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self. myApp.coreData.managedObjectContext];
+            [request setEntity:des];
+            NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", name];
+            [request setPredicate:query];
+            NSError *error = nil;
+            NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+            //TODO: check if results is null
+            NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
+            [IVSummary setText: description];
+            [self zoomOnAnnotation];
+        }
+    }
 }
 
 -(void) zoomOnAnnotation {
