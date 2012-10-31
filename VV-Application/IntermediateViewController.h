@@ -11,14 +11,18 @@
 #import "AppDelegate.h"
 #import "PublicLibrary.h"
 
-@interface IntermediateViewController : UIViewController
+@interface IntermediateViewController : UIViewController {
+}
 
 @property (weak, nonatomic) AppDelegate *myApp;
 @property (nonatomic, weak) IBOutlet UIImageView *landmarkImage;
 
+
+- (IBAction)playVideo:(id) sender;
+
 #pragma mark -
 #pragma mark play video
--(void) playVideo:(NSString *) filename;
+-(void) initAndPlayVideo:(NSString *) filename;
 - (void) playbackDidFinish:(NSNotification*)aNotification;
 
 @end

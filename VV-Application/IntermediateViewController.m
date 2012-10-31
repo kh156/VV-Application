@@ -39,7 +39,6 @@
     [super viewDidLoad];
     [self loadLandmarkImage];
 
-//    [self playVideo:@"DummyVideo.m4v"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,22 +79,34 @@
 }*/
 
 
+- (IBAction)playVideo:(id) sender{
+    [self initAndPlayVideo:@"DummyVideo.m4v"];
+}
 
 
 #pragma mark -
 #pragma mark play video
--(void) playVideo:(NSString *)filename
+-(void) initAndPlayVideo:(NSString *)filename
 {
     NSString *path = [self.myApp.lib getResourceFilepath:filename];
     NSURL* url = [NSURL fileURLWithPath:path];
-    NSLog(@"video url = %@", url);
-    
-//    NSLog(@"system version = %f", [[[UIDevice currentDevice] systemVersion] doubleValue]);
-	if (url)
-    {
+//    NSLog(@"video url = %@", url);
+        
+//    moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(playbackDidFinish:)
+//                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+//                                               object:moviePlayer];    
+//    moviePlayer.controlStyle = MPMovieControlStyleDefault;
+//    moviePlayer.shouldAutoplay = YES;
+//    [self.view addSubview:moviePlayer.view];
+////    [moviePlayer prepareToPlay];
+//    [moviePlayer setFullscreen:YES animated:YES];
+
         MPMoviePlayerViewController* theMovie=[[MPMoviePlayerViewController alloc] initWithContentURL:url];
         if (theMovie)
         {
+            NSLog(@"movie player created!!!");
             [self presentMoviePlayerViewControllerAnimated:theMovie];
             theMovie.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
             [[NSNotificationCenter defaultCenter] addObserver:self
@@ -104,7 +115,6 @@
                                                        object:theMovie];
             [theMovie.moviePlayer play];
         }
-	}
 }
 
 - (void) playbackDidFinish:(NSNotification*)aNotification
