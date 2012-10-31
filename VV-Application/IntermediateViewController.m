@@ -37,9 +37,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self loadLandmarkImage];
+    [self loadLandmarkImage];
 
-    [self playVideo:@"DummyVideo.m4v"];
+//    [self playVideo:@"DummyVideo.m4v"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,12 +57,12 @@
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     NSString *description = ((Landmark *) [fetchResults objectAtIndex:0]).landmark_general_picture;
-    NSLog(@"%@", description);
-    /*CGSize size;
+    NSLog(@"image = %@", description);
+    CGSize size;
     size.height = 600;
     size.width = 1000;
     
-    UIImage *image = [self imageWithImage:[myLibrary getImageFromFile:description] scaledToSize:size];*/
+//    UIImage *image = [self imageWithImage:[self.myApp.lib getImageFromFile:description] scaledToSize:size];
     
      
     UIImage *image = [self.myApp.lib getImageFromFile:description];
