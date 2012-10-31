@@ -130,7 +130,7 @@ NSString* landmarkName;
             //TODO: check if results is null
             NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
             NSString* generalDes = [self.myApp.lib getStringFromFile:description];
-            [HSSummary setText: description];
+            [HSSummary setText: generalDes];
             [self zoomOnAnnotation];
         }
     }
