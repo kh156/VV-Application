@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Landmark.h"
 #import "Insula.h"
+#import "Timeslot.h"
+#import "Intermediate.h"
+#import "Clickables.h"
 
 @interface CoreData : NSObject
 
@@ -18,7 +21,7 @@
 
 - (void)initializeData;
 - (void)initializeInsula;
-- (void)initializeLandmark:(Insula *)myInsula;
+- (void)initializeLandmark:(Timeslot *)timeslot;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 

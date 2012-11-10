@@ -36,32 +36,68 @@
                                                                   inManagedObjectContext:self.managedObjectContext];
         [gesuiti setInsula_name:@"Gesuiti"];
         [gesuiti setInsula_annotation_description:@"Gesuiti_annotation_description.txt"];
+        [gesuiti setInsula_annotation_picture:@""];
         [gesuiti setInsula_general_description:@"Gesuiti_general_description.txt"];
         [gesuiti setInsula_general_picture:@"Gesuiti_general_picture.jpg"];
         [gesuiti setLatitude:[NSNumber numberWithDouble:45.4333]];
         [gesuiti setLongitude:[NSNumber numberWithDouble:12.3167]];
-        [self initializeLandmark:gesuiti];
+        
+        Timeslot *timeslot = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                       inManagedObjectContext:self.managedObjectContext];
+        
+        timeslot.year = [NSNumber numberWithInt:1508];
+        timeslot.month = [NSNumber numberWithInt:10];
+        timeslot.insula = gesuiti;
+        
+        [gesuiti addTimeslotsObject:timeslot];
+        [self initializeLandmark:timeslot];
     }
 }
 
-- (void)initializeLandmark:(Insula *)myInsula {
+- (void)initializeLandmark:(Timeslot *)timeslot {
     Landmark *scuola = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
-            inManagedObjectContext:self.managedObjectContext];
+                                                                 inManagedObjectContext:self.managedObjectContext];
     [scuola setLandmark_name:@"Scuola Grande di San Marco"];
     [scuola setInsula_name: @"Gesuiti"];
     [scuola setLandmark_3d:@"house.obj"];
     [scuola setLandmark_annotation_description:@"Scuola_annotation_description.txt"];
+    [scuola setLandmark_annotation_picture:@""];
     [scuola setLandmark_general_description:@"Scuola_general_description.txt"];
     [scuola setLandmark_general_picture:@"Scuola_general_picture.png"];
-    [scuola setLandmark_intermediate1:@""];
-        [scuola setLandmark_intermediate2:@""];
-        [scuola setLandmark_intermediate3:@""];
-        [scuola setLandmark_intermediate4:@""];
-        [scuola setLandmark_intermediate5:@""];
     [scuola setLatitude:[NSNumber numberWithDouble:45.433]];
     [scuola setLongitude:[NSNumber numberWithDouble:12.316]];
-    [scuola setInsula:myInsula];
-    [myInsula addLandmarksObject:scuola];
+    [scuola addTimeslotsObject:timeslot];
+    
+    Intermediate *north = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
+                                                                        inManagedObjectContext:self.managedObjectContext];
+    north.num = @"N";
+    north.image = @"";
+    north.landmark = scuola;
+    
+    Intermediate *south = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
+                                                                        inManagedObjectContext:self.managedObjectContext];
+    south.num = @"S";
+    south.image = @"";
+    south.landmark = scuola;
+    
+    Intermediate *west = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
+                                                                       inManagedObjectContext:self.managedObjectContext];
+    west.num = @"W";
+    west.image = @"";
+    west.landmark = scuola;
+    
+    Intermediate *east = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
+                                                                       inManagedObjectContext:self.managedObjectContext];
+    east.num = @"E";
+    east.image = @"";
+    east.landmark = scuola;
+    
+    [scuola addIntermediatesObject:north];
+    [scuola addIntermediatesObject:south];
+    [scuola addIntermediatesObject:west];
+    [scuola addIntermediatesObject:east];
+    
+    [timeslot addLandmarksObject:scuola];
 }
 
 - (void)saveContext

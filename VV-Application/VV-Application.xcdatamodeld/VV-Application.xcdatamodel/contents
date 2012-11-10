@@ -3,40 +3,52 @@
     <entity name="Clickables" representedClassName="Clickables" syncable="YES">
         <attribute name="height" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="insula_name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="landmark_intermediate_num" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="landmark_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="width" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="x" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="intermediate" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Intermediate" inverseName="clickables" inverseEntity="Intermediate" syncable="YES"/>
     </entity>
     <entity name="Insula" representedClassName="Insula" syncable="YES">
         <attribute name="insula_annotation_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="insula_annotation_picture" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="insula_general_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="insula_general_picture" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="insula_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="landmarks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Landmark" inverseName="insula" inverseEntity="Landmark" syncable="YES"/>
+        <relationship name="timeslots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Timeslot" inverseName="insula" inverseEntity="Timeslot" syncable="YES"/>
+    </entity>
+    <entity name="Intermediate" representedClassName="Intermediate" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="num" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="clickables" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Clickables" inverseName="intermediate" inverseEntity="Clickables" syncable="YES"/>
+        <relationship name="landmark" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Landmark" inverseName="intermediates" inverseEntity="Landmark" syncable="YES"/>
     </entity>
     <entity name="Landmark" representedClassName="Landmark" syncable="YES">
         <attribute name="insula_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="landmark_3d" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="landmark_annotation_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="landmark_annotation_picture" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="landmark_general_description" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="landmark_general_picture" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="landmark_intermediate1" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="landmark_intermediate2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="landmark_intermediate3" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="landmark_intermediate4" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="landmark_intermediate5" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="landmark_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="insula" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Insula" inverseName="landmarks" inverseEntity="Insula" syncable="YES"/>
+        <relationship name="intermediates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Intermediate" inverseName="landmark" inverseEntity="Intermediate" syncable="YES"/>
+        <relationship name="timeslots" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Timeslot" inverseName="landmarks" inverseEntity="Timeslot" syncable="YES"/>
+    </entity>
+    <entity name="Timeslot" representedClassName="Timeslot" syncable="YES">
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="insula" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Insula" inverseName="timeslots" inverseEntity="Insula" syncable="YES"/>
+        <relationship name="landmarks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Landmark" inverseName="timeslots" inverseEntity="Landmark" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Clickables" positionX="160" positionY="-72" width="128" height="148"/>
-        <element name="Insula" positionX="-117" positionY="135" width="189" height="148"/>
-        <element name="Landmark" positionX="-362" positionY="-9" width="200" height="253"/>
+        <element name="Clickables" positionX="468" positionY="-202" width="108" height="148"/>
+        <element name="Insula" positionX="-387" positionY="-333" width="189" height="163"/>
+        <element name="Landmark" positionX="18" positionY="-388" width="200" height="208"/>
+        <element name="Timeslot" positionX="-155" positionY="-256" width="128" height="103"/>
+        <element name="Intermediate" positionX="288" positionY="-270" width="128" height="103"/>
     </elements>
 </model>
