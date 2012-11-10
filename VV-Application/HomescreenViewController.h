@@ -13,7 +13,7 @@
 #import "PublicLibrary.h"
 
 
-@interface HomescreenViewController : UIViewController 
+@interface HomescreenViewController : UIViewController <MKMapViewDelegate>
 
 //TODO: find better design solution to global variables....
 extern NSString* insulaName;
