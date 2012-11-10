@@ -11,25 +11,16 @@
 #import "HomescreenViewController.h"
 #import "AppDelegate.h"
 
-@interface InsulaViewController : UIViewController 
+@interface InsulaViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    NSArray *tableData;
+}
 
-@property(nonatomic, weak) IBOutlet UIScrollView *IVScroller;
-@property(nonatomic, weak) IBOutlet UIView *IVScrollerContent;
+@property (nonatomic, retain) NSArray *tableData;
 @property(nonatomic, weak) IBOutlet UITextView *IVSummary;
 @property(nonatomic, weak) IBOutlet UIButton *IVButton;
 @property(nonatomic, weak) IBOutlet MKMapView *IVMapView;
 @property(nonatomic, weak) IBOutlet UISearchBar *IVSearchBar;
 @property(nonatomic, weak) IBOutlet UISlider *IVSlider;
-@property(nonatomic, weak) IBOutlet UIButton *IVButton1;
-@property(nonatomic, weak) IBOutlet UIButton *IVButton2;
-@property(nonatomic, weak) IBOutlet UIButton *IVButton3;
-@property(nonatomic, weak) IBOutlet UIButton *IVButton4;
-@property(nonatomic, weak) IBOutlet UIButton *IVButton5;
-@property(nonatomic, weak) IBOutlet UIButton *IVButton6;
-@property(nonatomic, weak) IBOutlet UIButton *IVButton7;
-@property(nonatomic, weak) IBOutlet UIButton *IVButton8;
-@property(nonatomic, weak) IBOutlet UIButton *IVButton9;
-@property(nonatomic, weak) IBOutlet UIButton *IVButton10;
 
 @property(nonatomic, weak) AppDelegate *myApp;
 
@@ -40,6 +31,5 @@
 -(IBAction)landmarkSearch: (UIBarButtonItem *)sender;
 -(void) zoomOnAnnotation;
 -(void) plotMapAnnotations;
--(void) initLandmarkButtons;
 
 @end
