@@ -11,12 +11,14 @@
 		0803A70C163FB8000018474F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0803A70B163FB8000018474F /* AudioToolbox.framework */; };
 		088118F5163DCB30002916E7 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 088118F0163DCB30002916E7 /* CoreData.m */; };
 		088118F7163DCB30002916E7 /* VV-Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 088118F3163DCB30002916E7 /* VV-Application.xcdatamodeld */; };
+		08A3F61D164E1BE2006BA743 /* Timeslot.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A3F61C164E1BE2006BA743 /* Timeslot.m */; };
+		08A3F623164E1C19006BA743 /* Intermediate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A3F622164E1C19006BA743 /* Intermediate.m */; };
+		08A3F626164E1C28006BA743 /* Clickables.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A3F625164E1C28006BA743 /* Clickables.m */; };
+		08A3F629164E1DAB006BA743 /* Insula.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A3F628164E1DAB006BA743 /* Insula.m */; };
+		08A3F62F164E21B4006BA743 /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A3F62E164E21B3006BA743 /* Landmark.m */; };
 		08B2CAE7163F9F230004F2EA /* PublicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2CAE6163F9F230004F2EA /* PublicLibrary.m */; };
 		08CB734F1640CDCF00204214 /* Materials in Resources */ = {isa = PBXBuildFile; fileRef = 08CB734E1640CDCF00204214 /* Materials */; };
 		08D10F881640CCF0007D0F62 /* cube_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AEA16388F770038A5A0 /* cube_top.jpg */; };
-		08F659A6163E3C8C00ACFAB6 /* Insula.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659A5163E3C8C00ACFAB6 /* Insula.m */; };
-		08F659A9163E516600ACFAB6 /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659A8163E516500ACFAB6 /* Landmark.m */; };
-		08F659AC163E516C00ACFAB6 /* Clickables.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F659AB163E516C00ACFAB6 /* Clickables.m */; };
 		6C3C9AEB16388F770038A5A0 /* chapel_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD716388F770038A5A0 /* chapel_diffuse.jpg */; };
 		6C3C9AEC16388F770038A5A0 /* GoundDiffuseMap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD816388F770038A5A0 /* GoundDiffuseMap.jpg */; };
 		6C3C9AED16388F770038A5A0 /* house_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD916388F770038A5A0 /* house_diffuse.jpg */; };
@@ -82,15 +84,19 @@
 		088118EF163DCB30002916E7 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
 		088118F0163DCB30002916E7 /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreData.m; sourceTree = "<group>"; };
 		088118F4163DCB30002916E7 /* VV-Application.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "VV-Application.xcdatamodel"; sourceTree = "<group>"; };
+		08A3F61B164E1BE2006BA743 /* Timeslot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timeslot.h; sourceTree = "<group>"; };
+		08A3F61C164E1BE2006BA743 /* Timeslot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timeslot.m; sourceTree = "<group>"; };
+		08A3F621164E1C19006BA743 /* Intermediate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intermediate.h; sourceTree = "<group>"; };
+		08A3F622164E1C19006BA743 /* Intermediate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intermediate.m; sourceTree = "<group>"; };
+		08A3F624164E1C28006BA743 /* Clickables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clickables.h; sourceTree = "<group>"; };
+		08A3F625164E1C28006BA743 /* Clickables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clickables.m; sourceTree = "<group>"; };
+		08A3F627164E1DAB006BA743 /* Insula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insula.h; sourceTree = "<group>"; };
+		08A3F628164E1DAB006BA743 /* Insula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insula.m; sourceTree = "<group>"; };
+		08A3F62D164E21B3006BA743 /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
+		08A3F62E164E21B3006BA743 /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
 		08B2CAE5163F9F230004F2EA /* PublicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicLibrary.h; sourceTree = "<group>"; };
 		08B2CAE6163F9F230004F2EA /* PublicLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicLibrary.m; sourceTree = "<group>"; };
 		08CB734E1640CDCF00204214 /* Materials */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Materials; sourceTree = "<group>"; };
-		08F659A4163E3C8C00ACFAB6 /* Insula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insula.h; sourceTree = "<group>"; };
-		08F659A5163E3C8C00ACFAB6 /* Insula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insula.m; sourceTree = "<group>"; };
-		08F659A7163E516500ACFAB6 /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
-		08F659A8163E516500ACFAB6 /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
-		08F659AA163E516C00ACFAB6 /* Clickables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clickables.h; sourceTree = "<group>"; };
-		08F659AB163E516C00ACFAB6 /* Clickables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clickables.m; sourceTree = "<group>"; };
 		6C3C9AD716388F770038A5A0 /* chapel_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chapel_diffuse.jpg; sourceTree = "<group>"; };
 		6C3C9AD816388F770038A5A0 /* GoundDiffuseMap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoundDiffuseMap.jpg; sourceTree = "<group>"; };
 		6C3C9AD916388F770038A5A0 /* house_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_diffuse.jpg; sourceTree = "<group>"; };
@@ -191,12 +197,16 @@
 				088118EF163DCB30002916E7 /* CoreData.h */,
 				088118F0163DCB30002916E7 /* CoreData.m */,
 				088118F3163DCB30002916E7 /* VV-Application.xcdatamodeld */,
-				08F659A7163E516500ACFAB6 /* Landmark.h */,
-				08F659A8163E516500ACFAB6 /* Landmark.m */,
-				08F659A4163E3C8C00ACFAB6 /* Insula.h */,
-				08F659A5163E3C8C00ACFAB6 /* Insula.m */,
-				08F659AA163E516C00ACFAB6 /* Clickables.h */,
-				08F659AB163E516C00ACFAB6 /* Clickables.m */,
+				08A3F627164E1DAB006BA743 /* Insula.h */,
+				08A3F628164E1DAB006BA743 /* Insula.m */,
+				08A3F61B164E1BE2006BA743 /* Timeslot.h */,
+				08A3F61C164E1BE2006BA743 /* Timeslot.m */,
+				08A3F62D164E21B3006BA743 /* Landmark.h */,
+				08A3F62E164E21B3006BA743 /* Landmark.m */,
+				08A3F621164E1C19006BA743 /* Intermediate.h */,
+				08A3F622164E1C19006BA743 /* Intermediate.m */,
+				08A3F624164E1C28006BA743 /* Clickables.h */,
+				08A3F625164E1C28006BA743 /* Clickables.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -549,10 +559,12 @@
 				6C462C7F162FC4B1006C451F /* MapAnnotation.m in Sources */,
 				088118F5163DCB30002916E7 /* CoreData.m in Sources */,
 				088118F7163DCB30002916E7 /* VV-Application.xcdatamodeld in Sources */,
-				08F659A6163E3C8C00ACFAB6 /* Insula.m in Sources */,
-				08F659A9163E516600ACFAB6 /* Landmark.m in Sources */,
-				08F659AC163E516C00ACFAB6 /* Clickables.m in Sources */,
 				08B2CAE7163F9F230004F2EA /* PublicLibrary.m in Sources */,
+				08A3F61D164E1BE2006BA743 /* Timeslot.m in Sources */,
+				08A3F623164E1C19006BA743 /* Intermediate.m in Sources */,
+				08A3F626164E1C28006BA743 /* Clickables.m in Sources */,
+				08A3F629164E1DAB006BA743 /* Insula.m in Sources */,
+				08A3F62F164E21B4006BA743 /* Landmark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
