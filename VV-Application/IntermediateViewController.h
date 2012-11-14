@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) AppDelegate *myApp;
 @property (nonatomic, weak) IBOutlet UIImageView *landmarkImage;
+@property NSInteger rotation;
 
 
 - (IBAction)playVideo:(id) sender;

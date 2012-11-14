@@ -17,6 +17,7 @@
 @implementation IntermediateViewController
 @synthesize myApp = _myApp;
 @synthesize landmarkImage;
+@synthesize rotation;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -62,9 +63,26 @@
      
     UIImage *image = [self.myApp.lib getImageFromFile:description];
     [self.landmarkImage setImage:image];
-    NSLog(@"landmarkImage set");
+    rotation = 0;
+    //NSLog(@"landmarkImage set");
 }
 
+/*-(IBAction)rotateView:(id)sender {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    [request setEntity:des];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"Landmark_name == %@", landmarkName];
+    [request setPredicate:query];
+    NSError *error = nil;
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    NSString *description = ((Landmark* ) [fetchResults objectAtIndex:0]).intermediates
+    CGSize size;
+    size.height = 600;
+    size.width = 1000;
+    UIImage *image = [self.myApp.lib getImageFromFile:description];
+    [self.landmarkImage setImage:image];
+    rotation = (rotation+1)%4;
+}*/
 
 
 - (IBAction)playVideo:(id) sender{
