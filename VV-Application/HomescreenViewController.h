@@ -31,14 +31,20 @@ extern NSString* landmarkName;
 @property(nonatomic, weak) AppDelegate *myApp;
 
 
--(IBAction)insula_button_touch:(UIButton *)sender;
--(IBAction) slider_moved:(UISlider *)sender;
--(void)setInitialMapRegion;
+-(AppDelegate *) myApp;
+-(void) viewDidLoad;
+-(void) initTableButtons;
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+-(void)plotMapAnnotations;
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude;
--(IBAction)insulaSearch:(UIBarButtonItem *) sender;
--(void) zoomOnAnnotation;
--(void) plotMapAnnotations;
--(void) initInsulaButtons;
+-(void)setInitialMapRegion;
+-(void) zoomOnAnnotation: (NSString *) name;
+-(IBAction) slider_moved:(UISlider *)sender;
+-(IBAction)insulaSearch: (UIBarButtonItem *)sender;
+-(void)didReceiveMemoryWarning;
+-(IBAction)insula_button_touch:(UIButton *)sender;
 
 
 
