@@ -71,8 +71,14 @@
     Intermediate *north = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
                                                                         inManagedObjectContext:self.managedObjectContext];
     north.num = @"N";
-    north.image = @"";
+    north.image = @"Scuola_general_picture.png";
     north.landmark = scuola;
+    
+    Intermediate *east = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
+                                                                       inManagedObjectContext:self.managedObjectContext];
+    east.num = @"E";
+    east.image = @"";
+    east.landmark = scuola;
     
     Intermediate *south = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
                                                                         inManagedObjectContext:self.managedObjectContext];
@@ -86,16 +92,11 @@
     west.image = @"";
     west.landmark = scuola;
     
-    Intermediate *east = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
-                                                                       inManagedObjectContext:self.managedObjectContext];
-    east.num = @"E";
-    east.image = @"";
-    east.landmark = scuola;
     
     [scuola addIntermediatesObject:north];
+    [scuola addIntermediatesObject:east];
     [scuola addIntermediatesObject:south];
     [scuola addIntermediatesObject:west];
-    [scuola addIntermediatesObject:east];
     
     [timeslot addLandmarksObject:scuola];
 }

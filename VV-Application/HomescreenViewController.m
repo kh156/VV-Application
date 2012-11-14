@@ -27,6 +27,7 @@ NSString* landmarkName;
 @synthesize HSMapView;
 @synthesize HSSearchBar;
 @synthesize HSSlider;
+@synthesize insulaImage;
 @synthesize myApp = _myApp;
 
 - (AppDelegate *)myApp {
@@ -45,6 +46,19 @@ NSString* landmarkName;
     //[HSSlider setMaximumValue:10];
     //[HSSlider setValue: 0.34];
 }
+
+/*-(MKAnnotationView *) mapview:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    MKPinAnnotationView *myPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"current"];
+    myPin.pinColor = MKPinAnnotationColorRed;
+    UIImage *image = [self.myApp.lib getImageFromFile:@"VisualizingVeniceLogo.jpg"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    myPin.rightCalloutAccessoryView = imageView;
+    myPin.draggable = NO;
+    myPin.highlighted = YES;
+    myPin.animatesDrop = TRUE;
+    myPin.canShowCallout = YES;
+    return myPin;
+}*/
 
 #pragma mark - TableView Data Source methods
 
@@ -83,6 +97,11 @@ NSString* landmarkName;
     NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
     [HSSummary setText: [self.myApp.lib getStringFromFile:description]];
     [self zoomOnAnnotation: name];
+    
+    /*NSString* imageDescription = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_picture;
+    UIImage *image = [self.myApp.lib getImageFromFile:imageDescription];
+    [self.insulaImage setImage:image];
+    [self zoomOnAnnotation: name];*/
 }
 
 #pragma mark - Map Methods

@@ -21,6 +21,7 @@
 @synthesize IVButton;
 @synthesize IVSearchBar;
 @synthesize IVSlider;
+@synthesize landmarkImage;
 @synthesize myApp = _myApp;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -81,8 +82,11 @@
         NSError *error = nil;
         NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
         NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
+        //NSString* imageDescription = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_picture;
         [IVSummary setText: [self.myApp.lib getStringFromFile:description]];
-        [self zoomOnAnnotation: name];
+        //UIImage *image = [self.myApp.lib getImageFromFile:imageDescription];
+        //[self.landmarkImage setImage:image];
+        [self zoomOnAnnotation: name];    
 }
 
 

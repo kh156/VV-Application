@@ -15,8 +15,8 @@
     CLLocationCoordinate2D _coordinate;
 }
 
-@property (copy) NSString *name;
-@property (copy) NSString *address;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *address;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 - (id)initWithName:(NSString*)name address:(NSString*)address latitude:(double) latitude longitude:(double) longitude;

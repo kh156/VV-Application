@@ -21,6 +21,7 @@
 @property(nonatomic, weak) IBOutlet MKMapView *IVMapView;
 @property(nonatomic, weak) IBOutlet UISearchBar *IVSearchBar;
 @property(nonatomic, weak) IBOutlet UISlider *IVSlider;
+@property(nonatomic, weak) IBOutlet UIImageView *landmarkImage;
 @property(nonatomic, weak) AppDelegate *myApp;
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
