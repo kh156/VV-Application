@@ -80,7 +80,7 @@ NSString* landmarkName;
     [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
-    NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
+    NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
     [HSSummary setText: [self.myApp.lib getStringFromFile:description]];
     [self zoomOnAnnotation: name];
 }
