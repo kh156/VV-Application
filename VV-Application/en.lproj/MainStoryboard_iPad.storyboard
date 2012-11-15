@@ -104,8 +104,8 @@
                                     <outlet property="delegate" destination="2" id="ktG-cv-Ibi"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="W8A-bV-uN6">
-                                <rect key="frame" x="273" y="466" width="200" height="190"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" id="W8A-bV-uN6">
+                                <rect key="frame" x="296" y="486" width="165" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -121,6 +121,7 @@
                         <outlet property="HSSearchBar" destination="Px0-dF-prm" id="g2Y-n6-G3n"/>
                         <outlet property="HSSlider" destination="Ecg-0e-gTf" id="PQz-YJ-jFq"/>
                         <outlet property="HSSummary" destination="7Gw-qP-uux" id="a52-fu-ZYS"/>
+                        <outlet property="insulaImage" destination="W8A-bV-uN6" id="0pn-hJ-0Uh"/>
                         <outlet property="searchDisplayController" destination="bar-O9-pOr" id="Yyz-Xx-0pa"/>
                         <outlet property="view" destination="5" id="Btu-mt-IsV"/>
                     </connections>
@@ -233,8 +234,8 @@
                                     <segue destination="jea-Ud-xDz" kind="modal" id="TTl-kz-Jeg"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="wbO-ab-8t2">
-                                <rect key="frame" x="277" y="473" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" id="wbO-ab-8t2">
+                                <rect key="frame" x="303" y="507" width="154" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -248,6 +249,7 @@
                         <outlet property="IVSearchBar" destination="0o2-gb-6N9" id="bpf-2L-sPB"/>
                         <outlet property="IVSlider" destination="y1F-Xn-4hu" id="y7t-Sk-feM"/>
                         <outlet property="IVSummary" destination="waT-mm-uFV" id="H6p-kR-YGX"/>
+                        <outlet property="landmarkImage" destination="wbO-ab-8t2" id="Cp6-Sz-eDg"/>
                         <outlet property="view" destination="PGF-0a-x36" id="MSe-L8-OfE"/>
                     </connections>
                 </viewController>
@@ -472,8 +474,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="44L-Qm-mBa"/>
-        <segue reference="7XH-om-ulK"/>
         <segue reference="TTl-kz-Jeg"/>
+        <segue reference="ygA-ac-g2y"/>
+        <segue reference="44L-Qm-mBa"/>
     </inferredMetricsTieBreakers>
 </document>

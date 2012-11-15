@@ -99,10 +99,10 @@ NSString* landmarkName;
     [HSSummary setText: [self.myApp.lib getStringFromFile:description]];
     [self zoomOnAnnotation: name];
     
-    /*NSString* imageDescription = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_picture;
-    UIImage *image = [self.myApp.lib getImageFromFile:imageDescription];
-    [self.insulaImage setImage:image];
-    [self zoomOnAnnotation: name];*/
+    NSString* imageDescription = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_picture;
+    UIImage *img = [UIImage imageNamed:imageDescription];
+    [insulaImage setImage:img];
+    [self zoomOnAnnotation: name];
 }
 
 #pragma mark - Map Methods

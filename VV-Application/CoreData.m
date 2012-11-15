@@ -36,9 +36,9 @@
                                                                   inManagedObjectContext:self.managedObjectContext];
         [gesuiti setInsula_name:@"Gesuiti"];
         [gesuiti setInsula_annotation_description:@"Gesuiti_annotation_description.txt"];
-        [gesuiti setInsula_annotation_picture:@""];
+        [gesuiti setInsula_annotation_picture:@"VisualizingVenice.jpg"];
         [gesuiti setInsula_general_description:@"Gesuiti_general_description.txt"];
-        [gesuiti setInsula_general_picture:@"Gesuiti_general_picture.jpg"];
+        [gesuiti setInsula_general_picture:@"VisualizingVeniceLogo.jpg"];
         [gesuiti setLatitude:[NSNumber numberWithDouble:45.4333]];
         [gesuiti setLongitude:[NSNumber numberWithDouble:12.3167]];
         
@@ -61,9 +61,9 @@
     [scuola setInsula_name: @"Gesuiti"];
     [scuola setLandmark_3d:@"house.obj"];
     [scuola setLandmark_annotation_description:@"Scuola_annotation_description.txt"];
-    [scuola setLandmark_annotation_picture:@""];
+    [scuola setLandmark_annotation_picture:@"VisualizingVeniceLogo.jpg"];
     [scuola setLandmark_general_description:@"Scuola_general_description.txt"];
-    [scuola setLandmark_general_picture:@"Scuola_general_picture.png"];
+    [scuola setLandmark_general_picture:@"VisualizingVeniceLogo.jpg"];
     [scuola setLatitude:[NSNumber numberWithDouble:45.433]];
     [scuola setLongitude:[NSNumber numberWithDouble:12.316]];
     [scuola addTimeslotsObject:timeslot];

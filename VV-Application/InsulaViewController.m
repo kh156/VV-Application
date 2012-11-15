@@ -83,11 +83,11 @@
         NSError *error = nil;
         NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
         NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
-        //NSString* imageDescription = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_picture;
         [IVSummary setText: [self.myApp.lib getStringFromFile:description]];
-        //UIImage *image = [self.myApp.lib getImageFromFile:imageDescription];
-        //[self.landmarkImage setImage:image];
-        [self zoomOnAnnotation: name];    
+        NSString* imageDescription = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_picture;
+        UIImage *img = [UIImage imageNamed:imageDescription];
+        [landmarkImage setImage:img];
+        [self zoomOnAnnotation: name];
 }
 
 
