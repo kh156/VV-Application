@@ -39,6 +39,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"insula = %@, landmark = %@", insulaName, landmarkName);
     [super viewDidLoad];
     [self initTableButtons];
     [self plotMapAnnotations];

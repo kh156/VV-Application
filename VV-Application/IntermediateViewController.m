@@ -35,8 +35,8 @@
     return _myApp;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+     NSLog(@"insula = %@, landmark = %@", insulaName, landmarkName);
     [super viewDidLoad];
     [self loadLandmarkImage];
 }
@@ -87,8 +87,7 @@
 }
 
 
-#pragma mark -
-#pragma mark play video
+#pragma mark - play video
 -(void) initAndPlayVideo:(NSString *)filename
 {
     NSString *path = [self.myApp.lib getResourceFilepath:filename];
@@ -132,4 +131,10 @@
     theMovie.moviePlayer.initialPlaybackTime=-1.0;
     theMovie = nil;
 }
+//- (IBAction)goToIVScreen:(UIBarButtonItem *)sender {
+//    NSLog(@"insula = %@, landmark = %@", insulaName, landmarkName);
+//}
+
+
+
 @end
