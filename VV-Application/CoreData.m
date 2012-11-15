@@ -36,9 +36,9 @@
                                                                   inManagedObjectContext:self.managedObjectContext];
         [gesuiti setInsula_name:@"Gesuiti"];
         [gesuiti setInsula_annotation_description:@"Gesuiti_annotation_description.txt"];
-        [gesuiti setInsula_annotation_picture:@"VisualizingVenice.jpg"];
+        [gesuiti setInsula_annotation_picture:@"Gesuiti_annotation_picture.jpg"];
         [gesuiti setInsula_general_description:@"Gesuiti_general_description.txt"];
-        [gesuiti setInsula_general_picture:@"VisualizingVeniceLogo.jpg"];
+        [gesuiti setInsula_general_picture:@"Gesuiti_general_picture.jpg"];
         [gesuiti setLatitude:[NSNumber numberWithDouble:45.4333]];
         [gesuiti setLongitude:[NSNumber numberWithDouble:12.3167]];
         
@@ -61,9 +61,10 @@
     [scuola setInsula_name: @"Gesuiti"];
     [scuola setLandmark_3d:@"house.obj"];
     [scuola setLandmark_annotation_description:@"Scuola_annotation_description.txt"];
-    [scuola setLandmark_annotation_picture:@"VisualizingVeniceLogo.jpg"];
+    [scuola setLandmark_annotation_picture:@"Scuola_annotation_picture.jpg"];
     [scuola setLandmark_general_description:@"Scuola_general_description.txt"];
-    [scuola setLandmark_general_picture:@"VisualizingVeniceLogo.jpg"];
+    [scuola setLandmark_general_picture:@"Scuola_general_picture.png"];
+    [scuola setLandmark_video:@"Scuola_video.m4v"];
     [scuola setLatitude:[NSNumber numberWithDouble:45.433]];
     [scuola setLongitude:[NSNumber numberWithDouble:12.316]];
     [scuola addTimeslotsObject:timeslot];
@@ -71,27 +72,105 @@
     Intermediate *north = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
                                                                         inManagedObjectContext:self.managedObjectContext];
     north.num = @"N";
-    north.image = @"Scuola_general_picture.png";
+    north.image = @"Scuola_intermediate1.png";
     north.landmark = scuola;
+
+    Popover *p1 = (Popover *)[NSEntityDescription insertNewObjectForEntityForName:@"Popover"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    p1.title = @"Scoula Grande di San Marco";
+    p1.x = [NSNumber numberWithDouble:50.0];
+    p1.y = [NSNumber numberWithDouble:50.0];
+    p1.width = [NSNumber numberWithDouble:1386 - 50];
+    p1.height = [NSNumber numberWithDouble:967 - 50];
+    p1.text = @"Scoula_i1_p1.txt";
+    p1.intermediate = north;
+    [north addPopoversObject:p1];
+    
+    Popover *p2 = (Popover *)[NSEntityDescription insertNewObjectForEntityForName:@"Popover"
+                                                           inManagedObjectContext:self.managedObjectContext];
+    p2.title = @"Virtual Space";
+    p2.x = [NSNumber numberWithDouble:40.0];
+    p2.y = [NSNumber numberWithDouble:967.0];
+    p2.width = [NSNumber numberWithDouble:1386 - 40];
+    p2.height = [NSNumber numberWithDouble:1326 - 967];
+    p2.text = @"Scoula_i1_p2.txt";
+    p2.intermediate = north;
+    [north addPopoversObject:p2];
+
     
     Intermediate *east = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
                                                                        inManagedObjectContext:self.managedObjectContext];
     east.num = @"E";
-    east.image = @"";
+    east.image = @"Scuola_intermediate2.png";
     east.landmark = scuola;
+    
+    Popover *p3 = (Popover *)[NSEntityDescription insertNewObjectForEntityForName:@"Popover"
+                                                           inManagedObjectContext:self.managedObjectContext];
+    p3.x = [NSNumber numberWithDouble:0];
+    p3.y = [NSNumber numberWithDouble:65];
+    p3.width = [NSNumber numberWithDouble:1422 - 0];
+    p3.height = [NSNumber numberWithDouble:912 - 65];
+    p3.intermediate = east;
+    [east addPopoversObject:p3];
+
+    Popover *p4 = (Popover *)[NSEntityDescription insertNewObjectForEntityForName:@"Popover"
+                                                           inManagedObjectContext:self.managedObjectContext];
+    p4.x = [NSNumber numberWithDouble:44];
+    p4.y = [NSNumber numberWithDouble:918];
+    p4.width = [NSNumber numberWithDouble:1424 - 44];
+    p4.height = [NSNumber numberWithDouble:1344 - 918];
+    p4.intermediate = east;
+    [east addPopoversObject:p4];
+    
     
     Intermediate *south = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
                                                                         inManagedObjectContext:self.managedObjectContext];
     south.num = @"S";
-    south.image = @"";
+    south.image = @"Scuola_intermediate3.png";
     south.landmark = scuola;
+    
+    Popover *p5 = (Popover *)[NSEntityDescription insertNewObjectForEntityForName:@"Popover"
+                                                           inManagedObjectContext:self.managedObjectContext];
+    p5.x = [NSNumber numberWithDouble:0];
+    p5.y = [NSNumber numberWithDouble:0];
+    p5.width = [NSNumber numberWithDouble:1097 - 0];
+    p5.height = [NSNumber numberWithDouble:988 - 0];
+    p5.intermediate = south;
+    [south addPopoversObject:p5];
+
+    Popover *p6 = (Popover *)[NSEntityDescription insertNewObjectForEntityForName:@"Popover"
+                                                           inManagedObjectContext:self.managedObjectContext];
+    p6.x = [NSNumber numberWithDouble:0];
+    p6.y = [NSNumber numberWithDouble:988];
+    p6.width = [NSNumber numberWithDouble:1097 - 0];
+    p6.height = [NSNumber numberWithDouble:1401 - 988];
+    p6.intermediate = south;
+    [south addPopoversObject:p6];
+
     
     Intermediate *west = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
                                                                        inManagedObjectContext:self.managedObjectContext];
     west.num = @"W";
-    west.image = @"";
+    west.image = @"Scuola_intermediate4.png";
     west.landmark = scuola;
     
+    Popover *p7 = (Popover *)[NSEntityDescription insertNewObjectForEntityForName:@"Popover"
+                                                           inManagedObjectContext:self.managedObjectContext];
+    p7.x = [NSNumber numberWithDouble:0];
+    p7.y = [NSNumber numberWithDouble:313];
+    p7.width = [NSNumber numberWithDouble:527 - 0];
+    p7.height = [NSNumber numberWithDouble:988 - 313];
+    p7.intermediate = west;
+    [west addPopoversObject:p7];
+    
+    Popover *p8 = (Popover *)[NSEntityDescription insertNewObjectForEntityForName:@"Popover"
+                                                           inManagedObjectContext:self.managedObjectContext];
+    p8.x = [NSNumber numberWithDouble:0];
+    p8.y = [NSNumber numberWithDouble:988];
+    p8.width = [NSNumber numberWithDouble:527 - 0];
+    p8.height = [NSNumber numberWithDouble:1405 - 988];
+    p8.intermediate = west;
+    [west addPopoversObject:p8];
     
     [scuola addIntermediatesObject:north];
     [scuola addIntermediatesObject:east];

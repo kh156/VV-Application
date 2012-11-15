@@ -2,7 +2,7 @@
 //  Landmark.m
 //  VV-Application
 //
-//  Created by Kuang Han on 11/10/12.
+//  Created by Kuang Han on 11/15/12.
 //  Copyright (c) 2012 Nicholas Gordon. All rights reserved.
 //
 
@@ -16,13 +16,14 @@
 @dynamic insula_name;
 @dynamic landmark_3d;
 @dynamic landmark_annotation_description;
+@dynamic landmark_annotation_picture;
 @dynamic landmark_general_description;
 @dynamic landmark_general_picture;
 @dynamic landmark_name;
 @dynamic latitude;
 @dynamic longitude;
-@dynamic landmark_annotation_picture;
-@dynamic timeslots;
+@dynamic landmark_video;
 @dynamic intermediates;
+@dynamic timeslots;
 
 @end

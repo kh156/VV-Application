@@ -83,7 +83,7 @@
 
 
 - (IBAction)playVideo:(id) sender{
-    [self initAndPlayVideo:@"DummyVideo.m4v"];
+    [self initAndPlayVideo:@"Video1.m4v"];
 }
 
 

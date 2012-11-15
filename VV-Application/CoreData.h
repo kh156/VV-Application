@@ -11,7 +11,7 @@
 #import "Insula.h"
 #import "Timeslot.h"
 #import "Intermediate.h"
-#import "Clickables.h"
+#import "Popover.h"
 
 @interface CoreData : NSObject
 
