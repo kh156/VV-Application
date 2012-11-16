@@ -64,9 +64,6 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Ecg-0e-gTf">
                                 <rect key="frame" x="271" y="436" width="735" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="slider_moved:" destination="2" eventType="valueChanged" id="XVQ-mG-FYh"/>
-                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="M7e-Ve-Av4">
                                 <rect key="frame" x="754" y="614" width="250" height="44"/>
@@ -476,8 +473,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="7XH-om-ulK"/>
-        <segue reference="bwr-V0-23C"/>
+        <segue reference="ygA-ac-g2y"/>
         <segue reference="44L-Qm-mBa"/>
+        <segue reference="TTl-kz-Jeg"/>
     </inferredMetricsTieBreakers>
 </document>
