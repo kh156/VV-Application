@@ -22,6 +22,7 @@
 @synthesize IVSearchBar;
 @synthesize IVSlider;
 @synthesize landmarkImage;
+@synthesize dates;
 @synthesize myApp = _myApp;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -44,8 +45,39 @@
     [self initTableButtons];
     [self plotMapAnnotations];
     [self setInitialMapRegion];
+    
+    //prompt user for search bar input
     [IVSearchBar setPlaceholder:@"Search for a Landmark!"];
     [IVSearchBar placeholder];
+}
+
+#pragma mark - Slider methods, TimeChange methods
+
+-(void) setUpSlider {
+    dates = [[NSMutableArray alloc] init];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    [request setEntity:des];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name = %@", @"Scuola Grande di San Marco"];
+    [request setPredicate:query];
+    NSError *error = nil;
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
+    for (Timeslot *slot in lmark.timeslots) {
+        [dates addObject:[NSNumber numberWithInt:slot.year.intValue]];
+        NSLog(@"%@", [NSNumber numberWithInt:slot.year.intValue]);
+    }
+    IVSlider.continuous = YES;
+    [IVSlider setMinimumValue:0];
+    [IVSlider setMaximumValue:((float)[dates count] - 1)];
+    [IVSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
+}
+
+-(void) valueChanged:(UISlider *) sender {
+    NSUInteger index = (NSUInteger)(IVSlider.value + 0.5); //round number
+    [IVSlider setValue:index animated:NO];
+    NSNumber *date = [dates objectAtIndex:index];
+    //fetch text/picture for this date.....
 }
 
 #pragma mark - TableView Data Source methods

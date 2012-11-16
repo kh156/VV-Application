@@ -29,6 +29,7 @@ NSString* landmarkName;
 @synthesize HSSlider;
 @synthesize insulaImage;
 @synthesize myApp = _myApp;
+@synthesize dates;
 
 - (AppDelegate *)myApp {
     if (_myApp == NULL) {
@@ -45,8 +46,36 @@ NSString* landmarkName;
     [self setInitialMapRegion];
     [HSSearchBar setPlaceholder:@"Search for an Insula!"];
     [HSSearchBar placeholder];
-    //[HSSlider setMaximumValue:10];
-    //[HSSlider setValue: 0.34];
+    [self setUpSlider];
+}
+
+#pragma mark - Slider methods, TimeChange methods
+
+-(void) setUpSlider {
+    dates = [[NSMutableArray alloc] init];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    [request setEntity:des];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name = %@", @"Gesuiti"];
+    [request setPredicate:query];
+    NSError *error = nil;
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
+    for (Timeslot *slot in insula.timeslots) {
+        [dates addObject:[NSNumber numberWithInt:slot.year.intValue]];
+        NSLog(@"%@", [NSNumber numberWithInt:slot.year.intValue]);
+    }
+    HSSlider.continuous = YES;
+    [HSSlider setMinimumValue:0];
+    [HSSlider setMaximumValue:((float)[dates count] - 1)];
+    [HSSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
+}
+
+-(void) valueChanged:(UISlider *) sender {
+    NSUInteger index = (NSUInteger)(HSSlider.value + 0.5); //round number
+    [HSSlider setValue:index animated:NO];
+    NSNumber *date = [dates objectAtIndex:index];
+    //fetch text/picture for this date.....
 }
 
 //TODO: make this do stuff
