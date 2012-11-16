@@ -67,6 +67,13 @@
     //NSLog(@"landmarkImage set");
 }
 
+- (IBAction)rotateView:(UIBarButtonItem *)sender {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Intermediate" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    [request setEntity: des];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@""]
+}
+
 /*-(IBAction)rotateView:(id)sender {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Intermediate" inManagedObjectContext:self.myApp.coreData.managedObjectContext];

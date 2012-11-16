@@ -38,7 +38,7 @@
         [gesuiti setInsula_annotation_description:@"Gesuiti_annotation_description.txt"];
         [gesuiti setInsula_annotation_picture:@"Gesuiti_annotation_picture.jpg"];
         [gesuiti setInsula_general_description:@"Gesuiti_general_description.txt"];
-        [gesuiti setInsula_general_picture:@"Gesuiti_general_picture.jpg"];
+        [gesuiti setInsula_general_picture:@"VisualizingVeniceLogo.jpg"];
         [gesuiti setLatitude:[NSNumber numberWithDouble:45.4333]];
         [gesuiti setLongitude:[NSNumber numberWithDouble:12.3167]];
         

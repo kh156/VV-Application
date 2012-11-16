@@ -87,8 +87,10 @@
         NSString* imageDescription = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_picture;
         UIImage *img = [UIImage imageNamed:imageDescription];
         [landmarkImage setImage:img];
+        //TODO: resize image?
         [self zoomOnAnnotation: name];
 }
+
 
 
 #pragma mark - Map Methods
