@@ -44,6 +44,8 @@
     [self initTableButtons];
     [self plotMapAnnotations];
     [self setInitialMapRegion];
+    [IVSearchBar setPlaceholder:@"Search for a Landmark!"];
+    [IVSearchBar placeholder];
 }
 
 #pragma mark - TableView Data Source methods

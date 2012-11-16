@@ -43,11 +43,13 @@ NSString* landmarkName;
     [self initTableButtons];
     [self plotMapAnnotations];
     [self setInitialMapRegion];
-    //HSSearchBar.prompt = @"Search for an insula";
+    [HSSearchBar setPlaceholder:@"Search for an Insula!"];
+    [HSSearchBar placeholder];
     //[HSSlider setMaximumValue:10];
     //[HSSlider setValue: 0.34];
 }
 
+//TODO: make this do stuff
 -(MKAnnotationView *) mapview:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     MKPinAnnotationView *myPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"current"];
     myPin.pinColor = MKPinAnnotationColorRed;
