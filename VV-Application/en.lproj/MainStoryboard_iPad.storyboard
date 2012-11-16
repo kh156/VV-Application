@@ -391,7 +391,7 @@
                                     </barButtonItem>
                                     <barButtonItem title="Rotate View" id="gJS-kt-Bxh">
                                         <connections>
-                                            <action selector="rotateView:" destination="jea-Ud-xDz" id="tbm-MD-2Bx"/>
+                                            <action selector="rotateView:" destination="jea-Ud-xDz" id="G32-ME-lXV"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Play Video" id="ZtC-rn-hMx">

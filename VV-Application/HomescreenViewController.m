@@ -48,7 +48,7 @@ NSString* landmarkName;
     //[HSSlider setValue: 0.34];
 }
 
-/*-(MKAnnotationView *) mapview:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+-(MKAnnotationView *) mapview:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     MKPinAnnotationView *myPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"current"];
     myPin.pinColor = MKPinAnnotationColorRed;
     UIImage *image = [self.myApp.lib getImageFromFile:@"VisualizingVeniceLogo.jpg"];
@@ -59,7 +59,7 @@ NSString* landmarkName;
     myPin.animatesDrop = TRUE;
     myPin.canShowCallout = YES;
     return myPin;
-}*/
+}
 
 #pragma mark - TableView Data Source methods
 

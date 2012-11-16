@@ -36,7 +36,7 @@
 }
 
 - (void)viewDidLoad {
-     NSLog(@"insula = %@, landmark = %@", insulaName, landmarkName);
+     //NSLog(@"insula = %@, landmark = %@", insulaName, landmarkName);
     [super viewDidLoad];
     [self loadLandmarkImage];
 }
@@ -47,46 +47,62 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) loadLandmarkImage {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+-(void) loadLandmarkImage {NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
     NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", landmarkName];
     [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
-    NSString *description = ((Landmark *) [fetchResults objectAtIndex:0]).landmark_general_picture;
-//    NSLog(@"image = %@", description);
-    CGSize size;
-    size.height = 600;
-    size.width = 1000;
-     
-    UIImage *image = [self.myApp.lib getImageFromFile:description];
-    [self.landmarkImage setImage:image];
-    rotation = 1;
-    //NSLog(@"landmarkImage set");
+    Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
+    for (Intermediate *interm in lmark.intermediates) {
+        //NSLog(@"%@",interm.num);
+        if ([interm.num isEqualToString:@"N"]) {
+            UIImage *img = [self.myApp.lib getImageFromFile: interm.image];
+            [self.landmarkImage setImage:img];
+            rotation = @"E";
+            //NSLog(@"landmarkImage set");
+            break;
+        }
+    }
 }
 
 - (IBAction)rotateView:(UIBarButtonItem *)sender {
+   // NSLog(@"rotating view!");
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName:@"Intermediate" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity: des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@""]
-}
-
-/*-(IBAction)rotateView:(id)sender {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName:@"Intermediate" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
-    [request setEntity:des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"Landmark == %@", landmarkName];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", landmarkName];
     [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
-    NSString *description = ((Intermediate* ) [fetchResults objectAtIndex:rotation]).image;
-    UIImage *image = [self.myApp.lib getImageFromFile:description];
-    [self.landmarkImage setImage:image];
-    rotation = (rotation+1)%4;
-} */
+    Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
+    for (Intermediate *interm in lmark.intermediates) {
+        if ([interm.num isEqualToString:rotation]) {
+            UIImage *img = [self.myApp.lib getImageFromFile: interm.image];
+            [self.landmarkImage setImage:img];
+            //NSLog(@"%@",interm.num);
+            [self nextRotation:rotation];
+            //NSLog(@"landmarkImage set");
+            break;
+        }
+    }
+}
+
+-(void) nextRotation:(NSString *) direction {
+    if ([direction isEqualToString:@"N"]) {
+        rotation = @"E";
+    }
+    else if ([direction isEqualToString:@"E"]) {
+        rotation = @"S";
+    }
+    else if ([direction isEqualToString:@"S"]) {
+        rotation = @"W";
+    }
+    else {
+        rotation = @"N";
+    }
+}
 
 
 - (IBAction)playVideo:(id) sender{
