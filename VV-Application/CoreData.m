@@ -47,6 +47,42 @@
 }
 
 - (void)initializeLandmark:(Insula *)insula {
+    Landmark *basilica = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
+                                                                 inManagedObjectContext:self.managedObjectContext];
+    basilica.landmark_name = @"The Basilica di S.S. Giovanni e Paolo";
+    basilica.landmark_annotation_description = @"Basilica_annotation_description.txt";
+    basilica.landmark_annotation_picture = @"Basilica_annotation_picture.jpg";
+    basilica.landmark_general_description = @"Basilica_general_description.txt";
+    basilica.landmark_general_picture = @"Basilica_general_picture.jpg";
+    basilica.latitude = [NSNumber numberWithDouble:45.439342];
+    basilica.longitude = [NSNumber numberWithDouble:12.341980];
+    basilica.insula = insula;
+    [insula addLandmarksObject:basilica];
+    
+    Landmark *cistern = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
+                                                                   inManagedObjectContext:self.managedObjectContext];
+    cistern.landmark_name = @"Cistern";
+    cistern.landmark_annotation_description = @"Cistern_annotation_description.txt";
+    cistern.landmark_annotation_picture = @"Cistern_annotation_picture.jpg";
+    cistern.landmark_general_description = @"Cistern_general_description.txt";
+    cistern.landmark_general_picture = @"Cistern_general_picture.jpg";
+    cistern.latitude = [NSNumber numberWithDouble:45.439065];
+    cistern.longitude = [NSNumber numberWithDouble:12.341623];
+    cistern.insula = insula;
+    [insula addLandmarksObject:cistern];
+
+    Landmark *equestrian = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
+                                                                   inManagedObjectContext:self.managedObjectContext];
+    equestrian.landmark_name = @"Equestrian Monument to Bartolommeo Colleoni";
+    equestrian.landmark_annotation_description = @"Equestrian_annotation_description.txt";
+    equestrian.landmark_annotation_picture = @"Equestrian_annotation_picture.jpg";
+    equestrian.landmark_general_description = @"Equestrian_general_description.txt";
+    equestrian.landmark_general_picture = @"Equestrian_general_picture.jpg";
+    equestrian.latitude = [NSNumber numberWithDouble:45.439187];
+    equestrian.longitude = [NSNumber numberWithDouble:12.341398];
+    equestrian.insula = insula;
+    [insula addLandmarksObject:equestrian];
+
     Landmark *scuola = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
                                                                  inManagedObjectContext:self.managedObjectContext];
     [scuola setLandmark_name:@"Scuola Grande di San Marco"];
@@ -56,8 +92,8 @@
     [scuola setLandmark_general_description:@"Scuola_general_description.txt"];
     [scuola setLandmark_general_picture:@"Scuola_general_picture.jpg"];
     [scuola setLandmark_video:@"Scuola_video.m4v"];
-    [scuola setLatitude:[NSNumber numberWithDouble:45.433]];
-    [scuola setLongitude:[NSNumber numberWithDouble:12.316]];
+    [scuola setLatitude:[NSNumber numberWithDouble:45.439641]];
+    [scuola setLongitude:[NSNumber numberWithDouble:12.341350]];
     [scuola setInsula:insula];
     
     Timeslot *t1508 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
