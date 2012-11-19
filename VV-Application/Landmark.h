@@ -20,9 +20,11 @@
 @property (nonatomic, retain) NSString * landmark_video;
 @property (nonatomic, retain) NSNumber * latitude;
 @property (nonatomic, retain) NSNumber * longitude;
+@property (nonatomic, retain) NSString * landmark_general_description;
+@property (nonatomic, retain) NSString * landmark_general_picture;
+@property (nonatomic, retain) Insula *insula;
 @property (nonatomic, retain) NSSet *intermediates;
 @property (nonatomic, retain) NSSet *timeslots;
-@property (nonatomic, retain) Insula *insula;
 @end
 
 @interface Landmark (CoreDataGeneratedAccessors)

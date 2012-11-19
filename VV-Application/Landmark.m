@@ -21,8 +21,10 @@
 @dynamic landmark_video;
 @dynamic latitude;
 @dynamic longitude;
+@dynamic landmark_general_description;
+@dynamic landmark_general_picture;
+@dynamic insula;
 @dynamic intermediates;
 @dynamic timeslots;
-@dynamic insula;
 
 @end

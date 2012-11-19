@@ -53,6 +53,8 @@
     [scuola setLandmark_3d:@"house.obj"];
     [scuola setLandmark_annotation_description:@"Scuola_annotation_description.txt"];
     [scuola setLandmark_annotation_picture:@"Scuola_annotation_picture.jpg"];
+    [scuola setLandmark_general_description:@"Scuola_general_description.txt"];
+    [scuola setLandmark_general_picture:@"Scuola_general_picture.jpg"];
     [scuola setLandmark_video:@"Scuola_video.m4v"];
     [scuola setLatitude:[NSNumber numberWithDouble:45.433]];
     [scuola setLongitude:[NSNumber numberWithDouble:12.316]];
