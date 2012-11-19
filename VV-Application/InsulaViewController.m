@@ -71,8 +71,8 @@
     dates = [[NSMutableArray alloc] init];
     NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name = %@", landmarkName];
     NSArray *fetchResults = [self entity:@"Landmark" predicate: query];
-    Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
-    for (Timeslot *slot in insula.timeslots) {
+    Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
+    for (Timeslot *slot in lmark.timeslots) {
         [dates addObject:slot.year];
         //NSLog(@"%@", slot.year);
     }
@@ -98,6 +98,7 @@
     }
     [IVSlider setValue:IVSlider.maximumValue];
     [IVSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self valueChanged:IVSlider];
 }
 
 
@@ -110,8 +111,9 @@
     Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
     for (Timeslot *timeslot in lmark.timeslots) {
         if ([timeslot.year isEqualToNumber:date]) {
-            //timeslot description set
-            //set timeslot image
+            [IVSummary setText:[self.myApp.lib getStringFromFile:timeslot.landmark_general_description]];
+            UIImage *img = [UIImage imageNamed:timeslot.landmark_general_picture];
+            [landmarkImage setImage:img];
             break;
         };
     }
@@ -140,14 +142,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         NSString *name =[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
         landmarkName = name;
+        [self setUpSlider];
         [IVButton setTitle: name forState: UIControlStateNormal];
-        NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", name];
-        NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
-        NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
-        [IVSummary setText: [self.myApp.lib getStringFromFile:description]];
-        NSString* imageDescription = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_picture;
-        UIImage *img = [UIImage imageNamed:imageDescription];
-        [landmarkImage setImage:img];
+        //NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", name];
+        //NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
+        //NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
+        //[IVSummary setText: [self.myApp.lib getStringFromFile:description]];
+        //NSString* imageDescription = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_picture;
+        //UIImage *img = [UIImage imageNamed:imageDescription];
+        //[landmarkImage setImage:img];
         //TODO: resize image?
         [self zoomOnAnnotation: name];
 }
@@ -210,11 +213,13 @@
         NSString *name = [annotation title];
         if ([name isEqualToString: IVSearchBar.text]) {
             [IVButton setTitle: IVSearchBar.text forState: UIControlStateNormal];
-            NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", name];
-            NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
+            landmarkName = IVSearchBar.text;
+            [self setUpSlider];
+            //NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", name];
+            //NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
             //TODO: check if results is null
-            NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
-            [IVSummary setText: [self.myApp.lib getStringFromFile:description]];
+            //NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
+            //[IVSummary setText: [self.myApp.lib getStringFromFile:description]];
             [self zoomOnAnnotation: IVSearchBar.text];
         }
     }

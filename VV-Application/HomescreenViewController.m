@@ -97,6 +97,7 @@ NSString* landmarkName;
     }
     [HSSlider setValue:HSSlider.maximumValue];
     [HSSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self valueChanged:HSSlider];
 }
 
 -(void) valueChanged:(UISlider *) sender {
@@ -108,8 +109,9 @@ NSString* landmarkName;
     Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
     for (Timeslot *timeslot in insula.timeslots) {
         if ([timeslot.year isEqualToNumber:date]) {
-            //timeslot description set
-            //set timeslot image
+            [HSSummary setText:[self.myApp.lib getStringFromFile:timeslot.insula_general_description]];
+            UIImage *img = [UIImage imageNamed:timeslot.insula_general_picture];
+            [insulaImage setImage:img];
             break;
         };
     }
@@ -153,7 +155,7 @@ NSString* landmarkName;
     NSString *name =[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
     insulaName = name;
     [HSButton setTitle: name forState: UIControlStateNormal];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", name];
+    /*NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", name];
     NSArray *fetchResults = [self entity:@"Insula" predicate:query];
     NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
     [HSSummary setText: [self.myApp.lib getStringFromFile:description]];
@@ -161,7 +163,7 @@ NSString* landmarkName;
     
     NSString* imageDescription = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_picture;
     UIImage *img = [UIImage imageNamed:imageDescription];
-    [insulaImage setImage:img];
+    [insulaImage setImage:img];*/
     [self zoomOnAnnotation: name];
     [self setUpSlider];
 }
@@ -225,13 +227,15 @@ NSString* landmarkName;
         NSString *name = [annotation title];
         if ([name isEqualToString: HSSearchBar.text]) {
             [HSButton setTitle: HSSearchBar.text forState: UIControlStateNormal];
-            NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", name];
+            /*NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", name];
             NSArray *fetchResults = [self entity:@"Insula" predicate:query];
             //TODO: check if results is null
             NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
             NSString* generalDes = [self.myApp.lib getStringFromFile:description];
-            [HSSummary setText: generalDes];
+            [HSSummary setText: generalDes];*/
             [self zoomOnAnnotation: HSSearchBar.text];
+            insulaName = HSSearchBar.text;
+            [self setUpSlider];
         }
     }
 }
