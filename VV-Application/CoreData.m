@@ -41,7 +41,7 @@
         [gesuiti setInsula_general_picture:@"VisualizingVeniceLogo.jpg"];
         [gesuiti setLatitude:[NSNumber numberWithDouble:45.4333]];
         [gesuiti setLongitude:[NSNumber numberWithDouble:12.3167]];
-
+        
         [self initializeLandmark:gesuiti];
     }
 }

@@ -45,51 +45,82 @@
     [self initTableButtons];
     [self plotMapAnnotations];
     [self setInitialMapRegion];
+    [IVSlider setEnabled:NO];
     
     //prompt user for search bar input
     [IVSearchBar setPlaceholder:@"Search for a Landmark!"];
     [IVSearchBar placeholder];
 }
 
-#pragma mark - Slider methods, TimeChange methods
+#pragma mark - fetch from core data utility method
 
--(void) setUpSlider {
-    dates = [[NSMutableArray alloc] init];
+-(NSArray *) entity:(NSString *) entity predicate: (NSPredicate *) query {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    NSEntityDescription *des = [NSEntityDescription entityForName:entity inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name = %@", @"Scuola Grande di San Marco"];
     [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
-    Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
-    for (Timeslot *slot in lmark.timeslots) {
-        [dates addObject:[NSNumber numberWithInt:slot.year.intValue]];
-        NSLog(@"%@", [NSNumber numberWithInt:slot.year.intValue]);
+    return fetchResults;
+}
+
+#pragma mark - Slider methods, TimeChange methods
+
+-(void) setUpSlider {
+    [IVSlider setEnabled:YES];
+    dates = [[NSMutableArray alloc] init];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name = %@", landmarkName];
+    NSArray *fetchResults = [self entity:@"Landmark" predicate: query];
+    Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
+    for (Timeslot *slot in insula.timeslots) {
+        [dates addObject:slot.year];
+        //NSLog(@"%@", slot.year);
     }
     IVSlider.continuous = YES;
     [IVSlider setMinimumValue:0];
     [IVSlider setMaximumValue:((float)[dates count] - 1)];
+    
+    int width = IVSlider.frame.size.width;
+    //origin is top left of slider
+    int startx = IVSlider.frame.origin.x;
+    int starty = IVSlider.frame.origin.y;
+    int count = 0;
+    [dates sortUsingSelector:@selector(compare:)];
+    for (NSNumber *num in dates) {
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(startx + count * (width/([dates count]-1)) - 20, starty - 20, 40, 20) ];
+        label.textColor = [UIColor blackColor];
+        label.backgroundColor = self.view.backgroundColor;
+        label.font = [UIFont fontWithName:@"Times New Roman Bold" size:(12.0)];
+        [self.view addSubview:label];
+        label.text = [NSString stringWithFormat: @"%d", [num intValue]];
+        count++;
+    }
+    [IVSlider setValue:IVSlider.maximumValue];
     [IVSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
 }
+
 
 -(void) valueChanged:(UISlider *) sender {
     NSUInteger index = (NSUInteger)(IVSlider.value + 0.5); //round number
     [IVSlider setValue:index animated:NO];
     NSNumber *date = [dates objectAtIndex:index];
-    //fetch text/picture for this date.....
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name = %@", landmarkName];
+    NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
+    Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
+    for (Timeslot *timeslot in lmark.timeslots) {
+        if ([timeslot.year isEqualToNumber:date]) {
+            //timeslot description set
+            //set timeslot image
+            break;
+        };
+    }
 }
 
 #pragma mark - TableView Data Source methods
 
 -(void) initTableButtons {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
-    [request setEntity:des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", insulaName];
-    [request setPredicate:query];
-    NSError *error = nil;
-    tableData = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    tableData = [self entity:@"Landmark" predicate: nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -108,16 +139,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         NSString *name =[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+        landmarkName = name;
         [IVButton setTitle: name forState: UIControlStateNormal];
-        NSFetchRequest *request = [[NSFetchRequest alloc] init];
-        NSEntityDescription *des = [NSEntityDescription entityForName: @"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
-        [request setEntity:des];
         NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", name];
-        [request setPredicate:query];
-        NSError *error = nil;
-        NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
-    
-    
+        NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
         NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
         [IVSummary setText: [self.myApp.lib getStringFromFile:description]];
         NSString* imageDescription = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_picture;
@@ -127,19 +152,12 @@
         [self zoomOnAnnotation: name];
 }
 
-
-
 #pragma mark - Map Methods
 
 -(void) plotMapAnnotations {
     // NSLog(@"plotting map annotations insula");
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
-    [request setEntity:des];
     NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", insulaName];
-    [request setPredicate:query];
-    NSError *error = nil;
-    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
     Landmark *lmark;
     for (lmark in fetchResults) {
         [self plotMapAnnotation:lmark.landmark_name address:[self.myApp.lib getStringFromFile:lmark.landmark_annotation_description] latitude:lmark.latitude.doubleValue longitude:lmark.longitude.doubleValue];
@@ -192,13 +210,8 @@
         NSString *name = [annotation title];
         if ([name isEqualToString: IVSearchBar.text]) {
             [IVButton setTitle: IVSearchBar.text forState: UIControlStateNormal];
-            NSFetchRequest *request = [[NSFetchRequest alloc] init];
-            NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self. myApp.coreData.managedObjectContext];
-            [request setEntity:des];
             NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", name];
-            [request setPredicate:query];
-            NSError *error = nil;
-            NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+            NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
             //TODO: check if results is null
             NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
             [IVSummary setText: [self.myApp.lib getStringFromFile:description]];
