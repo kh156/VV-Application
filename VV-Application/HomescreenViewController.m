@@ -110,7 +110,7 @@ NSString* landmarkName;
     for (Timeslot *timeslot in insula.timeslots) {
         if ([timeslot.year isEqualToNumber:date]) {
             [HSSummary setText:[self.myApp.lib getStringFromFile:timeslot.insula_general_description]];
-            UIImage *img = [UIImage imageNamed:timeslot.insula_general_picture];
+            UIImage *img = [self.myApp.lib getImageFromFile:timeslot.insula_general_picture];
             [insulaImage setImage:img];
             break;
         };

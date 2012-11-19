@@ -47,7 +47,7 @@
         t1508.year = [NSNumber numberWithInt:1508];
         t1508.month = [NSNumber numberWithInt:10];
         t1508.insula_general_description = @"Gesuiti_general_description.txt";
-        t1508.insula_general_picture = @"VisualizingVeniceLogo.jpg";
+        t1508.insula_general_picture = @"Gesuiti_general_picture_1508.png";
         [gesuiti addTimeslotsObject:t1508];
         
         Timeslot *t2012 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
@@ -55,7 +55,7 @@
         t2012.year = [NSNumber numberWithInt:2012];
         t2012.month = [NSNumber numberWithInt:11];
         t2012.insula_general_description = @"Gesuiti_general_description.txt";
-        t2012.insula_general_picture = @"VisualizingVeniceLogo.jpg";
+        t2012.insula_general_picture = @"Gesuiti_general_picture_2012.png";
         [gesuiti addTimeslotsObject:t2012];
 
         [self initializeLandmark:gesuiti];
