@@ -44,22 +44,30 @@ NSString* landmarkName;
     [self initTableButtons];
     [self plotMapAnnotations];
     [self setInitialMapRegion];
+    [HSSlider setEnabled:NO];
     [HSSearchBar setPlaceholder:@"Search for an Insula!"];
     [HSSearchBar placeholder];
-    [self setUpSlider];
+}
+
+#pragma mark - fetch from core data utility method
+
+-(NSArray *) entity:(NSString *) entity predicate: (NSPredicate *) query {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName:entity inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    [request setEntity:des];
+    [request setPredicate:query];
+    NSError *error = nil;
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    return fetchResults;
 }
 
 #pragma mark - Slider methods, TimeChange methods
 
 -(void) setUpSlider {
+    [HSSlider setEnabled:YES];
     dates = [[NSMutableArray alloc] init];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
-    [request setEntity:des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name = %@", @"Gesuiti"];
-    [request setPredicate:query];
-    NSError *error = nil;
-    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name = %@", insulaName];
+    NSArray *fetchResults = [self entity:@"Insula" predicate: query];
     Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
     for (Timeslot *slot in insula.timeslots) {
         [dates addObject:[NSNumber numberWithInt:slot.year.intValue]];
@@ -90,7 +98,16 @@ NSString* landmarkName;
     NSUInteger index = (NSUInteger)(HSSlider.value + 0.5); //round number
     [HSSlider setValue:index animated:NO];
     NSNumber *date = [dates objectAtIndex:index];
-    //fetch text/picture for this date.....
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name = %@", insulaName];
+    NSArray *fetchResults = [self entity:@"Insula" predicate:query];
+    Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
+    for (Timeslot *timeslot in insula.timeslots) {
+        if ([timeslot.year isEqualToNumber:date]) {
+            //timeslot description set
+            //set timeslot image
+            break;
+        };
+    }
 }
 
 //TODO: make this do stuff
@@ -110,11 +127,7 @@ NSString* landmarkName;
 #pragma mark - TableView Data Source methods
 
 -(void) initTableButtons {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
-    [request setEntity:des];
-    NSError *error = nil;
-    tableData = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    tableData = [self entity:@"Insula" predicate: nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -133,14 +146,10 @@ NSString* landmarkName;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *name =[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+    insulaName = name;
     [HSButton setTitle: name forState: UIControlStateNormal];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName: @"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
-    [request setEntity:des];
     NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", name];
-    [request setPredicate:query];
-    NSError *error = nil;
-    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    NSArray *fetchResults = [self entity:@"Insula" predicate:query];
     NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
     [HSSummary setText: [self.myApp.lib getStringFromFile:description]];
     [self zoomOnAnnotation: name];
@@ -149,15 +158,13 @@ NSString* landmarkName;
     UIImage *img = [UIImage imageNamed:imageDescription];
     [insulaImage setImage:img];
     [self zoomOnAnnotation: name];
+    [self setUpSlider];
 }
 
 #pragma mark - Map Methods
 
 -(void) plotMapAnnotations {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
-    [request setEntity:des];
-    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:NULL];
+    NSArray *fetchResults = [self entity:@"Insula" predicate:nil];
     Insula *insulaData;
     for (insulaData in fetchResults) {
         NSString *generalDes = [self.myApp.lib getStringFromFile:insulaData.insula_annotation_description];
@@ -213,13 +220,8 @@ NSString* landmarkName;
         NSString *name = [annotation title];
         if ([name isEqualToString: HSSearchBar.text]) {
             [HSButton setTitle: HSSearchBar.text forState: UIControlStateNormal];
-            NSFetchRequest *request = [[NSFetchRequest alloc] init];
-            NSEntityDescription *des = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
-            [request setEntity:des];
             NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", name];
-            [request setPredicate:query];
-            NSError *error = nil;
-            NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+            NSArray *fetchResults = [self entity:@"Insula" predicate:query];
             //TODO: check if results is null
             NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
             NSString* generalDes = [self.myApp.lib getStringFromFile:description];
