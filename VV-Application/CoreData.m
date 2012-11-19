@@ -42,6 +42,14 @@
         [gesuiti setLatitude:[NSNumber numberWithDouble:45.4333]];
         [gesuiti setLongitude:[NSNumber numberWithDouble:12.3167]];
         
+        Timeslot *t1508 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                    inManagedObjectContext:self.managedObjectContext];
+        t1508.year = [NSNumber numberWithInt:1508];
+        t1508.month = [NSNumber numberWithInt:10];
+        t1508.insula_general_description = @"Gesuiti_general_description.txt";
+        t1508.insula_general_picture = @"VisualizingVeniceLogo.jpg";
+        [gesuiti addTimeslotsObject:t1508];
+
         [self initializeLandmark:gesuiti];
     }
 }
@@ -98,7 +106,6 @@
     
     Timeslot *t1508 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
                                                                    inManagedObjectContext:self.managedObjectContext];
-    
     t1508.year = [NSNumber numberWithInt:1508];
     t1508.month = [NSNumber numberWithInt:10];
     t1508.landmark_general_description = @"Scuola_general_description_1508.txt";

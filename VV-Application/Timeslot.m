@@ -11,9 +11,11 @@
 
 @implementation Timeslot
 
-@dynamic month;
-@dynamic year;
 @dynamic landmark_general_description;
 @dynamic landmark_general_picture;
+@dynamic month;
+@dynamic year;
+@dynamic insula_general_description;
+@dynamic insula_general_picture;
 
 @end

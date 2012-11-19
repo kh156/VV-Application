@@ -13,14 +13,14 @@
 		0825D1AE16559BF90001DA8E /* Scuola_3D.obj in Resources */ = {isa = PBXBuildFile; fileRef = 0825D1AC16559BF90001DA8E /* Scuola_3D.obj */; };
 		0835E0121655AB3200D6B752 /* Intermediate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0835E0111655AB3200D6B752 /* Intermediate.m */; };
 		0835E0151655AB4100D6B752 /* Popover.m in Sources */ = {isa = PBXBuildFile; fileRef = 0835E0141655AB4100D6B752 /* Popover.m */; };
-		0842EC021659FA0500915EFC /* Timeslot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0842EC011659FA0500915EFC /* Timeslot.m */; };
-		0842EC081659FD0C00915EFC /* Insula.m in Sources */ = {isa = PBXBuildFile; fileRef = 0842EC071659FD0C00915EFC /* Insula.m */; };
 		088118F5163DCB30002916E7 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 088118F0163DCB30002916E7 /* CoreData.m */; };
 		088118F7163DCB30002916E7 /* VV-Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 088118F3163DCB30002916E7 /* VV-Application.xcdatamodeld */; };
 		08B2CAE7163F9F230004F2EA /* PublicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2CAE6163F9F230004F2EA /* PublicLibrary.m */; };
 		08CB734F1640CDCF00204214 /* Materials in Resources */ = {isa = PBXBuildFile; fileRef = 08CB734E1640CDCF00204214 /* Materials */; };
 		08D10F881640CCF0007D0F62 /* cube_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AEA16388F770038A5A0 /* cube_top.jpg */; };
 		08DB30F9165AC83300C6F391 /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB30F8165AC83300C6F391 /* Landmark.m */; };
+		08DB3110165AD01F00C6F391 /* Timeslot.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB310F165AD01F00C6F391 /* Timeslot.m */; };
+		08DB3113165AD09600C6F391 /* Insula.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB3112165AD09600C6F391 /* Insula.m */; };
 		6C3C9AEB16388F770038A5A0 /* chapel_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD716388F770038A5A0 /* chapel_diffuse.jpg */; };
 		6C3C9AEC16388F770038A5A0 /* GoundDiffuseMap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD816388F770038A5A0 /* GoundDiffuseMap.jpg */; };
 		6C3C9AED16388F770038A5A0 /* house_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD916388F770038A5A0 /* house_diffuse.jpg */; };
@@ -89,10 +89,6 @@
 		0835E0111655AB3200D6B752 /* Intermediate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intermediate.m; sourceTree = "<group>"; };
 		0835E0131655AB4100D6B752 /* Popover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Popover.h; sourceTree = "<group>"; };
 		0835E0141655AB4100D6B752 /* Popover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Popover.m; sourceTree = "<group>"; };
-		0842EC001659FA0500915EFC /* Timeslot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timeslot.h; sourceTree = "<group>"; };
-		0842EC011659FA0500915EFC /* Timeslot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timeslot.m; sourceTree = "<group>"; };
-		0842EC061659FD0C00915EFC /* Insula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insula.h; sourceTree = "<group>"; };
-		0842EC071659FD0C00915EFC /* Insula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insula.m; sourceTree = "<group>"; };
 		088118EF163DCB30002916E7 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
 		088118F0163DCB30002916E7 /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreData.m; sourceTree = "<group>"; };
 		088118F4163DCB30002916E7 /* VV-Application.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "VV-Application.xcdatamodel"; sourceTree = "<group>"; };
@@ -101,6 +97,10 @@
 		08CB734E1640CDCF00204214 /* Materials */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Materials; sourceTree = "<group>"; };
 		08DB30F7165AC83300C6F391 /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
 		08DB30F8165AC83300C6F391 /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
+		08DB310E165AD01F00C6F391 /* Timeslot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timeslot.h; sourceTree = "<group>"; };
+		08DB310F165AD01F00C6F391 /* Timeslot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timeslot.m; sourceTree = "<group>"; };
+		08DB3111165AD09600C6F391 /* Insula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insula.h; sourceTree = "<group>"; };
+		08DB3112165AD09600C6F391 /* Insula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insula.m; sourceTree = "<group>"; };
 		6C3C9AD716388F770038A5A0 /* chapel_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chapel_diffuse.jpg; sourceTree = "<group>"; };
 		6C3C9AD816388F770038A5A0 /* GoundDiffuseMap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoundDiffuseMap.jpg; sourceTree = "<group>"; };
 		6C3C9AD916388F770038A5A0 /* house_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_diffuse.jpg; sourceTree = "<group>"; };
@@ -201,12 +201,12 @@
 				088118EF163DCB30002916E7 /* CoreData.h */,
 				088118F0163DCB30002916E7 /* CoreData.m */,
 				088118F3163DCB30002916E7 /* VV-Application.xcdatamodeld */,
+				08DB3111165AD09600C6F391 /* Insula.h */,
+				08DB3112165AD09600C6F391 /* Insula.m */,
+				08DB310E165AD01F00C6F391 /* Timeslot.h */,
+				08DB310F165AD01F00C6F391 /* Timeslot.m */,
 				08DB30F7165AC83300C6F391 /* Landmark.h */,
 				08DB30F8165AC83300C6F391 /* Landmark.m */,
-				0842EC061659FD0C00915EFC /* Insula.h */,
-				0842EC071659FD0C00915EFC /* Insula.m */,
-				0842EC001659FA0500915EFC /* Timeslot.h */,
-				0842EC011659FA0500915EFC /* Timeslot.m */,
 				0835E0101655AB3200D6B752 /* Intermediate.h */,
 				0835E0111655AB3200D6B752 /* Intermediate.m */,
 				0835E0131655AB4100D6B752 /* Popover.h */,
@@ -570,9 +570,9 @@
 				08B2CAE7163F9F230004F2EA /* PublicLibrary.m in Sources */,
 				0835E0121655AB3200D6B752 /* Intermediate.m in Sources */,
 				0835E0151655AB4100D6B752 /* Popover.m in Sources */,
-				0842EC021659FA0500915EFC /* Timeslot.m in Sources */,
-				0842EC081659FD0C00915EFC /* Insula.m in Sources */,
 				08DB30F9165AC83300C6F391 /* Landmark.m in Sources */,
+				08DB3110165AD01F00C6F391 /* Timeslot.m in Sources */,
+				08DB3113165AD09600C6F391 /* Insula.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

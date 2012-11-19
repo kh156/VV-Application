@@ -8,6 +8,7 @@
 
 #import "Insula.h"
 #import "Landmark.h"
+#import "Timeslot.h"
 
 
 @implementation Insula
@@ -16,9 +17,10 @@
 @dynamic insula_annotation_picture;
 @dynamic insula_general_description;
 @dynamic insula_general_picture;
+@dynamic insula_name;
 @dynamic latitude;
 @dynamic longitude;
-@dynamic insula_name;
 @dynamic landmarks;
+@dynamic timeslots;
 
 @end

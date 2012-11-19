@@ -12,9 +12,11 @@
 
 @interface Timeslot : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * month;
-@property (nonatomic, retain) NSNumber * year;
 @property (nonatomic, retain) NSString * landmark_general_description;
 @property (nonatomic, retain) NSString * landmark_general_picture;
+@property (nonatomic, retain) NSNumber * month;
+@property (nonatomic, retain) NSNumber * year;
+@property (nonatomic, retain) NSString * insula_general_description;
+@property (nonatomic, retain) NSString * insula_general_picture;
 
 @end
