@@ -73,26 +73,30 @@
     NSArray *fetchResults = [self entity:@"Landmark" predicate: query];
     Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
     for (Timeslot *slot in insula.timeslots) {
-        [dates addObject:[NSNumber numberWithInt:slot.year.intValue]];
-        NSLog(@"%@", [NSNumber numberWithInt:slot.year.intValue]);
+        [dates addObject:slot.year];
+        //NSLog(@"%@", slot.year);
     }
     IVSlider.continuous = YES;
     [IVSlider setMinimumValue:0];
     [IVSlider setMaximumValue:((float)[dates count] - 1)];
     
-    /*int width = HSSlider.frame.size.width;
-     int height = HSSlider.frame.size.height;
-     //origin is top left of slider
-     int startx = HSSlider.frame.origin.x;
-     int starty = HSSlider.frame.origin.y;
-     int count = 1;
-     for (NSNumber *num in dates) {
-     UILabel *label = [[UILabel alloc] init];
-     [label setText:[num stringValue]];
-     CGRect *position = CGRectMake(startx + count * (width/([dates count]-1)), starty - height - 2, 10, 5);
-     [label setFrame:position];*/
-    
-    //}
+    int width = IVSlider.frame.size.width;
+    //origin is top left of slider
+    int startx = IVSlider.frame.origin.x;
+    int starty = IVSlider.frame.origin.y;
+    int count = 0;
+    [dates sortUsingSelector:@selector(compare:)];
+    for (NSNumber *num in dates) {
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(startx + count * (width/([dates count]-1)) - 20, starty - 20, 40, 20) ];
+        label.textAlignment =  UITextAlignmentCenter;
+        label.textColor = [UIColor blackColor];
+        label.backgroundColor = self.view.backgroundColor;
+        label.font = [UIFont fontWithName:@"Times New Roman Bold" size:(12.0)];
+        [self.view addSubview:label];
+        label.text = [NSString stringWithFormat: @"%d", [num intValue]];
+        count++;
+    }
     [IVSlider setValue:IVSlider.maximumValue];
     [IVSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
 }

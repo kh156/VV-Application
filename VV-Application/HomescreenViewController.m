@@ -70,8 +70,8 @@ NSString* landmarkName;
     NSArray *fetchResults = [self entity:@"Insula" predicate: query];
     Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
     for (Timeslot *slot in insula.timeslots) {
-        [dates addObject:[NSNumber numberWithInt:slot.year.intValue]];
-        NSLog(@"%@", [NSNumber numberWithInt:slot.year.intValue]);
+        [dates addObject:slot.year];
+        NSLog(@"%@", slot.year);
     }
     HSSlider.continuous = YES;
     [HSSlider setMinimumValue:0];
@@ -84,6 +84,9 @@ NSString* landmarkName;
     int count = 0;
     [dates sortUsingSelector:@selector(compare:)];
     for (NSNumber *num in dates) {
+        //NSLog(@"%d", [num intValue]);
+        //NSLog(@"%@", num);
+        
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(startx + count * (width/([dates count]-1)) - 20, starty - 20, 40, 20) ];
         label.textAlignment =  UITextAlignmentCenter;
         label.textColor = [UIColor blackColor];
