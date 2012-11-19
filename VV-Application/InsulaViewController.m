@@ -89,7 +89,6 @@
     for (NSNumber *num in dates) {
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(startx + count * (width/([dates count]-1)) - 20, starty - 20, 40, 20) ];
-        label.textAlignment =  UITextAlignmentCenter;
         label.textColor = [UIColor blackColor];
         label.backgroundColor = self.view.backgroundColor;
         label.font = [UIFont fontWithName:@"Times New Roman Bold" size:(12.0)];
