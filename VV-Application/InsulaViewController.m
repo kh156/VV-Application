@@ -116,6 +116,8 @@
         [request setPredicate:query];
         NSError *error = nil;
         NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    
+    
         NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
         [IVSummary setText: [self.myApp.lib getStringFromFile:description]];
         NSString* imageDescription = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_picture;
