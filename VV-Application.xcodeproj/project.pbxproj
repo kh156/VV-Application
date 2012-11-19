@@ -11,13 +11,13 @@
 		0803A70C163FB8000018474F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0803A70B163FB8000018474F /* AudioToolbox.framework */; };
 		0825D1AD16559BF90001DA8E /* Scuola_3D.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 0825D1AB16559BF80001DA8E /* Scuola_3D.mtl */; };
 		0825D1AE16559BF90001DA8E /* Scuola_3D.obj in Resources */ = {isa = PBXBuildFile; fileRef = 0825D1AC16559BF90001DA8E /* Scuola_3D.obj */; };
-		0825D1B216559F370001DA8E /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 0825D1B116559F370001DA8E /* Landmark.m */; };
 		0835E0121655AB3200D6B752 /* Intermediate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0835E0111655AB3200D6B752 /* Intermediate.m */; };
 		0835E0151655AB4100D6B752 /* Popover.m in Sources */ = {isa = PBXBuildFile; fileRef = 0835E0141655AB4100D6B752 /* Popover.m */; };
+		0842EC021659FA0500915EFC /* Timeslot.m in Sources */ = {isa = PBXBuildFile; fileRef = 0842EC011659FA0500915EFC /* Timeslot.m */; };
+		0842EC051659FAF600915EFC /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 0842EC041659FAF600915EFC /* Landmark.m */; };
+		0842EC081659FD0C00915EFC /* Insula.m in Sources */ = {isa = PBXBuildFile; fileRef = 0842EC071659FD0C00915EFC /* Insula.m */; };
 		088118F5163DCB30002916E7 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 088118F0163DCB30002916E7 /* CoreData.m */; };
 		088118F7163DCB30002916E7 /* VV-Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 088118F3163DCB30002916E7 /* VV-Application.xcdatamodeld */; };
-		08A3F61D164E1BE2006BA743 /* Timeslot.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A3F61C164E1BE2006BA743 /* Timeslot.m */; };
-		08A3F629164E1DAB006BA743 /* Insula.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A3F628164E1DAB006BA743 /* Insula.m */; };
 		08B2CAE7163F9F230004F2EA /* PublicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2CAE6163F9F230004F2EA /* PublicLibrary.m */; };
 		08CB734F1640CDCF00204214 /* Materials in Resources */ = {isa = PBXBuildFile; fileRef = 08CB734E1640CDCF00204214 /* Materials */; };
 		08D10F881640CCF0007D0F62 /* cube_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AEA16388F770038A5A0 /* cube_top.jpg */; };
@@ -85,19 +85,19 @@
 		0803A70B163FB8000018474F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0825D1AB16559BF80001DA8E /* Scuola_3D.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Scuola_3D.mtl; sourceTree = "<group>"; };
 		0825D1AC16559BF90001DA8E /* Scuola_3D.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Scuola_3D.obj; sourceTree = "<group>"; };
-		0825D1B016559F370001DA8E /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
-		0825D1B116559F370001DA8E /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
 		0835E0101655AB3200D6B752 /* Intermediate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intermediate.h; sourceTree = "<group>"; };
 		0835E0111655AB3200D6B752 /* Intermediate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intermediate.m; sourceTree = "<group>"; };
 		0835E0131655AB4100D6B752 /* Popover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Popover.h; sourceTree = "<group>"; };
 		0835E0141655AB4100D6B752 /* Popover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Popover.m; sourceTree = "<group>"; };
+		0842EC001659FA0500915EFC /* Timeslot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timeslot.h; sourceTree = "<group>"; };
+		0842EC011659FA0500915EFC /* Timeslot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timeslot.m; sourceTree = "<group>"; };
+		0842EC031659FAF600915EFC /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
+		0842EC041659FAF600915EFC /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
+		0842EC061659FD0C00915EFC /* Insula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insula.h; sourceTree = "<group>"; };
+		0842EC071659FD0C00915EFC /* Insula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insula.m; sourceTree = "<group>"; };
 		088118EF163DCB30002916E7 /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData.h; sourceTree = "<group>"; };
 		088118F0163DCB30002916E7 /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreData.m; sourceTree = "<group>"; };
 		088118F4163DCB30002916E7 /* VV-Application.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "VV-Application.xcdatamodel"; sourceTree = "<group>"; };
-		08A3F61B164E1BE2006BA743 /* Timeslot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timeslot.h; sourceTree = "<group>"; };
-		08A3F61C164E1BE2006BA743 /* Timeslot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timeslot.m; sourceTree = "<group>"; };
-		08A3F627164E1DAB006BA743 /* Insula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insula.h; sourceTree = "<group>"; };
-		08A3F628164E1DAB006BA743 /* Insula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insula.m; sourceTree = "<group>"; };
 		08B2CAE5163F9F230004F2EA /* PublicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicLibrary.h; sourceTree = "<group>"; };
 		08B2CAE6163F9F230004F2EA /* PublicLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicLibrary.m; sourceTree = "<group>"; };
 		08CB734E1640CDCF00204214 /* Materials */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Materials; sourceTree = "<group>"; };
@@ -201,12 +201,12 @@
 				088118EF163DCB30002916E7 /* CoreData.h */,
 				088118F0163DCB30002916E7 /* CoreData.m */,
 				088118F3163DCB30002916E7 /* VV-Application.xcdatamodeld */,
-				08A3F627164E1DAB006BA743 /* Insula.h */,
-				08A3F628164E1DAB006BA743 /* Insula.m */,
-				08A3F61B164E1BE2006BA743 /* Timeslot.h */,
-				08A3F61C164E1BE2006BA743 /* Timeslot.m */,
-				0825D1B016559F370001DA8E /* Landmark.h */,
-				0825D1B116559F370001DA8E /* Landmark.m */,
+				0842EC061659FD0C00915EFC /* Insula.h */,
+				0842EC071659FD0C00915EFC /* Insula.m */,
+				0842EC031659FAF600915EFC /* Landmark.h */,
+				0842EC041659FAF600915EFC /* Landmark.m */,
+				0842EC001659FA0500915EFC /* Timeslot.h */,
+				0842EC011659FA0500915EFC /* Timeslot.m */,
 				0835E0101655AB3200D6B752 /* Intermediate.h */,
 				0835E0111655AB3200D6B752 /* Intermediate.m */,
 				0835E0131655AB4100D6B752 /* Popover.h */,
@@ -568,11 +568,11 @@
 				088118F5163DCB30002916E7 /* CoreData.m in Sources */,
 				088118F7163DCB30002916E7 /* VV-Application.xcdatamodeld in Sources */,
 				08B2CAE7163F9F230004F2EA /* PublicLibrary.m in Sources */,
-				08A3F61D164E1BE2006BA743 /* Timeslot.m in Sources */,
-				08A3F629164E1DAB006BA743 /* Insula.m in Sources */,
-				0825D1B216559F370001DA8E /* Landmark.m in Sources */,
 				0835E0121655AB3200D6B752 /* Intermediate.m in Sources */,
 				0835E0151655AB4100D6B752 /* Popover.m in Sources */,
+				0842EC021659FA0500915EFC /* Timeslot.m in Sources */,
+				0842EC051659FAF600915EFC /* Landmark.m in Sources */,
+				0842EC081659FD0C00915EFC /* Insula.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

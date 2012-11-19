@@ -42,48 +42,38 @@
         [gesuiti setLatitude:[NSNumber numberWithDouble:45.4333]];
         [gesuiti setLongitude:[NSNumber numberWithDouble:12.3167]];
         
-        Timeslot *timeslot = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                                       inManagedObjectContext:self.managedObjectContext];
-        
-        timeslot.year = [NSNumber numberWithInt:1508];
-        timeslot.month = [NSNumber numberWithInt:10];
-        timeslot.insula = gesuiti;
-        
-        Timeslot *timeslot2 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                                       inManagedObjectContext:self.managedObjectContext];
-        timeslot.year = [NSNumber numberWithInt:2012];
-        timeslot.month = [NSNumber numberWithInt:111];
-        timeslot.insula = gesuiti;
-        
-        Timeslot *timeslot3 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                                        inManagedObjectContext:self.managedObjectContext];
-        timeslot.year = [NSNumber numberWithInt:2000];
-        timeslot.month = [NSNumber numberWithInt:111];
-        timeslot.insula = gesuiti;
-        
-        
-        [gesuiti addTimeslotsObject:timeslot];
-        [gesuiti addTimeslotsObject:timeslot2];
-        [gesuiti addTimeslotsObject:timeslot3];
-
-        [self initializeLandmark:timeslot];
+        [self initializeLandmark:gesuiti];
     }
 }
 
-- (void)initializeLandmark:(Timeslot *)timeslot {
+- (void)initializeLandmark:(Insula *)insula {
     Landmark *scuola = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
                                                                  inManagedObjectContext:self.managedObjectContext];
     [scuola setLandmark_name:@"Scuola Grande di San Marco"];
-    [scuola setInsula_name: @"Gesuiti"];
     [scuola setLandmark_3d:@"house.obj"];
     [scuola setLandmark_annotation_description:@"Scuola_annotation_description.txt"];
     [scuola setLandmark_annotation_picture:@"Scuola_annotation_picture.jpg"];
-    [scuola setLandmark_general_description:@"Scuola_general_description.txt"];
-    [scuola setLandmark_general_picture:@"Scuola_general_picture.png"];
     [scuola setLandmark_video:@"Scuola_video.m4v"];
     [scuola setLatitude:[NSNumber numberWithDouble:45.433]];
     [scuola setLongitude:[NSNumber numberWithDouble:12.316]];
-    [scuola addTimeslotsObject:timeslot];
+    [scuola setInsula:insula];
+    
+    Timeslot *t1508 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                   inManagedObjectContext:self.managedObjectContext];
+    
+    t1508.year = [NSNumber numberWithInt:1508];
+    t1508.month = [NSNumber numberWithInt:10];
+    t1508.landmark_general_description = @"Scuola_general_description_1508.txt";
+    t1508.landmark_general_picture = @"Scuola_general_picture_1508.jpg";
+    [scuola addTimeslotsObject:t1508];
+    
+    Timeslot *t2012 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                    inManagedObjectContext:self.managedObjectContext];
+    t2012.year = [NSNumber numberWithInt:2012];
+    t2012.month = [NSNumber numberWithInt:11];
+    t2012.landmark_general_description = @"Scuola_general_description_2012.txt";
+    t2012.landmark_general_picture = @"Scuola_general_picture_2012.jpg";
+    [scuola addTimeslotsObject:t2012];
     
     Intermediate *north = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
                                                                         inManagedObjectContext:self.managedObjectContext];
@@ -193,7 +183,7 @@
     [scuola addIntermediatesObject:south];
     [scuola addIntermediatesObject:west];
     
-    [timeslot addLandmarksObject:scuola];
+    [insula addLandmarksObject:scuola];
 }
 
 - (void)saveContext

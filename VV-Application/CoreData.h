@@ -21,7 +21,7 @@
 
 - (void)initializeData;
 - (void)initializeInsula;
-- (void)initializeLandmark:(Timeslot *)timeslot;
+- (void)initializeLandmark:(Insula *)insula;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
