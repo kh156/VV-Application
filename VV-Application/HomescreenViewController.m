@@ -68,6 +68,21 @@ NSString* landmarkName;
     HSSlider.continuous = YES;
     [HSSlider setMinimumValue:0];
     [HSSlider setMaximumValue:((float)[dates count] - 1)];
+    
+    /*int width = HSSlider.frame.size.width;
+    int height = HSSlider.frame.size.height;
+    //origin is top left of slider
+    int startx = HSSlider.frame.origin.x;
+    int starty = HSSlider.frame.origin.y;
+    int count = 1;
+    for (NSNumber *num in dates) {
+        UILabel *label = [[UILabel alloc] init];
+        [label setText:[num stringValue]];
+        CGRect *position = CGRectMake(startx + count * (width/([dates count]-1)), starty - height - 2, 10, 5);
+        [label setFrame:position];*/
+        
+    //}
+    [HSSlider setValue:HSSlider.maximumValue];
     [HSSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
