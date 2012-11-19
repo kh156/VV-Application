@@ -77,19 +77,22 @@ NSString* landmarkName;
     [HSSlider setMinimumValue:0];
     [HSSlider setMaximumValue:((float)[dates count] - 1)];
     
-    /*int width = HSSlider.frame.size.width;
-    int height = HSSlider.frame.size.height;
+    int width = HSSlider.frame.size.width;
     //origin is top left of slider
     int startx = HSSlider.frame.origin.x;
     int starty = HSSlider.frame.origin.y;
-    int count = 1;
+    int count = 0;
+    [dates sortUsingSelector:@selector(compare:)];
     for (NSNumber *num in dates) {
-        UILabel *label = [[UILabel alloc] init];
-        [label setText:[num stringValue]];
-        CGRect *position = CGRectMake(startx + count * (width/([dates count]-1)), starty - height - 2, 10, 5);
-        [label setFrame:position];*/
-        
-    //}
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(startx + count * (width/([dates count]-1)) - 20, starty - 20, 40, 20) ];
+        label.textAlignment =  UITextAlignmentCenter;
+        label.textColor = [UIColor blackColor];
+        label.backgroundColor = self.view.backgroundColor;
+        label.font = [UIFont fontWithName:@"Times New Roman Bold" size:(12.0)];
+        [self.view addSubview:label];
+        label.text = [NSString stringWithFormat: @"%d", [num intValue]];
+        count++;
+    }
     [HSSlider setValue:HSSlider.maximumValue];
     [HSSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
 }

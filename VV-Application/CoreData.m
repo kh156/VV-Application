@@ -52,12 +52,20 @@
         Timeslot *timeslot2 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
                                                                        inManagedObjectContext:self.managedObjectContext];
         timeslot.year = [NSNumber numberWithInt:2012];
-        timeslot.month = [NSNumber numberWithInt:11];
+        timeslot.month = [NSNumber numberWithInt:111];
+        timeslot.insula = gesuiti;
+        
+        Timeslot *timeslot3 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                        inManagedObjectContext:self.managedObjectContext];
+        timeslot.year = [NSNumber numberWithInt:2000];
+        timeslot.month = [NSNumber numberWithInt:111];
         timeslot.insula = gesuiti;
         
         
         [gesuiti addTimeslotsObject:timeslot];
         [gesuiti addTimeslotsObject:timeslot2];
+        [gesuiti addTimeslotsObject:timeslot3];
+
         [self initializeLandmark:timeslot];
     }
 }
