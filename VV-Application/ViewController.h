@@ -11,4 +11,21 @@
 
 @interface ViewController : UIViewController
 
+/**
+ * Initialize the view
+ * param: view name and bundle
+ * return: self
+ */
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
+
+/**
+ * Additional set up after loading the view
+ */
+- (void)viewDidLoad;
+
+/**
+ * Function to implement actions to be taken if application memory limit is reached.
+ */
+- (void)didReceiveMemoryWarning;
+
 @end
