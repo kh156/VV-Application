@@ -150,14 +150,27 @@ NSString* landmarkName;
 
 #pragma mark - TableView Data Source methods
 
+/**
+ * Retrieve names of all insulas and load them into tableData
+ */
 -(void) initTableButtons {
     tableData = [self entity:@"Insula" predicate: nil];
 }
 
+/**
+ * Retrieve number of insula buttons that must be created  
+ * param: the table view and the number of rows for a given section of the view.
+ * return: NSInteger representing the number of insulas
+ */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [tableData count];
 }
 
+/**
+ * Create table cells which serve as insula buttons in the insula view.
+ * param: the table view for which we want to add cells and the index path for the newly created cell.
+ * return: UITableViewCell representing an insula.
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
     cell = [tableView dequeueReusableCellWithIdentifier:@"Cell 1"];
@@ -168,6 +181,11 @@ NSString* landmarkName;
     return cell;
 }
 
+/**
+ * Sets up the time slider, updates HSButton, and zooms on an insula in the map when an insula button is selected in
+ * the table view.
+ * param: the table view to monitor and the index path of the selected cell.
+ */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *name =[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
     insulaName = name;
@@ -187,22 +205,31 @@ NSString* landmarkName;
 
 #pragma mark - Map Methods
 
+/*
+ * Fetches the names of all insulas plots annotations on the map for each insula
+ */
 -(void) plotMapAnnotations {
     NSArray *fetchResults = [self entity:@"Insula" predicate:nil];
     Insula *insulaData;
     for (insulaData in fetchResults) {
         NSString *generalDes = [self.myApp.lib getStringFromFile:insulaData.insula_annotation_description];
-        //NSLog(@"generalDes = %@", generalDes);
-        //TODO: generalDes = NULL?
         [self plotMapAnnotation:insulaData.insula_name address:generalDes latitude:insulaData.latitude.doubleValue longitude:insulaData.longitude.doubleValue];
     }
 }
 
+/*
+ * Plots a single annotation on the map
+ * param: String representing the title of the annotation, string representing the address/description of the annotation,
+ * and the latitude and longitude at which the annotation should be plotted on the map.
+ */
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude {
     MapAnnotation *annotation = [[MapAnnotation alloc] initWithName:name address:address latitude:latitude longitude:longitude];
     [HSMapView addAnnotation:annotation];
 }
 
+/**
+ * Sets the initial region of the map to display.
+ */
 -(void)setInitialMapRegion {
     MKCoordinateRegion mapRegion;
     mapRegion.center.latitude = 45.4333;
@@ -212,6 +239,10 @@ NSString* landmarkName;
     [HSMapView setRegion:mapRegion animated: YES];
 }
 
+/**
+ * Zooms in on a given annotation in the map.
+ * param: a string representing the title of the annotation to zoom in on.
+ */
 -(void) zoomOnAnnotation: (NSString *) name {
     for  (MapAnnotation *annotation in HSMapView.annotations) {
         NSString *title = [annotation title];
@@ -228,17 +259,12 @@ NSString* landmarkName;
     }
 }
 
--(IBAction) slider_moved:(UISlider *)sender {
-    MKCoordinateRegion mapRegion;
-    mapRegion.center.latitude = HSMapView.region.center.latitude;
-    mapRegion.center.longitude = HSMapView.region.center.longitude;
-    mapRegion.span.latitudeDelta = 0.1 * sender.value;
-    mapRegion.span.longitudeDelta = 0.1 * sender.value;
-    [HSMapView setRegion:mapRegion animated: YES];
-}
-
 #pragma mark - Search Bar Action
 
+/**
+ * Sets up the slider, shows description, and zooms in on the annotation for the searched insula
+ * Function equivalent to clicking an insula button, however, is called when user inputs text into the search bar.
+ */
 -(IBAction)insulaSearch: (UIBarButtonItem *)sender {
     for (MapAnnotation *annotation in HSMapView.annotations) {
         NSString *name = [annotation title];
@@ -259,15 +285,11 @@ NSString* landmarkName;
 
 #pragma mark - Other
 
+/**
+ * Function to implement actions to be taken if application memory limit is reached.
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-
--(IBAction)insula_button_touch:(UIButton *)sender {
-   insulaName = sender.currentTitle;
-   NSLog(@"%@",insulaName);
-}
-
 
 @end

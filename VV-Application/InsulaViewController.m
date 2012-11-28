@@ -170,9 +170,9 @@
 }
 
 /**
- * Create table cells which serve as insula buttons in the insula view.
+ * Create table cells which serve as landmark buttons in the insula view.
  * param: the table view for which we want to add cells and the index path for the newly created cell.
- * return: UITableViewCell representing an insula.
+ * return: UITableViewCell representing a landmark.
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
@@ -185,7 +185,7 @@
 }
 
 /**
- * Sets up the time slider, updates IVButton, and zooms on an insula in the map when an insula button is selected in
+ * Sets up the time slider, updates IVButton, and zooms on a landmark in the map when an landmark button is selected in
  * the table view.
  * param: the table view to monitor and the index path of the selected cell.
  */
@@ -233,7 +233,6 @@
 /**
  * Sets the initial region of the map to display. 
  */
-
 -(void)setInitialMapRegion {
     MKCoordinateRegion mapRegion;
     mapRegion.center.latitude = 45.4333;
@@ -267,9 +266,8 @@
 
 /**
  * Sets up the slider, shows description, and zooms in on the annotation for the searched landmark
- * Function equivalent to clicking an insula button, however, is called when user inputs text into the search bar.
+ * Function equivalent to clicking a landmark button, however, is called when user inputs text into the search bar.
  */
-
 -(IBAction)landmarkSearch: (UIBarButtonItem *)sender {
     for (MapAnnotation *annotation in IVMapView.annotations) {
         NSString *name = [annotation title];

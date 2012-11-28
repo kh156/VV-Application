@@ -76,7 +76,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="insula_button_touch:" destination="2" eventType="touchUpInside" id="dOz-IB-Ouz"/>
                                     <segue destination="4Jl-kq-jZQ" kind="modal" id="ygA-ac-g2y"/>
                                 </connections>
                             </button>
@@ -427,8 +426,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomescreenViewController.h"/>
             <relationships>
                 <relationship kind="action" name="insulaSearch:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="insula_button_touch:" candidateClass="UIButton"/>
-                <relationship kind="action" name="slider_moved:" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="HSButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="HSMapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="HSSearchBar" candidateClass="UISearchBar"/>
