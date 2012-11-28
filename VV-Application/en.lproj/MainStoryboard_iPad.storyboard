@@ -175,7 +175,7 @@
                                 <rect key="frame" x="0.0" y="704" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Homescreen" id="EPN-MI-LUq">
+                                    <barButtonItem title="Back" id="EPN-MI-LUq">
                                         <connections>
                                             <segue destination="2" kind="modal" id="44L-Qm-mBa"/>
                                         </connections>
@@ -304,7 +304,7 @@ seehttp://www.dukewired.org/.                                                   
                                 <rect key="frame" x="0.0" y="704" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Homescreen" id="p0C-th-8cy">
+                                    <barButtonItem title="Back" id="p0C-th-8cy">
                                         <connections>
                                             <segue destination="2" kind="modal" id="oNM-4i-GQz"/>
                                         </connections>
@@ -383,7 +383,7 @@ seehttp://www.dukewired.org/.                                                   
             </objects>
             <point key="canvasLocation" x="2546" y="-577"/>
         </scene>
-        <!--Intermediate View Controller-->
+        <!--Intermediate View Controller - Title-->
         <scene sceneID="O0s-e6-eaQ">
             <objects>
                 <viewController id="jea-Ud-xDz" customClass="IntermediateViewController" sceneMemberID="viewController">
@@ -395,7 +395,7 @@ seehttp://www.dukewired.org/.                                                   
                                 <rect key="frame" x="0.0" y="704" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Insula Screen" id="pJl-N1-IFQ">
+                                    <barButtonItem title="Back" id="pJl-N1-IFQ">
                                         <connections>
                                             <segue destination="4Jl-kq-jZQ" kind="modal" id="7XH-om-ulK"/>
                                         </connections>
@@ -432,6 +432,7 @@ seehttp://www.dukewired.org/.                                                   
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="RZi-mN-bu0"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="landmarkImage" destination="vUs-Si-I4D" id="7LY-Tj-xoh"/>
@@ -496,7 +497,7 @@ seehttp://www.dukewired.org/.                                                   
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="TTl-kz-Jeg"/>
-        <segue reference="ygA-ac-g2y"/>
-        <segue reference="oNM-4i-GQz"/>
+        <segue reference="7XH-om-ulK"/>
+        <segue reference="44L-Qm-mBa"/>
     </inferredMetricsTieBreakers>
 </document>
