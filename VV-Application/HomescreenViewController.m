@@ -31,6 +31,10 @@ NSString* landmarkName;
 @synthesize myApp = _myApp;
 @synthesize dates;
 
+/**
+ * Retrieve the app delegate
+ * return: App delegate instance
+ */
 - (AppDelegate *)myApp {
     if (_myApp == NULL) {
         _myApp = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -38,8 +42,11 @@ NSString* landmarkName;
     return _myApp;
 }
 
+/**
+ * Additional set up of view. Specifically, initialize insula buttons, plot map annotations, set the initial map region, 
+ * disable the HSSlider, and set the prompt for the search bar.
+ */
 - (void)viewDidLoad {
-     NSLog(@"insula = %@, landmark = %@", insulaName, landmarkName);
     [super viewDidLoad];
     [self initTableButtons];
     [self plotMapAnnotations];
@@ -51,6 +58,11 @@ NSString* landmarkName;
 
 #pragma mark - fetch from core data utility method
 
+/** 
+ * Utility method to fetch data from core data. 
+ * param: String representing entity to fetch and a predicate representing the query to core data.
+ * return: an array (fetchResults) representing the results of the fetch from core data.
+ */
 -(NSArray *) entity:(NSString *) entity predicate: (NSPredicate *) query {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:entity inManagedObjectContext:self.myApp.coreData.managedObjectContext];
@@ -63,6 +75,10 @@ NSString* landmarkName;
 
 #pragma mark - Slider methods, TimeChange methods
 
+/**
+ * Set up the time slider. Specifically, create labels from time sots, enable the slider, fetch time slots dats from core 
+ * data, and set default, min, and max values for time slider.
+ */
 -(void) setUpSlider {
     [HSSlider setEnabled:YES];
     dates = [[NSMutableArray alloc] init];
@@ -71,7 +87,6 @@ NSString* landmarkName;
     Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
     for (Timeslot *slot in insula.timeslots) {
         [dates addObject:slot.year];
-        NSLog(@"%@", slot.year);
     }
     HSSlider.continuous = YES;
     [HSSlider setMinimumValue:0];
@@ -84,9 +99,6 @@ NSString* landmarkName;
     int count = 0;
     [dates sortUsingSelector:@selector(compare:)];
     for (NSNumber *num in dates) {
-        //NSLog(@"%d", [num intValue]);
-        //NSLog(@"%@", num);
-        
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(startx + count * (width/([dates count]-1)) - 20, starty - 20, 40, 20) ];
         label.textColor = [UIColor blackColor];
         label.backgroundColor = self.view.backgroundColor;
@@ -100,6 +112,11 @@ NSString* landmarkName;
     [self valueChanged:HSSlider];
 }
 
+/**
+ * Called when the user changes the value of the time slider. Based upon value pulls description for the specific time 
+ * period as well as the image for the landmark during the given time period from core data and displays that data.
+ * param: the time slider being monitored
+ */
 -(void) valueChanged:(UISlider *) sender {
     NSUInteger index = (NSUInteger)(HSSlider.value + 0.5); //round number
     [HSSlider setValue:index animated:NO];
@@ -117,7 +134,7 @@ NSString* landmarkName;
     }
 }
 
-//TODO: make this do stuff
+/*
 -(MKAnnotationView *) mapview:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     MKPinAnnotationView *myPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"current"];
     myPin.pinColor = MKPinAnnotationColorRed;
@@ -129,7 +146,7 @@ NSString* landmarkName;
     myPin.animatesDrop = TRUE;
     myPin.canShowCallout = YES;
     return myPin;
-}
+}*/
 
 #pragma mark - TableView Data Source methods
 

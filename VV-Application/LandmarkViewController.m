@@ -16,6 +16,10 @@
 @synthesize rotateX, rotateY, rotateZ;
 @synthesize myApp = _myApp;
 
+/**
+ * Retrieve the app delegate
+ * return: App delegate instance
+ */
 - (AppDelegate *)myApp {
     if (_myApp == NULL) {
         _myApp = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -23,7 +27,11 @@
     return _myApp;
 }
 
-
+/**
+ * Initialize the view
+ * param: view name and bundle
+ * return: self
+ */
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,12 +41,18 @@
     return self;
 }
 
+/**
+ * Additional set up of view. Specifically, initialize view, and NGL framework for displaying 3D object
+ */
 - (void) viewDidLoad {
      NSLog(@"insula = %@, landmark = %@", insulaName, landmarkName);
 	[super viewDidLoad];
     [self initNGL: [self retrieveFileName]];
 }
-
+/**
+ * Retrieves the name of the 3D object file that will be displayed in the view
+ * return: String representing the name of the 3D object file for the landmark being viewed.
+ */
 -(NSString *) retrieveFileName {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
@@ -51,6 +65,10 @@
     return description;
 }
 
+/**
+ * Initializes the NGL framework with a 3D object file
+ * param: 3D object file to be loaded into NGL framework and displayed in the view.
+ */
 -(void) initNGL: (NSString *) fileName {
     NGLView *theView = [[NGLView alloc] initWithFrame:CGRectMake(185, 50, 650, 650)];
     theView.delegate = self;
@@ -63,10 +81,17 @@
     [[NGLDebug debugMonitor] startWithView:theView];
 }
 
+/**
+ * Function to implement actions to be taken if application memory limit is reached.
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+/**
+ * Add functionality to NGL framework. I.e. rotation of object. In this case, set up the NGL camera, and set
+ * mesh rotation fields to local variables representing rotate speeds in XYZ dimensions.
+ */
 -(void) drawView {
     mesh.rotateY = rotateY;
     mesh.rotateX = rotateX;
@@ -74,16 +99,22 @@
     [camera drawCamera];
 }
 
+/**
+ * IBAction called when user does a two finger rotate gesture. This rotates the 3D NGL object in the Z dimension.
+ * param: UIRotationGestureRecognizer for the view.
+ */
 -(IBAction) twoFingerRotate:(UIRotationGestureRecognizer *) sender {
     rotateZ = [sender rotation] * 180/3.14;
 }
 
+/**
+ * IBAction called when user does a pan gesture. This rotates the 3D object in the X or Y dimensions depending on the 
+ * direction of the pan gesture
+ * param: UIPanGestureRecognizer for the view
+ */
 -(IBAction) panHorizontal:(UIPanGestureRecognizer *) sender {
     rotateY += [sender velocityInView: self.view].x / 100.0;
     rotateX += [sender velocityInView: self.view].y / 100.0;
 }
-
-
-
 
  @end 

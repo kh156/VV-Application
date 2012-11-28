@@ -14,6 +14,11 @@
 
 @implementation ViewController
 
+/**
+ * Initialize the view
+ * param: view name and bundle
+ * return: self
+ */
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -23,16 +28,18 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+/**
+ * Additional set up after loading the view
+ */
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
+/**
+ * Function to implement actions to be taken if application memory limit is reached.
+ */
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
