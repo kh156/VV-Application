@@ -36,9 +36,7 @@
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude;
 -(void)setInitialMapRegion;
 -(void) zoomOnAnnotation: (NSString *) name;
--(IBAction) slider_moved:(UISlider *) sender;
 -(IBAction)landmarkSearch: (UIBarButtonItem *)sender;
 -(void)didReceiveMemoryWarning;
--(IBAction)landmark_button_touch:(UIButton *)sender;
 
 @end

@@ -25,6 +25,11 @@
 @synthesize dates;
 @synthesize myApp = _myApp;
 
+/**
+ * Initialize the view
+ * param: view name and bundle
+ * return: self
+ */
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -32,6 +37,10 @@
     return self;
 }
 
+/**
+ * Retrieve the app delegate
+ * return: App delegate instance
+ */
 - (AppDelegate *)myApp {
     if (_myApp == NULL) {
         _myApp = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -39,6 +48,10 @@
     return _myApp;
 }
 
+/**
+ * Additional set up of view. Specifically, initialize buttons, set up map, initialize map annotations,
+ * initialize search bar, and disable time slider.
+ */
 - (void)viewDidLoad {
     NSLog(@"insula = %@, landmark = %@", insulaName, landmarkName);
     [super viewDidLoad];
@@ -54,6 +67,11 @@
 
 #pragma mark - fetch from core data utility method
 
+/**
+ * Utility method to fetch data from the application's core data schema. 
+ * param: entity to retrieve and predicate for retrieval.
+ * return: array containing the fetched data results.
+ */
 -(NSArray *) entity:(NSString *) entity predicate: (NSPredicate *) query {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:entity inManagedObjectContext:self.myApp.coreData.managedObjectContext];
@@ -66,6 +84,10 @@
 
 #pragma mark - Slider methods, TimeChange methods
 
+/**
+ * Set up time slider. This includes enabling the time slider and creating text labels to represent
+ * the year slots on the slider. Additionally, it pulls up default data to be displayed.
+ */
 -(void) setUpSlider {
     [IVSlider setEnabled:YES];
     dates = [[NSMutableArray alloc] init];
@@ -73,15 +95,13 @@
     NSArray *fetchResults = [self entity:@"Landmark" predicate: query];
     Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
     
-    /* Need handle the case when no timeslot found! */
+    /* Need to handle the case when no timeslot found! */
     if (lmark.timeslots == NULL || lmark.timeslots.count == 0) {
-        NSLog(@"no time slots found in %@", landmarkName);
         return;
     }
     
     for (Timeslot *slot in lmark.timeslots) {
         [dates addObject:slot.year];
-        //NSLog(@"%@", slot.year);
     }
     IVSlider.continuous = YES;
     [IVSlider setMinimumValue:0];
@@ -108,6 +128,11 @@
     [self valueChanged:IVSlider];
 }
 
+/**
+ * Updates data that gets displayed in the view i.e. text displayed in IVSummary and the image displayed in landmarkImage 
+ * when the time slider value changes.
+ * param: a UISlider, i.e. the time slider (IVSlider)
+ */
 
 -(void) valueChanged:(UISlider *) sender {
     NSUInteger index = (NSUInteger)(IVSlider.value + 0.5); //round number
@@ -128,14 +153,27 @@
 
 #pragma mark - TableView Data Source methods
 
+/**
+ * Retrieve names of all landmarks in the currently viewed insula and load them into tableData
+ */
 -(void) initTableButtons {
     tableData = [self entity:@"Landmark" predicate: nil];
 }
-
+/**
+ * Retrieve number of landmarks buttons that must be created i.e. return the number of landmarks for the currently viewed 
+ * insula
+ * param: the table view and the number of rows for a given section of the view.
+ * return: NSInteger representing the number of landmarks
+ */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [tableData count];
 }
 
+/**
+ * Create table cells which serve as insula buttons in the insula view.
+ * param: the table view for which we want to add cells and the index path for the newly created cell.
+ * return: UITableViewCell representing an insula.
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
     cell = [tableView dequeueReusableCellWithIdentifier:@"Cell 1"];
@@ -146,6 +184,11 @@
     return cell;
 }
 
+/**
+ * Sets up the time slider, updates IVButton, and zooms on an insula in the map when an insula button is selected in
+ * the table view.
+ * param: the table view to monitor and the index path of the selected cell.
+ */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         NSString *name =[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
         landmarkName = name;
@@ -164,6 +207,9 @@
 
 #pragma mark - Map Methods
 
+/*
+ * Fetches the names of all landmarks in the currently viewed insula and plots annotations on the map for each landmark
+ */
 -(void) plotMapAnnotations {
     // NSLog(@"plotting map annotations insula");
     NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", insulaName];
@@ -174,10 +220,19 @@
     }
 }
 
+/*
+ * Plots a single annotation on the map
+ * param: String representing the title of the annotation, string representing the address/description of the annotation, 
+ * and the latitude and longitude at which the annotation should be plotted on the map.
+ */
 -(void) plotMapAnnotation: (NSString *) name address:(NSString *) address latitude:(double) latitude longitude:(double) longitude {
     MapAnnotation *annotation = [[MapAnnotation alloc] initWithName:name address:address latitude:latitude longitude:longitude];
     [IVMapView addAnnotation:annotation];
 }
+
+/**
+ * Sets the initial region of the map to display. 
+ */
 
 -(void)setInitialMapRegion {
     MKCoordinateRegion mapRegion;
@@ -188,6 +243,10 @@
     [IVMapView setRegion:mapRegion animated: YES];
 }
 
+/**
+ * Zooms in on a given annotation in the map.
+ * param: a string representing the title of the annotation to zoom in on.
+ */
 -(void) zoomOnAnnotation: (NSString *) name {
     for  (MapAnnotation *annotation in IVMapView.annotations) {
         NSString *title = [annotation title];
@@ -204,16 +263,12 @@
     }
 }
 
--(IBAction) slider_moved:(UISlider *) sender {
-    MKCoordinateRegion mapRegion;
-    mapRegion.center.latitude = IVMapView.region.center.latitude;
-    mapRegion.center.longitude = IVMapView.region.center.longitude;
-    mapRegion.span.latitudeDelta = 0.1 * sender.value + 0.01;
-    mapRegion.span.longitudeDelta = 0.1 * sender.value + 0.01;
-    [IVMapView setRegion:mapRegion animated: YES];
-}
-
 #pragma mark - Search Bar Action
+
+/**
+ * Sets up the slider, shows description, and zooms in on the annotation for the searched landmark
+ * Function equivalent to clicking an insula button, however, is called when user inputs text into the search bar.
+ */
 
 -(IBAction)landmarkSearch: (UIBarButtonItem *)sender {
     for (MapAnnotation *annotation in IVMapView.annotations) {
@@ -234,14 +289,11 @@
 
 #pragma mark - Other
 
+/**
+ * Function to implement actions to be taken if application memory limit is reached.
+ */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
--(IBAction)landmark_button_touch:(UIButton *)sender {
-    NSLog(@"calling landmark button touch");
-    landmarkName = sender.currentTitle;
-    NSLog(@"%@",landmarkName);
 }
 
 
