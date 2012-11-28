@@ -257,15 +257,39 @@
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="Ehd-a7-nUk">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" usesAttributedText="YES" id="Ehd-a7-nUk">
                                 <rect key="frame" x="252" y="44" width="772" height="660"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <string key="text">Overview Information About Visualizing Information Here.      Credits:  Programming - Nicholas Gordon, Veronica Ray, Kuang Han. Visualizing Venice Staff - Victoria Szabo, Sarah Goetz, etc...                                                               Visualizing Venice Website: https://www.visualizingvenice.com maybe some pictures of people, nice pictures of venice, visualizing venice logos, etc....</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Does the digital age demand a re-evaluation of traditional research methodologies? What can
+technology do for the humanities? Can it be a tool for answering research questions related to art and
+urban history? The Visualizing Venice project interrogates the limitations of methodologies, based
+on the static image and written word, and explores technology not only as a means of representing
+research but as a research tool in itself.
+
+Visualizing Venice interrogates growth and change in the city of Venice. Our team combines onsite
+and archival research in Venice with web tools and visualization technologies to create a mobile app,
+website, and database designed to help visitors to Venice (both physical and virtual) better understand
+how centuries of change and development produced the city that we experience today.
+
+Our team consists of faculty and students from Duke University, the Università IUAV di Venezia, the
+Università degli Studi di Padova, and Nesting Scrl. (click here: http://visualizingvenice.org/people/ for
+a list of individual participants). As educators, we are committed to training our undergraduate and
+graduate students not only in historical research, but also in the technologies that will shape the future
+of our discipline. We also stress the importance of international collaboration, and regularly organize
+training seminars and workshops in Venice and in the United States. For more information, please
+seehttp://www.dukewired.org/.                                                                                                                                                     </string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
@@ -456,6 +480,10 @@
         </class>
         <class className="LandmarkViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LandmarkViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="panHorizontal:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="action" name="twoFingerRotate:" candidateClass="UIRotationGestureRecognizer"/>
+            </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
@@ -467,8 +495,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ygA-ac-g2y"/>
-        <segue reference="44L-Qm-mBa"/>
         <segue reference="TTl-kz-Jeg"/>
+        <segue reference="ygA-ac-g2y"/>
+        <segue reference="oNM-4i-GQz"/>
     </inferredMetricsTieBreakers>
 </document>
