@@ -134,7 +134,16 @@
 #pragma mark - play video
 
 - (IBAction)playVideo:(id) sender{
-    [self initAndPlayVideo:@"Video1.m4v"];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
+    [request setEntity: des];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", landmarkName];
+    [request setPredicate:query];
+    NSError *error = nil;
+    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
+    Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
+
+    [self initAndPlayVideo:lmark.landmark_video];
 }
 
 
