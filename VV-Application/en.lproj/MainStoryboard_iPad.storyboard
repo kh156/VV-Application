@@ -24,7 +24,7 @@
                                 <items>
                                     <barButtonItem title="About/Credits" id="2Cs-xa-UjP">
                                         <connections>
-                                            <segue destination="ymn-7K-OlU" kind="modal" id="xEx-tx-5VH"/>
+                                            <segue destination="ymn-7K-OlU" kind="modal" identifier="HomeToAbout" id="xEx-tx-5VH"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -76,7 +76,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4Jl-kq-jZQ" kind="modal" id="ygA-ac-g2y"/>
+                                    <segue destination="4Jl-kq-jZQ" kind="modal" identifier="HomeToInsula" id="ygA-ac-g2y"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="fdz-AI-g3E">
@@ -177,7 +177,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="EPN-MI-LUq">
                                         <connections>
-                                            <segue destination="2" kind="modal" id="44L-Qm-mBa"/>
+                                            <segue destination="2" kind="modal" identifier="InsulaToHome" id="44L-Qm-mBa"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -223,7 +223,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jea-Ud-xDz" kind="modal" id="TTl-kz-Jeg"/>
+                                    <segue destination="jea-Ud-xDz" kind="modal" identifier="InsulaToLandmark" id="TTl-kz-Jeg"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" id="wbO-ab-8t2">
@@ -306,7 +306,7 @@ seehttp://www.dukewired.org/.                                                   
                                 <items>
                                     <barButtonItem title="Back" id="p0C-th-8cy">
                                         <connections>
-                                            <segue destination="2" kind="modal" id="oNM-4i-GQz"/>
+                                            <segue destination="2" kind="modal" identifier="AboutToHome" id="oNM-4i-GQz"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -353,7 +353,7 @@ seehttp://www.dukewired.org/.                                                   
                                 <items>
                                     <barButtonItem title="Back" id="lAN-pf-Tru">
                                         <connections>
-                                            <segue destination="jea-Ud-xDz" kind="modal" id="bwr-V0-23C"/>
+                                            <segue destination="jea-Ud-xDz" kind="modal" identifier="3DToLandmark" id="bwr-V0-23C"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -397,12 +397,12 @@ seehttp://www.dukewired.org/.                                                   
                                 <items>
                                     <barButtonItem title="Back" id="pJl-N1-IFQ">
                                         <connections>
-                                            <segue destination="4Jl-kq-jZQ" kind="modal" id="7XH-om-ulK"/>
+                                            <segue destination="4Jl-kq-jZQ" kind="modal" identifier="LandmarkToInsula" id="7XH-om-ulK"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="3D Virtual Space" id="tVN-NU-dke">
                                         <connections>
-                                            <segue destination="uon-Db-xCE" kind="modal" id="VXo-nb-P7H"/>
+                                            <segue destination="uon-Db-xCE" kind="modal" identifier="LandmarkTo3D" id="VXo-nb-P7H"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Rotate View" id="gJS-kt-Bxh">
@@ -496,8 +496,8 @@ seehttp://www.dukewired.org/.                                                   
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="44L-Qm-mBa"/>
         <segue reference="ygA-ac-g2y"/>
+        <segue reference="oNM-4i-GQz"/>
         <segue reference="TTl-kz-Jeg"/>
     </inferredMetricsTieBreakers>
 </document>

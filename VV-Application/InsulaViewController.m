@@ -294,5 +294,19 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    NSLog(@"InsulaView viewWillDisappear");
+}
 
+- (void) viewWillAppear:(BOOL)animated {
+    NSLog(@"InsulaView viewWillAppear");
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    NSLog(@"InsulaView viewDidDisappear");
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    NSLog(@"InsulaView viewDidAppear");
+}
 @end

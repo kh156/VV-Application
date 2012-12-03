@@ -117,4 +117,19 @@
     rotateX += [sender velocityInView: self.view].y / 100.0;
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    NSLog(@"LandmarkView viewWillDisappear");
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    NSLog(@"LandmarkView viewWillAppear");
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    NSLog(@"LandmarkView viewDidDisappear");
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    NSLog(@"LandmarkView viewDidAppear");
+}
  @end 

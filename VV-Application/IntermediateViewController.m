@@ -173,4 +173,21 @@
     theMovie = nil;
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    NSLog(@"IntermediaetView viewWillDisappear");
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    NSLog(@"IntermediaetView viewWillAppear");
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    NSLog(@"IntermediaetView viewDidDisappear");
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    NSLog(@"IntermediaetView viewDidAppear");
+}
+
+
 @end
