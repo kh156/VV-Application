@@ -62,6 +62,7 @@
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     NSString *description = ((Landmark *) [fetchResults objectAtIndex:0]).landmark_3d;
+    NSLog(@"NGL file: %@", description);
     return description;
 }
 
@@ -75,7 +76,7 @@
     [self.view addSubview: theView];
     theView.contentScaleFactor = [[UIScreen mainScreen] scale];
 	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys: kNGLMeshCentralizeYes, kNGLMeshKeyCentralize, @"0.3", kNGLMeshKeyNormalize, nil];
-	mesh = [[NGLMesh alloc] initWithFile:fileName settings:settings delegate:nil];
+	mesh = [[NGLMesh alloc] initWithFile:[self.myApp.lib getResourceFilepath: fileName] settings:settings delegate:nil];
     camera = [[NGLCamera alloc] initWithMeshes:mesh, nil];
 	[camera autoAdjustAspectRatio:YES animated:YES];
     [[NGLDebug debugMonitor] startWithView:theView];

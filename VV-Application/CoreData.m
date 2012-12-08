@@ -8,10 +8,20 @@
 
 #import "CoreData.h"
 
+@interface CoreData()
+- (void)initializeData;
+- (void)initializeInsula;
+- (void)initializeBasilica:(Insula *)insula;
+- (void)initializeCistern:(Insula *)insula;
+- (void)initializeEquestrian:(Insula *)insula;
+- (void)initializeScuola:(Insula *)insula;
+@end
+
 @implementation CoreData
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
 
 - (id)init {
     if (self = [super init]) {
@@ -58,13 +68,16 @@
         t2012.insula_general_picture = @"Gesuiti_general_picture_2012.png";
         [gesuiti addTimeslotsObject:t2012];
 
-        [self initializeLandmark:gesuiti];
+        [self initializeBasilica:gesuiti];
+        [self initializeCistern:gesuiti];
+        [self initializeEquestrian:gesuiti];
+        [self initializeScuola:gesuiti];
     }
 }
 
-- (void)initializeLandmark:(Insula *)insula {
+- (void)initializeBasilica:(Insula *)insula {
     Landmark *basilica = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
-                                                                 inManagedObjectContext:self.managedObjectContext];
+                                                                   inManagedObjectContext:self.managedObjectContext];
     basilica.landmark_name = @"The Basilica di S.S. Giovanni e Paolo";
     basilica.insula_name = @"Gesuiti";
     basilica.landmark_annotation_description = @"Basilica_annotation_description.txt";
@@ -75,6 +88,9 @@
     basilica.longitude = [NSNumber numberWithDouble:12.341980];
     basilica.insula = insula;
     [insula addLandmarksObject:basilica];
+}
+
+- (void)initializeCistern:(Insula *)insula {
     
     Landmark *cistern = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
                                                                    inManagedObjectContext:self.managedObjectContext];
@@ -89,8 +105,12 @@
     cistern.insula = insula;
     [insula addLandmarksObject:cistern];
 
+
+}
+
+- (void)initializeEquestrian:(Insula *)insula {
     Landmark *equestrian = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
-                                                                   inManagedObjectContext:self.managedObjectContext];
+                                                                     inManagedObjectContext:self.managedObjectContext];
     equestrian.landmark_name = @"Equestrian Monument to Bartolommeo Colleoni";
     equestrian.insula_name = @"Gesuiti";
     equestrian.landmark_annotation_description = @"Equestrian_annotation_description.txt";
@@ -100,13 +120,137 @@
     equestrian.latitude = [NSNumber numberWithDouble:45.439187];
     equestrian.longitude = [NSNumber numberWithDouble:12.341398];
     equestrian.insula = insula;
+    
+    Timeslot *t1475 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1475.year = [NSNumber numberWithInt:1475];
+    t1475.month = [NSNumber numberWithInt:0];
+    t1475.landmark_general_description = @"Equestrian_general_description_1475.txt";
+    t1475.landmark_general_picture = @"Equestrian_general_picture_1475.jpg";
+    [equestrian addTimeslotsObject:t1475];
+    
+    Timeslot *t1478 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1478.year = [NSNumber numberWithInt:1478];
+    t1478.month = [NSNumber numberWithInt:0];
+    t1478.landmark_general_description = @"Equestrian_general_description_1478.txt";
+    t1478.landmark_general_picture = @"Equestrian_general_picture_1478.jpg";
+    [equestrian addTimeslotsObject:t1478];
+    
+    Timeslot *t1481 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1481.year = [NSNumber numberWithInt:1481];
+    t1481.month = [NSNumber numberWithInt:0];
+    t1481.landmark_general_description = @"Equestrian_general_description_1481.txt";
+    t1481.landmark_general_picture = @"Equestrian_general_picture_1481.jpg";
+    [equestrian addTimeslotsObject:t1481];
+    
+    Timeslot *t1482 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1482.year = [NSNumber numberWithInt:1482];
+    t1482.month = [NSNumber numberWithInt:0];
+    t1482.landmark_general_description = @"Equestrian_general_description_1482.txt";
+    t1482.landmark_general_picture = @"Equestrian_general_picture_1482.jpg";
+    [equestrian addTimeslotsObject:t1482];
+    
+    Timeslot *t1488 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1488.year = [NSNumber numberWithInt:1488];
+    t1488.month = [NSNumber numberWithInt:0];
+    t1488.landmark_general_description = @"Equestrian_general_description_1488.txt";
+    t1488.landmark_general_picture = @"Equestrian_general_picture_1488.jpg";
+    [equestrian addTimeslotsObject:t1488];
+    
+    Timeslot *t1489 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1489.year = [NSNumber numberWithInt:1489];
+    t1489.month = [NSNumber numberWithInt:0];
+    t1489.landmark_general_description = @"Equestrian_general_description_1489.txt";
+    t1489.landmark_general_picture = @"Equestrian_general_picture_1489.jpg";
+    [equestrian addTimeslotsObject:t1489];
+    
+    Timeslot *t1492 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1492.year = [NSNumber numberWithInt:1492];
+    t1492.month = [NSNumber numberWithInt:0];
+    t1492.landmark_general_description = @"Equestrian_general_description_1492.txt";
+    t1492.landmark_general_picture = @"Equestrian_general_picture_1492.jpg";
+    [equestrian addTimeslotsObject:t1492];
+    
+    Timeslot *t1495 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1495.year = [NSNumber numberWithInt:1495];
+    t1495.month = [NSNumber numberWithInt:0];
+    t1495.landmark_general_description = @"Equestrian_general_description_1495.txt";
+    t1495.landmark_general_picture = @"Equestrian_general_picture_1495.jpg";
+    [equestrian addTimeslotsObject:t1495];
+    
+    Timeslot *t1496 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1496.year = [NSNumber numberWithInt:1496];
+    t1496.month = [NSNumber numberWithInt:0];
+    t1496.landmark_general_description = @"Equestrian_general_description_1496.txt";
+    t1496.landmark_general_picture = @"Equestrian_general_picture_1496.jpg";
+    [equestrian addTimeslotsObject:t1496];
+    
+    Timeslot *t1782 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1782.year = [NSNumber numberWithInt:1782];
+    t1782.month = [NSNumber numberWithInt:0];
+    t1782.landmark_general_description = @"Equestrian_general_description_1782.txt";
+    t1782.landmark_general_picture = @"Equestrian_general_picture_1782.jpg";
+    [equestrian addTimeslotsObject:t1782];
+    
+    Timeslot *t1796 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1796.year = [NSNumber numberWithInt:1796];
+    t1796.month = [NSNumber numberWithInt:0];
+    t1796.landmark_general_description = @"Equestrian_general_description_1796.txt";
+    t1796.landmark_general_picture = @"Equestrian_general_picture_1796.jpg";
+    [equestrian addTimeslotsObject:t1796];
+    
+    Timeslot *t1829 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1829.year = [NSNumber numberWithInt:1829];
+    t1829.month = [NSNumber numberWithInt:0];
+    t1829.landmark_general_description = @"Equestrian_general_description_1829.txt";
+    t1829.landmark_general_picture = @"Equestrian_general_picture_1829.jpg";
+    [equestrian addTimeslotsObject:t1829];
+    
+    Timeslot *t1917 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1917.year = [NSNumber numberWithInt:1917];
+    t1917.month = [NSNumber numberWithInt:0];
+    t1917.landmark_general_description = @"Equestrian_general_description_1917.txt";
+    t1917.landmark_general_picture = @"Equestrian_general_picture_1917.jpg";
+    [equestrian addTimeslotsObject:t1917];
+    
+    Timeslot *t1940 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1940.year = [NSNumber numberWithInt:1940];
+    t1940.month = [NSNumber numberWithInt:0];
+    t1940.landmark_general_description = @"Equestrian_general_description_1940.txt";
+    t1940.landmark_general_picture = @"Equestrian_general_picture_1940.jpg";
+    [equestrian addTimeslotsObject:t1940];
+    
+    Timeslot *t1990 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t1990.year = [NSNumber numberWithInt:1990];
+    t1990.month = [NSNumber numberWithInt:0];
+    t1990.landmark_general_description = @"Equestrian_general_description_1990.txt";
+    t1990.landmark_general_picture = @"Equestrian_general_picture_1990.jpg";
+    [equestrian addTimeslotsObject:t1990];
+    
+    
     [insula addLandmarksObject:equestrian];
+}
 
+- (void)initializeScuola:(Insula *)insula {
     Landmark *scuola = (Landmark *)[NSEntityDescription insertNewObjectForEntityForName:@"Landmark"
                                                                  inManagedObjectContext:self.managedObjectContext];
     [scuola setLandmark_name:@"Scuola Grande di San Marco"];
     scuola.insula_name = @"Gesuiti";
-    [scuola setLandmark_3d:@"house.obj"];
+    [scuola setLandmark_3d:@"Scuola_3D.obj"];
     [scuola setLandmark_annotation_description:@"Scuola_annotation_description.txt"];
     [scuola setLandmark_annotation_picture:@"Scuola_annotation_picture.jpg"];
     [scuola setLandmark_general_description:@"Scuola_general_description.txt"];
@@ -117,7 +261,7 @@
     [scuola setInsula:insula];
     
     Timeslot *t1260 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                                   inManagedObjectContext:self.managedObjectContext];
+                                                                inManagedObjectContext:self.managedObjectContext];
     t1260.year = [NSNumber numberWithInt:1260];
     t1260.month = [NSNumber numberWithInt:10];
     t1260.landmark_general_description = @"Scuola_general_description_1260.txt";
@@ -125,15 +269,15 @@
     [scuola addTimeslotsObject:t1260];
     
     Timeslot *t1421 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                                    inManagedObjectContext:self.managedObjectContext];
+                                                                inManagedObjectContext:self.managedObjectContext];
     t1421.year = [NSNumber numberWithInt:1421];
     t1421.month = [NSNumber numberWithInt:11];
     t1421.landmark_general_description = @"Scuola_general_description_1421.txt";
     t1421.landmark_general_picture = @"Scuola_general_picture_1421.jpg";
     [scuola addTimeslotsObject:t1421];
-
+    
     Timeslot *t1437 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                            inManagedObjectContext:self.managedObjectContext];
+                                                                inManagedObjectContext:self.managedObjectContext];
     t1437.year = [NSNumber numberWithInt:1437];
     t1437.month = [NSNumber numberWithInt:11];
     t1437.landmark_general_description = @"Scuola_general_description_1437.txt";
@@ -141,7 +285,7 @@
     [scuola addTimeslotsObject:t1437];
     
     Timeslot *t1438 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                            inManagedObjectContext:self.managedObjectContext];
+                                                                inManagedObjectContext:self.managedObjectContext];
     t1438.year = [NSNumber numberWithInt:1438];
     t1438.month = [NSNumber numberWithInt:11];
     t1438.landmark_general_description = @"Scuola_general_description_1438.txt";
@@ -149,7 +293,7 @@
     [scuola addTimeslotsObject:t1438];
     
     Timeslot *t1485 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                            inManagedObjectContext:self.managedObjectContext];
+                                                                inManagedObjectContext:self.managedObjectContext];
     t1485.year = [NSNumber numberWithInt:1485];
     t1485.month = [NSNumber numberWithInt:11];
     t1485.landmark_general_description = @"Scuola_general_description_1485.txt";
@@ -157,7 +301,7 @@
     [scuola addTimeslotsObject:t1485];
     
     Timeslot *t1486 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                            inManagedObjectContext:self.managedObjectContext];
+                                                                inManagedObjectContext:self.managedObjectContext];
     t1486.year = [NSNumber numberWithInt:1486];
     t1486.month = [NSNumber numberWithInt:11];
     t1486.landmark_general_description = @"Scuola_general_description_1486.txt";
@@ -165,7 +309,7 @@
     [scuola addTimeslotsObject:t1486];
     
     Timeslot *t1489 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                            inManagedObjectContext:self.managedObjectContext];
+                                                                inManagedObjectContext:self.managedObjectContext];
     t1489.year = [NSNumber numberWithInt:1489];
     t1489.month = [NSNumber numberWithInt:11];
     t1489.landmark_general_description = @"Scuola_general_description_1489.txt";
@@ -173,7 +317,7 @@
     [scuola addTimeslotsObject:t1489];
     
     Timeslot *t1490 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                            inManagedObjectContext:self.managedObjectContext];
+                                                                inManagedObjectContext:self.managedObjectContext];
     t1490.year = [NSNumber numberWithInt:1490];
     t1490.month = [NSNumber numberWithInt:11];
     t1490.landmark_general_description = @"Scuola_general_description_1490.txt";
@@ -181,22 +325,22 @@
     [scuola addTimeslotsObject:t1490];
     
     Timeslot *t1495 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
-                                                            inManagedObjectContext:self.managedObjectContext];
+                                                                inManagedObjectContext:self.managedObjectContext];
     t1495.year = [NSNumber numberWithInt:1495];
     t1495.month = [NSNumber numberWithInt:11];
     t1495.landmark_general_description = @"Scuola_general_description_1495.txt";
     t1495.landmark_general_picture = @"Scuola_general_picture_1495.jpg";
     [scuola addTimeslotsObject:t1495];
-
+    
     
     Intermediate *north = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
                                                                         inManagedObjectContext:self.managedObjectContext];
     north.num = @"N";
     north.image = @"Scuola_intermediate1.png";
     north.landmark = scuola;
-
+    
     Popover *p1 = (Popover *)[NSEntityDescription insertNewObjectForEntityForName:@"Popover"
-                                                                inManagedObjectContext:self.managedObjectContext];
+                                                           inManagedObjectContext:self.managedObjectContext];
     p1.title = @"Scoula Grande di San Marco";
     p1.x = [NSNumber numberWithDouble:50.0];
     p1.y = [NSNumber numberWithDouble:50.0];
@@ -216,7 +360,7 @@
     p2.text = @"Scoula_i1_p2.txt";
     p2.intermediate = north;
     [north addPopoversObject:p2];
-
+    
     
     Intermediate *east = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
                                                                        inManagedObjectContext:self.managedObjectContext];
@@ -232,7 +376,7 @@
     p3.height = [NSNumber numberWithDouble:912 - 65];
     p3.intermediate = east;
     [east addPopoversObject:p3];
-
+    
     Popover *p4 = (Popover *)[NSEntityDescription insertNewObjectForEntityForName:@"Popover"
                                                            inManagedObjectContext:self.managedObjectContext];
     p4.x = [NSNumber numberWithDouble:44];
@@ -257,7 +401,7 @@
     p5.height = [NSNumber numberWithDouble:988 - 0];
     p5.intermediate = south;
     [south addPopoversObject:p5];
-
+    
     Popover *p6 = (Popover *)[NSEntityDescription insertNewObjectForEntityForName:@"Popover"
                                                            inManagedObjectContext:self.managedObjectContext];
     p6.x = [NSNumber numberWithDouble:0];
@@ -266,7 +410,7 @@
     p6.height = [NSNumber numberWithDouble:1401 - 988];
     p6.intermediate = south;
     [south addPopoversObject:p6];
-
+    
     
     Intermediate *west = (Intermediate *)[NSEntityDescription insertNewObjectForEntityForName:@"Intermediate"
                                                                        inManagedObjectContext:self.managedObjectContext];
@@ -299,6 +443,7 @@
     
     [insula addLandmarksObject:scuola];
 }
+
 
 - (void)saveContext
 {

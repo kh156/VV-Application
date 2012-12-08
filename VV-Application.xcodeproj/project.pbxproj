@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0803A709163FB7D80018474F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0803A708163FB7D70018474F /* MediaPlayer.framework */; };
 		0803A70C163FB8000018474F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0803A70B163FB8000018474F /* AudioToolbox.framework */; };
-		0825D1AD16559BF90001DA8E /* Scuola_3D.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 0825D1AB16559BF80001DA8E /* Scuola_3D.mtl */; };
-		0825D1AE16559BF90001DA8E /* Scuola_3D.obj in Resources */ = {isa = PBXBuildFile; fileRef = 0825D1AC16559BF90001DA8E /* Scuola_3D.obj */; };
 		0835E0121655AB3200D6B752 /* Intermediate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0835E0111655AB3200D6B752 /* Intermediate.m */; };
 		0835E0151655AB4100D6B752 /* Popover.m in Sources */ = {isa = PBXBuildFile; fileRef = 0835E0141655AB4100D6B752 /* Popover.m */; };
 		088118F5163DCB30002916E7 /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 088118F0163DCB30002916E7 /* CoreData.m */; };
@@ -83,8 +81,6 @@
 /* Begin PBXFileReference section */
 		0803A708163FB7D70018474F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0803A70B163FB8000018474F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		0825D1AB16559BF80001DA8E /* Scuola_3D.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Scuola_3D.mtl; sourceTree = "<group>"; };
-		0825D1AC16559BF90001DA8E /* Scuola_3D.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Scuola_3D.obj; sourceTree = "<group>"; };
 		0835E0101655AB3200D6B752 /* Intermediate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intermediate.h; sourceTree = "<group>"; };
 		0835E0111655AB3200D6B752 /* Intermediate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intermediate.m; sourceTree = "<group>"; };
 		0835E0131655AB4100D6B752 /* Popover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Popover.h; sourceTree = "<group>"; };
@@ -230,8 +226,6 @@
 		6C3C9ADC16388F770038A5A0 /* House */ = {
 			isa = PBXGroup;
 			children = (
-				0825D1AB16559BF80001DA8E /* Scuola_3D.mtl */,
-				0825D1AC16559BF90001DA8E /* Scuola_3D.obj */,
 				6C3C9ADD16388F770038A5A0 /* house.mtl */,
 				6C3C9ADE16388F770038A5A0 /* house.obj */,
 				6C3C9ADF16388F770038A5A0 /* house_diffuse.jpg */,
@@ -521,8 +515,6 @@
 				6C3C9AFA16388F770038A5A0 /* cube_left.jpg in Resources */,
 				6C3C9AFB16388F770038A5A0 /* cube_right.jpg in Resources */,
 				08CB734F1640CDCF00204214 /* Materials in Resources */,
-				0825D1AD16559BF90001DA8E /* Scuola_3D.mtl in Resources */,
-				0825D1AE16559BF90001DA8E /* Scuola_3D.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
