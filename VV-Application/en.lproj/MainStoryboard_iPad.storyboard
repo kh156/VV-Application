@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -119,7 +119,6 @@
                         <outlet property="HSSummary" destination="7Gw-qP-uux" id="a52-fu-ZYS"/>
                         <outlet property="insulaImage" destination="W8A-bV-uN6" id="0pn-hJ-0Uh"/>
                         <outlet property="searchDisplayController" destination="bar-O9-pOr" id="Yyz-Xx-0pa"/>
-                        <outlet property="view" destination="5" id="Btu-mt-IsV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
@@ -223,7 +222,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jea-Ud-xDz" kind="modal" identifier="InsulaToLandmark" id="TTl-kz-Jeg"/>
+                                    <segue destination="jea-Ud-xDz" kind="modal" id="C9b-Hx-aqX"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" id="wbO-ab-8t2">
@@ -242,7 +241,6 @@
                         <outlet property="IVSlider" destination="y1F-Xn-4hu" id="y7t-Sk-feM"/>
                         <outlet property="IVSummary" destination="waT-mm-uFV" id="H6p-kR-YGX"/>
                         <outlet property="landmarkImage" destination="wbO-ab-8t2" id="Cp6-Sz-eDg"/>
-                        <outlet property="view" destination="PGF-0a-x36" id="MSe-L8-OfE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVE-Y2-R9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,7 +395,7 @@ seehttp://www.dukewired.org/.                                                   
                                 <items>
                                     <barButtonItem title="Back" id="pJl-N1-IFQ">
                                         <connections>
-                                            <segue destination="4Jl-kq-jZQ" kind="modal" identifier="LandmarkToInsula" id="7XH-om-ulK"/>
+                                            <segue destination="4Jl-kq-jZQ" kind="modal" id="tEh-bX-8JR"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="3D Virtual Space" id="tVN-NU-dke">
@@ -496,8 +494,8 @@ seehttp://www.dukewired.org/.                                                   
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="C9b-Hx-aqX"/>
         <segue reference="ygA-ac-g2y"/>
-        <segue reference="oNM-4i-GQz"/>
-        <segue reference="TTl-kz-Jeg"/>
+        <segue reference="44L-Qm-mBa"/>
     </inferredMetricsTieBreakers>
 </document>

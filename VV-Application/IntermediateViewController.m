@@ -49,6 +49,7 @@
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"IntermediateView viewDidLoad");
     [self loadLandmarkImage];
 }
 
@@ -67,7 +68,7 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", landmarkName];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", self.myApp.coreData.landmarkName];
     [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
@@ -94,7 +95,7 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity: des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", landmarkName];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", self.myApp.coreData.landmarkName];
     [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
@@ -137,7 +138,7 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity: des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", landmarkName];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", self.myApp.coreData.landmarkName];
     [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
@@ -174,19 +175,23 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-    NSLog(@"IntermediaetView viewWillDisappear");
+    NSLog(@"IntermediateView viewWillDisappear");
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    NSLog(@"IntermediaetView viewWillAppear");
+    NSLog(@"IntermediateView viewWillAppear");
 }
 
 - (void) viewDidDisappear:(BOOL)animated {
-    NSLog(@"IntermediaetView viewDidDisappear");
+    NSLog(@"IntermediateView viewDidDisappear");
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    NSLog(@"IntermediaetView viewDidAppear");
+    NSLog(@"IntermediateView viewDidAppear");
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"Prepare for segue");
 }
 
 

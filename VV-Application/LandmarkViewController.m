@@ -45,7 +45,7 @@
  * Additional set up of view. Specifically, initialize view, and NGL framework for displaying 3D object
  */
 - (void) viewDidLoad {
-     NSLog(@"insula = %@, landmark = %@", insulaName, landmarkName);
+    NSLog(@"LandmarkView viewDidLoad");
 	[super viewDidLoad];
     [self initNGL: [self retrieveFileName]];
 }
@@ -57,7 +57,7 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", landmarkName];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", self.myApp.coreData.landmarkName];
     [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
@@ -120,6 +120,7 @@
 
 - (void) viewWillDisappear:(BOOL)animated {
     NSLog(@"LandmarkView viewWillDisappear");
+    [EAGLContext setCurrentContext:nil];
 }
 
 - (void) viewWillAppear:(BOOL)animated {

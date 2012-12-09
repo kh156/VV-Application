@@ -18,8 +18,8 @@
 }
 
 //TODO: find better design solution to global variables....
-extern NSString* insulaName;
-extern NSString* landmarkName;
+//extern NSString* insulaName;
+//extern NSString* landmarkName;
 
 @property (nonatomic, retain) NSArray *tableData;
 @property(nonatomic, weak) IBOutlet UITextView *HSSummary;

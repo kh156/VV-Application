@@ -21,7 +21,7 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-
+@synthesize insulaName, landmarkName;
 
 - (id)init {
     if (self = [super init]) {
@@ -31,6 +31,8 @@
 }
 
 - (void)initializeData {
+    self.insulaName = @"Gesuiti";
+    self.landmarkName = @"Scuola Grande di San Marco";
     [self initializeInsula];
 }
 
