@@ -10,28 +10,16 @@
 #import "HomescreenViewController.h"
 #import "MapAnnotation.h"
 
-@interface IntermediateViewController ()
 
+@implementation IButton
+@synthesize text, title;
 @end
 
 @implementation IntermediateViewController
 @synthesize myApp = _myApp;
 @synthesize landmarkImage;
-@synthesize rotation;
-
-/**
- * Initialize the view
- * param: view name and bundle
- * return: self
- */
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize rotation = _rotation;
+@synthesize popover = _popover;
 
 /**
  * Retrieve the app delegate
@@ -50,21 +38,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"IntermediateView viewDidLoad");
-    [self loadLandmarkImage];
+    self.rotation = @"N";
+    [self rotateView:nil];
 }
 
 /**
- * Function to implement actions to be taken if application memory limit is reached.
+ * Upon the click of the "rotate view" button in the view fetches a new perspective for the landmark being viewed and 
+ * replaces the current perspective of the landmark image with the new one.
+ * param: UIBarButtonItem i.e. "rotate view" button
  */
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/**
- * Fetches the default landmark image to be shown in the view and displays it.
- */
--(void) loadLandmarkImage {
+- (IBAction)rotateView:(UIBarButtonItem *)sender {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
@@ -74,42 +57,63 @@
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
     for (Intermediate *interm in lmark.intermediates) {
-        //NSLog(@"%@",interm.num);
-        if ([interm.num isEqualToString:@"N"]) {
-            UIImage *img = [self.myApp.lib getImageFromFile: interm.image];
-            [self.landmarkImage setImage:img];
-            rotation = @"E";
-            //NSLog(@"landmarkImage set");
+        if ([interm.num isEqualToString:self.rotation]) {
+            self.landmarkImage.image = [self.myApp.lib getImageFromFile: interm.image];
+            [self updatePopovers:interm];
+            [self nextRotation];
             break;
         }
     }
 }
 
 /**
- * Upon the click of the "rotate view" button in the view fetches a new perspective for the landmark being viewed and 
- * replaces the current perspective of the landmark image with the new one.
- * param: UIBarButtonItem i.e. "rotate view" button
+ * Fetch the popover information and update popovers.
  */
-- (IBAction)rotateView:(UIBarButtonItem *)sender {
-   // NSLog(@"rotating view!");
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
-    [request setEntity: des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", self.myApp.coreData.landmarkName];
-    [request setPredicate:query];
-    NSError *error = nil;
-    NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
-    Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
-    for (Intermediate *interm in lmark.intermediates) {
-        if ([interm.num isEqualToString:rotation]) {
-            UIImage *img = [self.myApp.lib getImageFromFile: interm.image];
-            [self.landmarkImage setImage:img];
-            //NSLog(@"%@",interm.num);
-            [self nextRotation:rotation];
-            //NSLog(@"landmarkImage set");
-            break;
+- (void) updatePopovers:(Intermediate *)interm {
+    for (UIView* i in self.view.subviews){
+        if ([i.class isSubclassOfClass:[IButton class]]) {
+        [i removeFromSuperview];
         }
     }
+    
+    for (Popover* p in interm.popovers) {
+//        NSLog(@"Add %@ %@ %@ %@ %@", p.title, p.x, p.y, p.width, p.height);
+        IButton *bt = [IButton buttonWithType:UIButtonTypeCustom];
+        bt.title = p.title;
+        bt.text = [self.myApp.lib getStringFromFile:p.text];
+        bt.frame = CGRectMake(p.x.doubleValue, p.y.doubleValue, p.width.doubleValue, p.height.doubleValue);
+        double r = (double)(arc4random()%255) / 255.0;
+        double g = (double)(arc4random()%255) / 255.0;
+        double b = (double)(arc4random()%255) / 255.0;
+        bt.backgroundColor = [UIColor colorWithRed:r green:g blue:b alpha:0.3];
+        [bt addTarget:self action:@selector(popover:) forControlEvents:UIControlEventTouchUpInside];
+        [bt addTarget:self action:@selector(glow:) forControlEvents:UIControlEventTouchDown];
+        [self.view addSubview:bt];
+    }
+}
+
+- (void) popover:(IButton *)button {
+    NSLog(@"IButton pressed!!");
+    UITextView *text = [[UITextView alloc] init];
+    text.frame = CGRectMake(0, 0, 450, 250);
+    text.editable = NO;
+    text.text = button.text;
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.frame = text.frame;
+    vc.title = button.title;
+    [vc.view addSubview:text];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    _popover = [[UIPopoverController alloc] initWithContentViewController:nav];
+    self.popover.popoverContentSize = vc.view.frame.size;
+    [self.popover presentPopoverFromRect:CGRectMake(button.frame.size.width / 2, button.frame.size.height / 1, 1, 1) inView:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+}
+
+- (void) glow:(IButton *)button {
+    double r = (double)(arc4random()%255) / 255.0;
+    double g = (double)(arc4random()%255) / 255.0;
+    double b = (double)(arc4random()%255) / 255.0;
+    button.backgroundColor = [UIColor colorWithRed:r green:g blue:b alpha:0.3];
 }
 
 /**
@@ -117,18 +121,18 @@
  * the rotate view button is clicked again.
  * param: a string representing the current perspective of the landmark image being displayed
  */
--(void) nextRotation:(NSString *) direction {
-    if ([direction isEqualToString:@"N"]) {
-        rotation = @"E";
+-(void) nextRotation {
+    if ([self.rotation isEqualToString:@"N"]) {
+        self.rotation = @"E";
     }
-    else if ([direction isEqualToString:@"E"]) {
-        rotation = @"S";
+    else if ([self.rotation isEqualToString:@"E"]) {
+        self.rotation = @"S";
     }
-    else if ([direction isEqualToString:@"S"]) {
-        rotation = @"W";
+    else if ([self.rotation isEqualToString:@"S"]) {
+        self.rotation = @"W";
     }
     else {
-        rotation = @"N";
+        self.rotation = @"N";
     }
 }
 
@@ -173,26 +177,5 @@
     theMovie.moviePlayer.initialPlaybackTime=-1.0;
     theMovie = nil;
 }
-
-- (void) viewWillDisappear:(BOOL)animated {
-    NSLog(@"IntermediateView viewWillDisappear");
-}
-
-- (void) viewWillAppear:(BOOL)animated {
-    NSLog(@"IntermediateView viewWillAppear");
-}
-
-- (void) viewDidDisappear:(BOOL)animated {
-    NSLog(@"IntermediateView viewDidDisappear");
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    NSLog(@"IntermediateView viewDidAppear");
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"Prepare for segue");
-}
-
 
 @end

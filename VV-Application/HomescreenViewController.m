@@ -17,8 +17,6 @@
 
 
 //TODO: find better design solution to this global variable.....
-//NSString* insulaName;
-//NSString* landmarkName;
 
 @implementation HomescreenViewController;
 @synthesize tableData;
@@ -291,22 +289,6 @@
  */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-- (void) viewWillDisappear:(BOOL)animated {
-    NSLog(@"HomeScreenView viewWillDisappear");
-}
-
-- (void) viewWillAppear:(BOOL)animated {
-    NSLog(@"HomeScreenView viewWillAppear");
-}
-
-- (void) viewDidDisappear:(BOOL)animated {
-    NSLog(@"HomeScreenView viewDidDisappear");
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    NSLog(@"HomeScreenView viewDidAppear");
 }
 
 @end
