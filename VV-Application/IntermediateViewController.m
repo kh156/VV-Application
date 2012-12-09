@@ -143,7 +143,6 @@
     NSURL* url = [NSURL fileURLWithPath:path];
         MPMoviePlayerViewController* theMovie=[[MPMoviePlayerViewController alloc] initWithContentURL:url];
         if (theMovie) {
-            NSLog(@"movie player created!!!");
             [self presentMoviePlayerViewControllerAnimated:theMovie];
             theMovie.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
             [[NSNotificationCenter defaultCenter] addObserver:self
@@ -155,7 +154,6 @@
 }
 
 - (void) playbackDidFinish:(NSNotification*)aNotification {
-	NSLog(@"Playing finished!!");
     MPMoviePlayerViewController* theMovie=[aNotification object];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object: theMovie];
     [self dismissMoviePlayerViewControllerAnimated];
