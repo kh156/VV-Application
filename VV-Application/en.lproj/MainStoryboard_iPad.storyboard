@@ -494,8 +494,8 @@ seehttp://www.dukewired.org/.                                                   
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="tEh-bX-8JR"/>
         <segue reference="C9b-Hx-aqX"/>
+        <segue reference="tEh-bX-8JR"/>
         <segue reference="44L-Qm-mBa"/>
     </inferredMetricsTieBreakers>
 </document>
