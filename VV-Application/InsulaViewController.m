@@ -24,6 +24,7 @@
 @synthesize landmarkImage;
 @synthesize dates;
 @synthesize myApp = _myApp;
+@synthesize sliderDates;
 
 /**
  * Initialize the view
@@ -91,6 +92,12 @@
 -(void) setUpSlider {
     [IVSlider setEnabled:YES];
     dates = [[NSMutableArray alloc] init];
+    for (UILabel *year in sliderDates) {
+        [year removeFromSuperview];
+    }
+    
+    sliderDates = [[NSMutableArray alloc] init];
+        
     NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name = %@", self.myApp.coreData.landmarkName];
     NSArray *fetchResults = [self entity:@"Landmark" predicate: query];
     Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
@@ -116,6 +123,7 @@
     for (NSNumber *num in dates) {
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(startx + count * (width/([dates count]-1)) - 20, starty - 20, 40, 20) ];
+        [sliderDates addObject:label];
         label.textColor = [UIColor blackColor];
         label.backgroundColor = self.view.backgroundColor;
         label.font = [UIFont fontWithName:@"Times New Roman Bold" size:(12.0)];
