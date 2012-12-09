@@ -17,8 +17,6 @@
 
 
 //TODO: find better design solution to this global variable.....
-NSString* insulaName;
-NSString* landmarkName;
 
 @implementation HomescreenViewController;
 @synthesize tableData;
@@ -48,6 +46,7 @@ NSString* landmarkName;
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"HomeScreenView viewDidLoad");
     [self initTableButtons];
     [self plotMapAnnotations];
     [self setInitialMapRegion];
@@ -82,7 +81,7 @@ NSString* landmarkName;
 -(void) setUpSlider {
     [HSSlider setEnabled:YES];
     dates = [[NSMutableArray alloc] init];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name = %@", insulaName];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name = %@", self.myApp.coreData.insulaName];
     NSArray *fetchResults = [self entity:@"Insula" predicate: query];
     Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
     for (Timeslot *slot in insula.timeslots) {
@@ -121,7 +120,7 @@ NSString* landmarkName;
     NSUInteger index = (NSUInteger)(HSSlider.value + 0.5); //round number
     [HSSlider setValue:index animated:NO];
     NSNumber *date = [dates objectAtIndex:index];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name = %@", insulaName];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name = %@", self.myApp.coreData.insulaName];
     NSArray *fetchResults = [self entity:@"Insula" predicate:query];
     Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
     for (Timeslot *timeslot in insula.timeslots) {
@@ -188,7 +187,7 @@ NSString* landmarkName;
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *name =[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
-    insulaName = name;
+    self.myApp.coreData.insulaName = name;
     [HSButton setTitle: name forState: UIControlStateNormal];
     /*NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", name];
     NSArray *fetchResults = [self entity:@"Insula" predicate:query];
@@ -277,7 +276,7 @@ NSString* landmarkName;
             NSString* generalDes = [self.myApp.lib getStringFromFile:description];
             [HSSummary setText: generalDes];*/
             [self zoomOnAnnotation: HSSearchBar.text];
-            insulaName = HSSearchBar.text;
+            self.myApp.coreData.insulaName = HSSearchBar.text;
             [self setUpSlider];
         }
     }

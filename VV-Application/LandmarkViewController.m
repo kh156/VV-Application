@@ -45,7 +45,7 @@
  * Additional set up of view. Specifically, initialize view, and NGL framework for displaying 3D object
  */
 - (void) viewDidLoad {
-     NSLog(@"insula = %@, landmark = %@", insulaName, landmarkName);
+    NSLog(@"LandmarkView viewDidLoad");
 	[super viewDidLoad];
     [self initNGL: [self retrieveFileName]];
 }
@@ -57,11 +57,12 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *des = [NSEntityDescription entityForName:@"Landmark" inManagedObjectContext:self.myApp.coreData.managedObjectContext];
     [request setEntity:des];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", landmarkName];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", self.myApp.coreData.landmarkName];
     [request setPredicate:query];
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     NSString *description = ((Landmark *) [fetchResults objectAtIndex:0]).landmark_3d;
+    NSLog(@"NGL file: %@", description);
     return description;
 }
 
@@ -75,7 +76,7 @@
     [self.view addSubview: theView];
     theView.contentScaleFactor = [[UIScreen mainScreen] scale];
 	NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys: kNGLMeshCentralizeYes, kNGLMeshKeyCentralize, @"0.3", kNGLMeshKeyNormalize, nil];
-	mesh = [[NGLMesh alloc] initWithFile:fileName settings:settings delegate:nil];
+	mesh = [[NGLMesh alloc] initWithFile:[self.myApp.lib getResourceFilepath: fileName] settings:settings delegate:nil];
     camera = [[NGLCamera alloc] initWithMeshes:mesh, nil];
 	[camera autoAdjustAspectRatio:YES animated:YES];
     [[NGLDebug debugMonitor] startWithView:theView];
@@ -117,4 +118,20 @@
     rotateX += [sender velocityInView: self.view].y / 100.0;
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    NSLog(@"LandmarkView viewWillDisappear");
+    [EAGLContext setCurrentContext:nil];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    NSLog(@"LandmarkView viewWillAppear");
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    NSLog(@"LandmarkView viewDidDisappear");
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    NSLog(@"LandmarkView viewDidAppear");
+}
  @end 

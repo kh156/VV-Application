@@ -53,7 +53,7 @@
  * initialize search bar, and disable time slider.
  */
 - (void)viewDidLoad {
-    NSLog(@"insula = %@, landmark = %@", insulaName, landmarkName);
+    NSLog(@"InsulaView viewDidLoad");
     [super viewDidLoad];
     [self initTableButtons];
     [self plotMapAnnotations];
@@ -91,7 +91,7 @@
 -(void) setUpSlider {
     [IVSlider setEnabled:YES];
     dates = [[NSMutableArray alloc] init];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name = %@", landmarkName];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name = %@", self.myApp.coreData.landmarkName];
     NSArray *fetchResults = [self entity:@"Landmark" predicate: query];
     Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
     
@@ -138,7 +138,7 @@
     NSUInteger index = (NSUInteger)(IVSlider.value + 0.5); //round number
     [IVSlider setValue:index animated:NO];
     NSNumber *date = [dates objectAtIndex:index];
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name = %@", landmarkName];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name = %@", self.myApp.coreData.landmarkName];
     NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
     Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
     for (Timeslot *timeslot in lmark.timeslots) {
@@ -191,7 +191,7 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         NSString *name =[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
-        landmarkName = name;
+        self.myApp.coreData.landmarkName = name;
         [self setUpSlider];
         [IVButton setTitle: name forState: UIControlStateNormal];
         //NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", name];
@@ -212,7 +212,7 @@
  */
 -(void) plotMapAnnotations {
     // NSLog(@"plotting map annotations insula");
-    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", insulaName];
+    NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", self.myApp.coreData.insulaName];
     NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
     Landmark *lmark;
     for (lmark in fetchResults) {
@@ -273,7 +273,7 @@
         NSString *name = [annotation title];
         if ([name isEqualToString: IVSearchBar.text]) {
             [IVButton setTitle: IVSearchBar.text forState: UIControlStateNormal];
-            landmarkName = IVSearchBar.text;
+            self.myApp.coreData.landmarkName = IVSearchBar.text;
             [self setUpSlider];
             //NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", name];
             //NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
@@ -294,5 +294,19 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    NSLog(@"InsulaView viewWillDisappear");
+}
 
+- (void) viewWillAppear:(BOOL)animated {
+    NSLog(@"InsulaView viewWillAppear");
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    NSLog(@"InsulaView viewDidDisappear");
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    NSLog(@"InsulaView viewDidAppear");
+}
 @end

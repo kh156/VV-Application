@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -24,7 +24,7 @@
                                 <items>
                                     <barButtonItem title="About/Credits" id="2Cs-xa-UjP">
                                         <connections>
-                                            <segue destination="ymn-7K-OlU" kind="modal" id="xEx-tx-5VH"/>
+                                            <segue destination="ymn-7K-OlU" kind="modal" identifier="HomeToAbout" id="xEx-tx-5VH"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -76,7 +76,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4Jl-kq-jZQ" kind="modal" id="ygA-ac-g2y"/>
+                                    <segue destination="4Jl-kq-jZQ" kind="modal" identifier="HomeToInsula" id="ygA-ac-g2y"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="fdz-AI-g3E">
@@ -119,7 +119,6 @@
                         <outlet property="HSSummary" destination="7Gw-qP-uux" id="a52-fu-ZYS"/>
                         <outlet property="insulaImage" destination="W8A-bV-uN6" id="0pn-hJ-0Uh"/>
                         <outlet property="searchDisplayController" destination="bar-O9-pOr" id="Yyz-Xx-0pa"/>
-                        <outlet property="view" destination="5" id="Btu-mt-IsV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
@@ -177,7 +176,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="EPN-MI-LUq">
                                         <connections>
-                                            <segue destination="2" kind="modal" id="44L-Qm-mBa"/>
+                                            <segue destination="2" kind="modal" identifier="InsulaToHome" id="44L-Qm-mBa"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -223,7 +222,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jea-Ud-xDz" kind="modal" id="TTl-kz-Jeg"/>
+                                    <segue destination="jea-Ud-xDz" kind="modal" id="C9b-Hx-aqX"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" id="wbO-ab-8t2">
@@ -242,7 +241,6 @@
                         <outlet property="IVSlider" destination="y1F-Xn-4hu" id="y7t-Sk-feM"/>
                         <outlet property="IVSummary" destination="waT-mm-uFV" id="H6p-kR-YGX"/>
                         <outlet property="landmarkImage" destination="wbO-ab-8t2" id="Cp6-Sz-eDg"/>
-                        <outlet property="view" destination="PGF-0a-x36" id="MSe-L8-OfE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVE-Y2-R9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -257,7 +255,7 @@
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" usesAttributedText="YES" id="Ehd-a7-nUk">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" id="Ehd-a7-nUk">
                                 <rect key="frame" x="252" y="44" width="772" height="660"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -306,7 +304,7 @@ seehttp://www.dukewired.org/.                                                   
                                 <items>
                                     <barButtonItem title="Back" id="p0C-th-8cy">
                                         <connections>
-                                            <segue destination="2" kind="modal" id="oNM-4i-GQz"/>
+                                            <segue destination="2" kind="modal" identifier="AboutToHome" id="oNM-4i-GQz"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -353,7 +351,7 @@ seehttp://www.dukewired.org/.                                                   
                                 <items>
                                     <barButtonItem title="Back" id="lAN-pf-Tru">
                                         <connections>
-                                            <segue destination="jea-Ud-xDz" kind="modal" id="bwr-V0-23C"/>
+                                            <segue destination="jea-Ud-xDz" kind="modal" identifier="3DToLandmark" id="bwr-V0-23C"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -397,12 +395,12 @@ seehttp://www.dukewired.org/.                                                   
                                 <items>
                                     <barButtonItem title="Back" id="pJl-N1-IFQ">
                                         <connections>
-                                            <segue destination="4Jl-kq-jZQ" kind="modal" id="7XH-om-ulK"/>
+                                            <segue destination="4Jl-kq-jZQ" kind="modal" id="tEh-bX-8JR"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="3D Virtual Space" id="tVN-NU-dke">
                                         <connections>
-                                            <segue destination="uon-Db-xCE" kind="modal" id="VXo-nb-P7H"/>
+                                            <segue destination="uon-Db-xCE" kind="modal" identifier="LandmarkTo3D" id="VXo-nb-P7H"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Rotate View" id="gJS-kt-Bxh">
@@ -496,8 +494,8 @@ seehttp://www.dukewired.org/.                                                   
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="TTl-kz-Jeg"/>
-        <segue reference="7XH-om-ulK"/>
+        <segue reference="tEh-bX-8JR"/>
+        <segue reference="C9b-Hx-aqX"/>
         <segue reference="44L-Qm-mBa"/>
     </inferredMetricsTieBreakers>
 </document>

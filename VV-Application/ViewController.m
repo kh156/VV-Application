@@ -33,6 +33,7 @@
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"About/Credits viewDidLoad");
 }
 
 /**
@@ -42,4 +43,19 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void) viewWillDisappear:(BOOL)animated {
+    NSLog(@"About/Credits viewWillDisappear");
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    NSLog(@"About/Credits viewWillAppear");
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    NSLog(@"About/Credits viewDidDisappear");
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    NSLog(@"About/Credits viewDidAppear");
+}
 @end

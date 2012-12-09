@@ -19,9 +19,9 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-- (void)initializeData;
-- (void)initializeInsula;
-- (void)initializeLandmark:(Insula *)insula;
+@property (nonatomic, strong) NSString* insulaName;
+@property (nonatomic, strong) NSString* landmarkName;
+
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
