@@ -78,7 +78,6 @@
     
     for (Popover* p in interm.popovers) {
         NSLog(@"%@", p.title);
-//        NSLog(@"Add %@ %@ %@ %@ %@", p.title, p.x, p.y, p.width, p.height);
         IButton *bt = [IButton buttonWithType:UIButtonTypeCustom];
         bt.title = p.title;
         bt.text = [self.myApp.lib getStringFromFile:p.text];

@@ -90,6 +90,14 @@
     basilica.longitude = [NSNumber numberWithDouble:12.341980];
     basilica.insula = insula;
     [insula addLandmarksObject:basilica];
+    
+    Timeslot *t2012 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t2012.year = [NSNumber numberWithInt:2012];
+    t2012.month = [NSNumber numberWithInt:0];
+    t2012.landmark_general_description = @"Basilica_general_description_2012.txt";
+    t2012.landmark_general_picture = @"Basilica_general_picture_2012.jpg";
+    [basilica addTimeslotsObject:t2012];
 }
 
 - (void)initializeCistern:(Insula *)insula {
@@ -106,8 +114,14 @@
     cistern.longitude = [NSNumber numberWithDouble:12.341623];
     cistern.insula = insula;
     [insula addLandmarksObject:cistern];
-
-
+    
+    Timeslot *t2012 = (Timeslot *)[NSEntityDescription insertNewObjectForEntityForName:@"Timeslot"
+                                                                inManagedObjectContext:self.managedObjectContext];
+    t2012.year = [NSNumber numberWithInt:2012];
+    t2012.month = [NSNumber numberWithInt:0];
+    t2012.landmark_general_description = @"Cistern_general_description_2012.txt";
+    t2012.landmark_general_picture = @"Cistern_general_picture_2012.jpg";
+    [cistern addTimeslotsObject:t2012];
 }
 
 - (void)initializeEquestrian:(Insula *)insula {

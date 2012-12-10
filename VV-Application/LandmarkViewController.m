@@ -123,15 +123,4 @@
     [EAGLContext setCurrentContext:nil];
 }
 
-- (void) viewWillAppear:(BOOL)animated {
-    NSLog(@"LandmarkView viewWillAppear");
-}
-
-- (void) viewDidDisappear:(BOOL)animated {
-    NSLog(@"LandmarkView viewDidDisappear");
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    NSLog(@"LandmarkView viewDidAppear");
-}
  @end 
