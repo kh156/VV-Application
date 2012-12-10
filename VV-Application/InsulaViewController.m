@@ -126,7 +126,7 @@
     [dates sortUsingSelector:@selector(compare:)];
     for (NSNumber *num in dates) {
         UILabel *label;
-        if ([dates count] > 0) {
+        if ([dates count] > 1) {
             label = [[UILabel alloc] initWithFrame:CGRectMake(startx + count * (width/([dates count]-1)) - 20, starty - 20, 40, 20) ];
         }
         else {
