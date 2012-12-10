@@ -77,6 +77,7 @@
     }
     
     for (Popover* p in interm.popovers) {
+        NSLog(@"%@", p.title);
 //        NSLog(@"Add %@ %@ %@ %@ %@", p.title, p.x, p.y, p.width, p.height);
         IButton *bt = [IButton buttonWithType:UIButtonTypeCustom];
         bt.title = p.title;
@@ -85,7 +86,7 @@
         double r = (double)(arc4random()%255) / 255.0;
         double g = (double)(arc4random()%255) / 255.0;
         double b = (double)(arc4random()%255) / 255.0;
-        bt.backgroundColor = [UIColor colorWithRed:r green:g blue:b alpha:0.3];
+        bt.backgroundColor = [UIColor colorWithRed:r green:g blue:b alpha:0.2];
         [bt addTarget:self action:@selector(popover:) forControlEvents:UIControlEventTouchUpInside];
         [bt addTarget:self action:@selector(glow:) forControlEvents:UIControlEventTouchDown];
         [self.view addSubview:bt];
@@ -106,7 +107,7 @@
     
     _popover = [[UIPopoverController alloc] initWithContentViewController:nav];
     self.popover.popoverContentSize = vc.view.frame.size;
-    [self.popover presentPopoverFromRect:CGRectMake(button.frame.size.width / 2, button.frame.size.height / 1, 1, 1) inView:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    [self.popover presentPopoverFromRect:CGRectMake(button.frame.size.width / 2, button.frame.size.height / 1, 1, 1) inView:button permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
 }
 
 - (void) glow:(IButton *)button {

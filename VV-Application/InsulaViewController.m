@@ -125,8 +125,13 @@
     int count = 0;
     [dates sortUsingSelector:@selector(compare:)];
     for (NSNumber *num in dates) {
-        
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(startx + count * (width/([dates count]-1)) - 20, starty - 20, 40, 20) ];
+        UILabel *label;
+        if ([dates count] > 0) {
+            label = [[UILabel alloc] initWithFrame:CGRectMake(startx + count * (width/([dates count]-1)) - 20, starty - 20, 40, 20) ];
+        }
+        else {
+            label = [[UILabel alloc] initWithFrame:CGRectMake(startx + count * width - 20, starty - 20, 40, 20)];
+        }
         [sliderDates addObject:label];
         label.textColor = [UIColor blackColor];
         label.backgroundColor = self.view.backgroundColor;

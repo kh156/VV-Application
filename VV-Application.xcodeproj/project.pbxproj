@@ -39,6 +39,7 @@
 		6C462C7C162F828C006C451F /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C462C7B162F828C006C451F /* NinevehGL.framework */; };
 		6C462C7F162FC4B1006C451F /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C462C7E162FC4B1006C451F /* MapAnnotation.m */; };
 		6C65C100161EE5B0003A3823 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C65C0FF161EE5B0003A3823 /* ViewController.m */; };
+		6CBCA9A81675BC56009953D2 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CBCA9A71675BC56009953D2 /* MainStoryboard_iPad.storyboard */; };
 		6CC704D9162264AB007003C7 /* LandmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC704D8162264AB007003C7 /* LandmarkViewController.m */; };
 		6CC704E116237F83007003C7 /* InsulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC704E016237F83007003C7 /* InsulaViewController.m */; };
 		6CDFD69E162BCC2B0018676A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDFD69D162BCC2B0018676A /* OpenGLES.framework */; };
@@ -53,7 +54,6 @@
 		6CE17849161EDE60007A6004 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE17848161EDE60007A6004 /* Default@2x.png */; };
 		6CE1784B161EDE60007A6004 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE1784A161EDE60007A6004 /* Default-568h@2x.png */; };
 		6CE1784E161EDE60007A6004 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE1784C161EDE60007A6004 /* MainStoryboard_iPhone.storyboard */; };
-		6CE17851161EDE60007A6004 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE1784F161EDE60007A6004 /* MainStoryboard_iPad.storyboard */; };
 		6CE17854161EDE60007A6004 /* HomescreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE17853161EDE60007A6004 /* HomescreenViewController.m */; };
 		6CE1785C161EDE60007A6004 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE1785B161EDE60007A6004 /* SenTestingKit.framework */; };
 		6CE1785D161EDE60007A6004 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE17834161EDE60007A6004 /* UIKit.framework */; };
@@ -120,6 +120,7 @@
 		6C462C7E162FC4B1006C451F /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		6C65C0FE161EE5B0003A3823 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6C65C0FF161EE5B0003A3823 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6CBCA9A71675BC56009953D2 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		6CC704D7162264AB007003C7 /* LandmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandmarkViewController.h; sourceTree = "<group>"; };
 		6CC704D8162264AB007003C7 /* LandmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandmarkViewController.m; sourceTree = "<group>"; };
 		6CC704DF16237F83007003C7 /* InsulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsulaViewController.h; sourceTree = "<group>"; };
@@ -140,7 +141,6 @@
 		6CE17848161EDE60007A6004 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6CE1784A161EDE60007A6004 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6CE1784D161EDE60007A6004 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		6CE17850161EDE60007A6004 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		6CE17852161EDE60007A6004 /* HomescreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomescreenViewController.h; sourceTree = "<group>"; };
 		6CE17853161EDE60007A6004 /* HomescreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomescreenViewController.m; sourceTree = "<group>"; };
 		6CE1785A161EDE60007A6004 /* VV-ApplicationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VV-ApplicationTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -397,7 +397,7 @@
 		6CE17877161EDF8B007A6004 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				6CE1784F161EDE60007A6004 /* MainStoryboard_iPad.storyboard */,
+				6CBCA9A71675BC56009953D2 /* MainStoryboard_iPad.storyboard */,
 				6CE1784C161EDE60007A6004 /* MainStoryboard_iPhone.storyboard */,
 			);
 			name = Storyboards;
@@ -495,7 +495,6 @@
 				6CE17849161EDE60007A6004 /* Default@2x.png in Resources */,
 				6CE1784B161EDE60007A6004 /* Default-568h@2x.png in Resources */,
 				6CE1784E161EDE60007A6004 /* MainStoryboard_iPhone.storyboard in Resources */,
-				6CE17851161EDE60007A6004 /* MainStoryboard_iPad.storyboard in Resources */,
 				6CECA0F016262A09002C4A4D /* VisualizingVeniceLogo.jpg in Resources */,
 				6C3C9AEB16388F770038A5A0 /* chapel_diffuse.jpg in Resources */,
 				6C3C9AEC16388F770038A5A0 /* GoundDiffuseMap.jpg in Resources */,
@@ -515,6 +514,7 @@
 				6C3C9AFA16388F770038A5A0 /* cube_left.jpg in Resources */,
 				6C3C9AFB16388F770038A5A0 /* cube_right.jpg in Resources */,
 				08CB734F1640CDCF00204214 /* Materials in Resources */,
+				6CBCA9A81675BC56009953D2 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,14 +601,6 @@
 				6CE1784D161EDE60007A6004 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		6CE1784F161EDE60007A6004 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6CE17850161EDE60007A6004 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		6CE17864161EDE60007A6004 /* InfoPlist.strings */ = {
