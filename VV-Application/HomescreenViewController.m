@@ -48,7 +48,6 @@
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"HomeScreenView viewDidLoad");
     [self initTableButtons];
     [self plotMapAnnotations];
     [self setInitialMapRegion];

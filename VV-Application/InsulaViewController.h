@@ -27,12 +27,6 @@
 @property(nonatomic, weak) AppDelegate *myApp;
 @property(nonatomic, strong) NSMutableArray *sliderDates;
 
-/**
- * Initialize the view
- * param: view name and bundle
- * return: self
- */
--(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 
 /**
  * Retrieve the app delegate

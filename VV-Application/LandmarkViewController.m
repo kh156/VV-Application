@@ -27,25 +27,11 @@
     return _myApp;
 }
 
-/**
- * Initialize the view
- * param: view name and bundle
- * return: self
- */
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 /**
  * Additional set up of view. Specifically, initialize view, and NGL framework for displaying 3D object
  */
 - (void) viewDidLoad {
-    NSLog(@"LandmarkView viewDidLoad");
 	[super viewDidLoad];
     [self initNGL: [self retrieveFileName]];
 }
@@ -62,7 +48,6 @@
     NSError *error = nil;
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     NSString *description = ((Landmark *) [fetchResults objectAtIndex:0]).landmark_3d;
-    NSLog(@"NGL file: %@", description);
     return description;
 }
 
@@ -119,7 +104,6 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-    NSLog(@"LandmarkView viewWillDisappear");
     [EAGLContext setCurrentContext:nil];
 }
 

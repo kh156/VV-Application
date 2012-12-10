@@ -27,17 +27,6 @@
 @synthesize myApp = _myApp;
 @synthesize sliderDates;
 
-/**
- * Initialize the view
- * param: view name and bundle
- * return: self
- */
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
-    return self;
-}
 
 /**
  * Retrieve the app delegate
@@ -55,7 +44,6 @@
  * initialize search bar, and disable time slider.
  */
 - (void)viewDidLoad {
-    NSLog(@"InsulaView viewDidLoad");
     [super viewDidLoad];
     [self initTableButtons];
     [self plotMapAnnotations];
@@ -67,7 +55,7 @@
     [IVSearchBar placeholder];
     
     [IVTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:0];
-    [self tableView:IVTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] name: @"Cistern"];
+    [self tableView:IVTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] name: @"Equestrian Monument to Bartolommeo Colleoni"];
 }
 
 #pragma mark - fetch from core data utility method
@@ -140,7 +128,7 @@
         label.text = [NSString stringWithFormat: @"%d", [num intValue]];
         count++;
     }
-    [IVSlider setValue:IVSlider.maximumValue];
+    [IVSlider setValue:IVSlider.minimumValue];
     [IVSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
     [self valueChanged:IVSlider];
 }
@@ -161,7 +149,7 @@
     for (Timeslot *timeslot in lmark.timeslots) {
         if ([timeslot.year isEqualToNumber:date]) {
             [IVSummary setText:[self.myApp.lib getStringFromFile:timeslot.landmark_general_description]];
-            UIImage *img = [UIImage imageNamed:timeslot.landmark_general_picture];
+            UIImage *img = [self.myApp.lib getImageFromFile:timeslot.landmark_general_picture];
             [landmarkImage setImage:img];
             break;
         };

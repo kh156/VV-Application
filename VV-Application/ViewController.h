@@ -11,12 +11,6 @@
 
 @interface ViewController : UIViewController
 
-/**
- * Initialize the view
- * param: view name and bundle
- * return: self
- */
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 
 /**
  * Additional set up after loading the view

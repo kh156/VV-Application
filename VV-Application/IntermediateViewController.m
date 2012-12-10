@@ -37,7 +37,6 @@
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"IntermediateView viewDidLoad");
     self.rotation = @"N";
     [self rotateView:nil];
 }
@@ -77,7 +76,6 @@
     }
     
     for (Popover* p in interm.popovers) {
-        NSLog(@"%@", p.title);
         IButton *bt = [IButton buttonWithType:UIButtonTypeCustom];
         bt.title = p.title;
         bt.text = [self.myApp.lib getStringFromFile:p.text];
@@ -93,7 +91,6 @@
 }
 
 - (void) popover:(IButton *)button {
-    NSLog(@"IButton pressed!!");
     UITextView *text = [[UITextView alloc] init];
     text.frame = CGRectMake(0, 0, 450, 250);
     text.editable = NO;

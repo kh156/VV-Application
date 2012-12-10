@@ -92,7 +92,7 @@
         return [NSData dataWithContentsOfFile:[self getResourceFilepath:fileName]];
     }
     else {
-        NSLog(@"%@ does not exist", fileName);
+        NSLog(@"Warning: %@ does not exist", fileName);
         return NULL;
     }
 }

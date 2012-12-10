@@ -30,13 +30,6 @@
 - (AppDelegate *)myApp;
 
 /**
- * Initialize the view
- * param: view name and bundle
- * return: self
- */
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
-
-/**
  * Additional set up of view. Specifically, initialize view, and NGL framework for displaying 3D object
  */
 - (void) viewDidLoad;

@@ -14,26 +14,12 @@
 
 @implementation ViewController
 
-/**
- * Initialize the view
- * param: view name and bundle
- * return: self
- */
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 /**
  * Additional set up after loading the view
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"About/Credits viewDidLoad");
 }
 
 /**

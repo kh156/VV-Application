@@ -15,27 +15,9 @@
 		088118F7163DCB30002916E7 /* VV-Application.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 088118F3163DCB30002916E7 /* VV-Application.xcdatamodeld */; };
 		08B2CAE7163F9F230004F2EA /* PublicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B2CAE6163F9F230004F2EA /* PublicLibrary.m */; };
 		08CB734F1640CDCF00204214 /* Materials in Resources */ = {isa = PBXBuildFile; fileRef = 08CB734E1640CDCF00204214 /* Materials */; };
-		08D10F881640CCF0007D0F62 /* cube_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AEA16388F770038A5A0 /* cube_top.jpg */; };
 		08DB3110165AD01F00C6F391 /* Timeslot.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB310F165AD01F00C6F391 /* Timeslot.m */; };
 		08DB3113165AD09600C6F391 /* Insula.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB3112165AD09600C6F391 /* Insula.m */; };
 		08DB311D165AE57F00C6F391 /* Landmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB311C165AE57F00C6F391 /* Landmark.m */; };
-		6C3C9AEB16388F770038A5A0 /* chapel_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD716388F770038A5A0 /* chapel_diffuse.jpg */; };
-		6C3C9AEC16388F770038A5A0 /* GoundDiffuseMap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD816388F770038A5A0 /* GoundDiffuseMap.jpg */; };
-		6C3C9AED16388F770038A5A0 /* house_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AD916388F770038A5A0 /* house_diffuse.jpg */; };
-		6C3C9AEE16388F770038A5A0 /* medieval scene.dae in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9ADA16388F770038A5A0 /* medieval scene.dae */; };
-		6C3C9AEF16388F770038A5A0 /* windmill_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9ADB16388F770038A5A0 /* windmill_diffuse.jpg */; };
-		6C3C9AF016388F770038A5A0 /* house.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9ADD16388F770038A5A0 /* house.mtl */; };
-		6C3C9AF116388F770038A5A0 /* house.obj in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9ADE16388F770038A5A0 /* house.obj */; };
-		6C3C9AF216388F770038A5A0 /* house_diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9ADF16388F770038A5A0 /* house_diffuse.jpg */; };
-		6C3C9AF316388F770038A5A0 /* house_normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE016388F770038A5A0 /* house_normal.jpg */; };
-		6C3C9AF416388F770038A5A0 /* house_spec.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE116388F770038A5A0 /* house_spec.jpg */; };
-		6C3C9AF516388F770038A5A0 /* cube.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE316388F770038A5A0 /* cube.mtl */; };
-		6C3C9AF616388F770038A5A0 /* cube.obj in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE416388F770038A5A0 /* cube.obj */; };
-		6C3C9AF716388F770038A5A0 /* cube_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE516388F770038A5A0 /* cube_back.jpg */; };
-		6C3C9AF816388F770038A5A0 /* cube_bottom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE616388F770038A5A0 /* cube_bottom.jpg */; };
-		6C3C9AF916388F770038A5A0 /* cube_front.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE716388F770038A5A0 /* cube_front.jpg */; };
-		6C3C9AFA16388F770038A5A0 /* cube_left.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE816388F770038A5A0 /* cube_left.jpg */; };
-		6C3C9AFB16388F770038A5A0 /* cube_right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3C9AE916388F770038A5A0 /* cube_right.jpg */; };
 		6C462C7C162F828C006C451F /* NinevehGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C462C7B162F828C006C451F /* NinevehGL.framework */; };
 		6C462C7F162FC4B1006C451F /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C462C7E162FC4B1006C451F /* MapAnnotation.m */; };
 		6C65C100161EE5B0003A3823 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C65C0FF161EE5B0003A3823 /* ViewController.m */; };
@@ -97,24 +79,6 @@
 		08DB3112165AD09600C6F391 /* Insula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insula.m; sourceTree = "<group>"; };
 		08DB311B165AE57F00C6F391 /* Landmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Landmark.h; sourceTree = "<group>"; };
 		08DB311C165AE57F00C6F391 /* Landmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmark.m; sourceTree = "<group>"; };
-		6C3C9AD716388F770038A5A0 /* chapel_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chapel_diffuse.jpg; sourceTree = "<group>"; };
-		6C3C9AD816388F770038A5A0 /* GoundDiffuseMap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GoundDiffuseMap.jpg; sourceTree = "<group>"; };
-		6C3C9AD916388F770038A5A0 /* house_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_diffuse.jpg; sourceTree = "<group>"; };
-		6C3C9ADA16388F770038A5A0 /* medieval scene.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "medieval scene.dae"; sourceTree = "<group>"; };
-		6C3C9ADB16388F770038A5A0 /* windmill_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = windmill_diffuse.jpg; sourceTree = "<group>"; };
-		6C3C9ADD16388F770038A5A0 /* house.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = house.mtl; sourceTree = "<group>"; };
-		6C3C9ADE16388F770038A5A0 /* house.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = house.obj; sourceTree = "<group>"; };
-		6C3C9ADF16388F770038A5A0 /* house_diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_diffuse.jpg; sourceTree = "<group>"; };
-		6C3C9AE016388F770038A5A0 /* house_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_normal.jpg; sourceTree = "<group>"; };
-		6C3C9AE116388F770038A5A0 /* house_spec.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house_spec.jpg; sourceTree = "<group>"; };
-		6C3C9AE316388F770038A5A0 /* cube.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cube.mtl; sourceTree = "<group>"; };
-		6C3C9AE416388F770038A5A0 /* cube.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cube.obj; sourceTree = "<group>"; };
-		6C3C9AE516388F770038A5A0 /* cube_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_back.jpg; sourceTree = "<group>"; };
-		6C3C9AE616388F770038A5A0 /* cube_bottom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_bottom.jpg; sourceTree = "<group>"; };
-		6C3C9AE716388F770038A5A0 /* cube_front.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_front.jpg; sourceTree = "<group>"; };
-		6C3C9AE816388F770038A5A0 /* cube_left.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_left.jpg; sourceTree = "<group>"; };
-		6C3C9AE916388F770038A5A0 /* cube_right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_right.jpg; sourceTree = "<group>"; };
-		6C3C9AEA16388F770038A5A0 /* cube_top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cube_top.jpg; sourceTree = "<group>"; };
 		6C462C7B162F828C006C451F /* NinevehGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NinevehGL.framework; sourceTree = "<group>"; };
 		6C462C7D162FC4B1006C451F /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 		6C462C7E162FC4B1006C451F /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
@@ -209,45 +173,6 @@
 				0835E0141655AB4100D6B752 /* Popover.m */,
 			);
 			name = CoreData;
-			sourceTree = "<group>";
-		};
-		6C3C9AD616388F770038A5A0 /* Medieval */ = {
-			isa = PBXGroup;
-			children = (
-				6C3C9AD716388F770038A5A0 /* chapel_diffuse.jpg */,
-				6C3C9AD816388F770038A5A0 /* GoundDiffuseMap.jpg */,
-				6C3C9AD916388F770038A5A0 /* house_diffuse.jpg */,
-				6C3C9ADA16388F770038A5A0 /* medieval scene.dae */,
-				6C3C9ADB16388F770038A5A0 /* windmill_diffuse.jpg */,
-			);
-			path = Medieval;
-			sourceTree = "<group>";
-		};
-		6C3C9ADC16388F770038A5A0 /* House */ = {
-			isa = PBXGroup;
-			children = (
-				6C3C9ADD16388F770038A5A0 /* house.mtl */,
-				6C3C9ADE16388F770038A5A0 /* house.obj */,
-				6C3C9ADF16388F770038A5A0 /* house_diffuse.jpg */,
-				6C3C9AE016388F770038A5A0 /* house_normal.jpg */,
-				6C3C9AE116388F770038A5A0 /* house_spec.jpg */,
-			);
-			path = House;
-			sourceTree = "<group>";
-		};
-		6C3C9AE216388F770038A5A0 /* Cube */ = {
-			isa = PBXGroup;
-			children = (
-				6C3C9AE316388F770038A5A0 /* cube.mtl */,
-				6C3C9AE416388F770038A5A0 /* cube.obj */,
-				6C3C9AE516388F770038A5A0 /* cube_back.jpg */,
-				6C3C9AE616388F770038A5A0 /* cube_bottom.jpg */,
-				6C3C9AE716388F770038A5A0 /* cube_front.jpg */,
-				6C3C9AE816388F770038A5A0 /* cube_left.jpg */,
-				6C3C9AE916388F770038A5A0 /* cube_right.jpg */,
-				6C3C9AEA16388F770038A5A0 /* cube_top.jpg */,
-			);
-			path = Cube;
 			sourceTree = "<group>";
 		};
 		6CC704DA162264B4007003C7 /* LandmarkViews */ = {
@@ -407,9 +332,6 @@
 			isa = PBXGroup;
 			children = (
 				08CB734E1640CDCF00204214 /* Materials */,
-				6C3C9AD616388F770038A5A0 /* Medieval */,
-				6C3C9ADC16388F770038A5A0 /* House */,
-				6C3C9AE216388F770038A5A0 /* Cube */,
 				6CECA0EF16262A09002C4A4D /* VisualizingVeniceLogo.jpg */,
 				6CE17846161EDE60007A6004 /* Default.png */,
 				6CE17848161EDE60007A6004 /* Default@2x.png */,
@@ -489,30 +411,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08D10F881640CCF0007D0F62 /* cube_top.jpg in Resources */,
 				6CE1783F161EDE60007A6004 /* InfoPlist.strings in Resources */,
 				6CE17847161EDE60007A6004 /* Default.png in Resources */,
 				6CE17849161EDE60007A6004 /* Default@2x.png in Resources */,
 				6CE1784B161EDE60007A6004 /* Default-568h@2x.png in Resources */,
 				6CE1784E161EDE60007A6004 /* MainStoryboard_iPhone.storyboard in Resources */,
 				6CECA0F016262A09002C4A4D /* VisualizingVeniceLogo.jpg in Resources */,
-				6C3C9AEB16388F770038A5A0 /* chapel_diffuse.jpg in Resources */,
-				6C3C9AEC16388F770038A5A0 /* GoundDiffuseMap.jpg in Resources */,
-				6C3C9AED16388F770038A5A0 /* house_diffuse.jpg in Resources */,
-				6C3C9AEE16388F770038A5A0 /* medieval scene.dae in Resources */,
-				6C3C9AEF16388F770038A5A0 /* windmill_diffuse.jpg in Resources */,
-				6C3C9AF016388F770038A5A0 /* house.mtl in Resources */,
-				6C3C9AF116388F770038A5A0 /* house.obj in Resources */,
-				6C3C9AF216388F770038A5A0 /* house_diffuse.jpg in Resources */,
-				6C3C9AF316388F770038A5A0 /* house_normal.jpg in Resources */,
-				6C3C9AF416388F770038A5A0 /* house_spec.jpg in Resources */,
-				6C3C9AF516388F770038A5A0 /* cube.mtl in Resources */,
-				6C3C9AF616388F770038A5A0 /* cube.obj in Resources */,
-				6C3C9AF716388F770038A5A0 /* cube_back.jpg in Resources */,
-				6C3C9AF816388F770038A5A0 /* cube_bottom.jpg in Resources */,
-				6C3C9AF916388F770038A5A0 /* cube_front.jpg in Resources */,
-				6C3C9AFA16388F770038A5A0 /* cube_left.jpg in Resources */,
-				6C3C9AFB16388F770038A5A0 /* cube_right.jpg in Resources */,
 				08CB734F1640CDCF00204214 /* Materials in Resources */,
 				6CBCA9A81675BC56009953D2 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
