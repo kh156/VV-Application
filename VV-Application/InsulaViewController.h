@@ -22,6 +22,7 @@
 @property(nonatomic, weak) IBOutlet UISearchBar *IVSearchBar;
 @property(nonatomic, weak) IBOutlet UISlider *IVSlider;
 @property(nonatomic, weak) IBOutlet UIImageView *landmarkImage;
+@property(nonatomic, weak) IBOutlet UITableView *IVTableView;
 @property(nonatomic, strong) NSMutableArray *dates;
 @property(nonatomic, weak) AppDelegate *myApp;
 @property(nonatomic, strong) NSMutableArray *sliderDates;

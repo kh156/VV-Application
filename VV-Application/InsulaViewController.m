@@ -21,6 +21,7 @@
 @synthesize IVButton;
 @synthesize IVSearchBar;
 @synthesize IVSlider;
+@synthesize IVTableView;
 @synthesize landmarkImage;
 @synthesize dates;
 @synthesize myApp = _myApp;
@@ -64,6 +65,9 @@
     //prompt user for search bar input
     [IVSearchBar setPlaceholder:@"Search for a Landmark!"];
     [IVSearchBar placeholder];
+    
+    [IVTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:0];
+    [self tableView:IVTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] name: @"Cistern"];
 }
 
 #pragma mark - fetch from core data utility method
@@ -202,15 +206,14 @@
         self.myApp.coreData.landmarkName = name;
         [self setUpSlider];
         [IVButton setTitle: name forState: UIControlStateNormal];
-        //NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", name];
-        //NSArray *fetchResults = [self entity:@"Landmark" predicate:query];
-        //NSString* description = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_description;
-        //[IVSummary setText: [self.myApp.lib getStringFromFile:description]];
-        //NSString* imageDescription = ((Landmark *)[fetchResults objectAtIndex:0]).landmark_general_picture;
-        //UIImage *img = [UIImage imageNamed:imageDescription];
-        //[landmarkImage setImage:img];
-        //TODO: resize image?
         [self zoomOnAnnotation: name];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath name: (NSString *) name {
+    self.myApp.coreData.landmarkName = name;
+    [self setUpSlider];
+    [IVButton setTitle: name forState: UIControlStateNormal];
+    [self zoomOnAnnotation: name];
 }
 
 #pragma mark - Map Methods

@@ -26,6 +26,7 @@
 @property(nonatomic, weak) IBOutlet MKMapView *HSMapView;
 @property(nonatomic, weak) IBOutlet UISlider *HSSlider;
 @property(nonatomic, weak) IBOutlet UIImageView *insulaImage;
+@property(nonatomic, weak) IBOutlet UITableView *HSTableView;
 @property(nonatomic, strong) NSMutableArray *dates;
 
 @property(nonatomic, weak) AppDelegate *myApp;

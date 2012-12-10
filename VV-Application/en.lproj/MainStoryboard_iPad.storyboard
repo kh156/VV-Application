@@ -117,6 +117,7 @@
                         <outlet property="HSSearchBar" destination="Px0-dF-prm" id="g2Y-n6-G3n"/>
                         <outlet property="HSSlider" destination="Ecg-0e-gTf" id="PQz-YJ-jFq"/>
                         <outlet property="HSSummary" destination="7Gw-qP-uux" id="a52-fu-ZYS"/>
+                        <outlet property="HSTableView" destination="fdz-AI-g3E" id="oNB-zQ-fsd"/>
                         <outlet property="insulaImage" destination="W8A-bV-uN6" id="0pn-hJ-0Uh"/>
                         <outlet property="searchDisplayController" destination="bar-O9-pOr" id="Yyz-Xx-0pa"/>
                     </connections>
@@ -207,7 +208,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="y1F-Xn-4hu">
-                                <rect key="frame" x="288" y="483" width="728" height="23"/>
+                                <rect key="frame" x="288" y="483" width="710" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4bi-p6-hY7">
@@ -240,6 +241,7 @@
                         <outlet property="IVSearchBar" destination="0o2-gb-6N9" id="bpf-2L-sPB"/>
                         <outlet property="IVSlider" destination="y1F-Xn-4hu" id="y7t-Sk-feM"/>
                         <outlet property="IVSummary" destination="waT-mm-uFV" id="H6p-kR-YGX"/>
+                        <outlet property="IVTableView" destination="2ZV-lr-yLL" id="Jtc-w8-5M9"/>
                         <outlet property="landmarkImage" destination="wbO-ab-8t2" id="Cp6-Sz-eDg"/>
                     </connections>
                 </viewController>
@@ -454,6 +456,7 @@ seehttp://www.dukewired.org/.                                                   
                 <relationship kind="outlet" name="HSSearchBar" candidateClass="UISearchBar"/>
                 <relationship kind="outlet" name="HSSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="HSSummary" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="HSTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="insulaImage" candidateClass="UIImageView"/>
             </relationships>
         </class>
@@ -466,6 +469,7 @@ seehttp://www.dukewired.org/.                                                   
                 <relationship kind="outlet" name="IVSearchBar" candidateClass="UISearchBar"/>
                 <relationship kind="outlet" name="IVSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="IVSummary" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="IVTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="landmarkImage" candidateClass="UIImageView"/>
             </relationships>
         </class>
@@ -494,8 +498,8 @@ seehttp://www.dukewired.org/.                                                   
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oNM-4i-GQz"/>
-        <segue reference="tEh-bX-8JR"/>
+        <segue reference="44L-Qm-mBa"/>
+        <segue reference="ygA-ac-g2y"/>
         <segue reference="C9b-Hx-aqX"/>
     </inferredMetricsTieBreakers>
 </document>

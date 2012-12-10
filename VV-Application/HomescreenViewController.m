@@ -27,7 +27,9 @@
 @synthesize HSSlider;
 @synthesize insulaImage;
 @synthesize myApp = _myApp;
+@synthesize HSTableView;
 @synthesize dates;
+
 
 /**
  * Retrieve the app delegate
@@ -53,6 +55,8 @@
     [HSSlider setEnabled:NO];
     [HSSearchBar setPlaceholder:@"Search for an Insula!"];
     [HSSearchBar placeholder];
+    [HSTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:0];
+    [self tableView:HSTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] name: @"Gesuiti"];
 }
 
 #pragma mark - fetch from core data utility method
@@ -133,19 +137,6 @@
     }
 }
 
-/*
--(MKAnnotationView *) mapview:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-    MKPinAnnotationView *myPin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"current"];
-    myPin.pinColor = MKPinAnnotationColorRed;
-    UIImage *image = [self.myApp.lib getImageFromFile:@"VisualizingVeniceLogo.jpg"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    myPin.rightCalloutAccessoryView = imageView;
-    myPin.draggable = NO;
-    myPin.highlighted = YES;
-    myPin.animatesDrop = TRUE;
-    myPin.canShowCallout = YES;
-    return myPin;
-}*/
 
 #pragma mark - TableView Data Source methods
 
@@ -189,15 +180,13 @@
     NSString *name =[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
     self.myApp.coreData.insulaName = name;
     [HSButton setTitle: name forState: UIControlStateNormal];
-    /*NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", name];
-    NSArray *fetchResults = [self entity:@"Insula" predicate:query];
-    NSString* description = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_description;
-    [HSSummary setText: [self.myApp.lib getStringFromFile:description]];
     [self zoomOnAnnotation: name];
-    
-    NSString* imageDescription = ((Insula *)[fetchResults objectAtIndex:0]).insula_general_picture;
-    UIImage *img = [UIImage imageNamed:imageDescription];
-    [insulaImage setImage:img];*/
+    [self setUpSlider];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath name:(NSString *)name {
+    self.myApp.coreData.insulaName = name;
+    [HSButton setTitle: name forState: UIControlStateNormal];
     [self zoomOnAnnotation: name];
     [self setUpSlider];
 }
