@@ -179,6 +179,10 @@
     NSString *name =[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
     self.myApp.coreData.insulaName = name;
     [HSButton setTitle: name forState: UIControlStateNormal];
+    [HSButton sizeToFit];
+    int position = 1012 - HSButton.frame.size.width;
+    CGRect newFrame = CGRectMake(position, HSButton.frame.origin.y, HSButton.frame.size.width, HSButton.frame.size.height);
+    [HSButton setFrame: newFrame];
     [self zoomOnAnnotation: name];
     [self setUpSlider];
 }
@@ -186,6 +190,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath name:(NSString *)name {
     self.myApp.coreData.insulaName = name;
     [HSButton setTitle: name forState: UIControlStateNormal];
+    [HSButton sizeToFit];
+    int position = 1012 - HSButton.frame.size.width;
+    CGRect newFrame = CGRectMake(position, HSButton.frame.origin.y, HSButton.frame.size.width, HSButton.frame.size.height);
+    [HSButton setFrame: newFrame];
     [self zoomOnAnnotation: name];
     [self setUpSlider];
 }
@@ -242,6 +250,12 @@
             mapRegion.span.longitudeDelta = 0.0005;
             [HSSlider setValue: 0.0005/0.1];
             [HSMapView setRegion:mapRegion animated: YES];
+            MKPinAnnotationView *av = (MKPinAnnotationView *)[HSMapView viewForAnnotation:annotation];
+            [av setPinColor:MKPinAnnotationColorGreen];
+        }
+        else if (![title isEqualToString:@"Current Location"]){
+            MKPinAnnotationView *av = (MKPinAnnotationView *)[HSMapView viewForAnnotation:annotation];
+            [av setPinColor:MKPinAnnotationColorRed];
         }
     }
 }
@@ -257,6 +271,10 @@
         NSString *name = [annotation title];
         if ([name isEqualToString: HSSearchBar.text]) {
             [HSButton setTitle: HSSearchBar.text forState: UIControlStateNormal];
+            [HSButton sizeToFit];
+            int position = 1012 - HSButton.frame.size.width;
+            CGRect newFrame = CGRectMake(position, HSButton.frame.origin.y, HSButton.frame.size.width, HSButton.frame.size.height);
+            [HSButton setFrame: newFrame];
             /*NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name == %@", name];
             NSArray *fetchResults = [self entity:@"Insula" predicate:query];
             //TODO: check if results is null

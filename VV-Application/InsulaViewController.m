@@ -199,6 +199,10 @@
         self.myApp.coreData.landmarkName = name;
         [self setUpSlider];
         [IVButton setTitle: name forState: UIControlStateNormal];
+        [IVButton sizeToFit];
+        int position = 1012 - IVButton.frame.size.width;
+        CGRect newFrame = CGRectMake(position, IVButton.frame.origin.y, IVButton.frame.size.width, IVButton.frame.size.height);
+        [IVButton setFrame: newFrame];
         [self zoomOnAnnotation: name];
 }
 
@@ -206,6 +210,10 @@
     self.myApp.coreData.landmarkName = name;
     [self setUpSlider];
     [IVButton setTitle: name forState: UIControlStateNormal];
+    [IVButton sizeToFit];
+    int position = 1012 - IVButton.frame.size.width;
+    CGRect newFrame = CGRectMake(position, IVButton.frame.origin.y, IVButton.frame.size.width, IVButton.frame.size.height);
+    [IVButton setFrame: newFrame];
     [self zoomOnAnnotation: name];
 }
 
@@ -262,6 +270,12 @@
             mapRegion.span.longitudeDelta = 0.0005;
             [IVSlider setValue: 0.0005/0.1];
             [IVMapView setRegion:mapRegion animated: YES];
+            MKPinAnnotationView *av = (MKPinAnnotationView *)[IVMapView viewForAnnotation:annotation];
+            [av setPinColor:MKPinAnnotationColorGreen];
+        }
+        else if (![title isEqualToString:@"Current Location"]){
+            MKPinAnnotationView *av = (MKPinAnnotationView *)[IVMapView viewForAnnotation:annotation];
+            [av setPinColor:MKPinAnnotationColorRed];
         }
     }
 }
@@ -277,6 +291,10 @@
         NSString *name = [annotation title];
         if ([name isEqualToString: IVSearchBar.text]) {
             [IVButton setTitle: IVSearchBar.text forState: UIControlStateNormal];
+            [IVButton sizeToFit];
+            int position = 1012 - IVButton.frame.size.width;
+            CGRect newFrame = CGRectMake(position, IVButton.frame.origin.y, IVButton.frame.size.width, IVButton.frame.size.height);
+            [IVButton setFrame: newFrame];
             self.myApp.coreData.landmarkName = IVSearchBar.text;
             [self setUpSlider];
             //NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name == %@", name];
