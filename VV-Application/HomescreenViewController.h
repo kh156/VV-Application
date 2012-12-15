@@ -27,16 +27,11 @@
 @property(nonatomic, weak) IBOutlet UISlider *HSSlider;
 @property(nonatomic, weak) IBOutlet UIImageView *insulaImage;
 @property(nonatomic, weak) IBOutlet UITableView *HSTableView;
+@property(nonatomic, weak) IBOutlet UIImageView *HSGeneralImage;
 @property(nonatomic, strong) NSMutableArray *dates;
 
 @property(nonatomic, weak) AppDelegate *myApp;
 
-
-/**
-* Retrieve the app delegate
-* return: App delegate instance
-*/
-- (AppDelegate *)myApp;
 
 /**
  * Additional set up of view. Specifically, initialize insula buttons, plot map annotations, set the initial map region,

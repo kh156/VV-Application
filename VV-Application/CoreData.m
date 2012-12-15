@@ -29,7 +29,9 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-@synthesize insulaName, landmarkName;
+@synthesize insulaName = _insulaName;
+@synthesize landmarkName = _landmarkName;
+@synthesize propertyList = _propertyList;
 
 - (id)init {
     if (self = [super init]) {
@@ -40,27 +42,28 @@
 
 /* Overrider this to add support for server-side update */
 - (void)initializeData {
+    // Initialize property list
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Database" ofType:@"plist"];
+    self.propertyList = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    // Check if database exists
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     request.entity = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.managedObjectContext];
     NSArray *fetchResults = [self.managedObjectContext executeFetchRequest:request error:NULL];
     
     NSLog(@"fetch result has size of %u", fetchResults.count);
     if (fetchResults.count == 0) {
+        // Initialize database
         [self loadDataFromPropertyList];
     }
 }
 
-- (void)loadDataFromPropertyList {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Database" ofType:@"plist"];
-    NSDictionary *root = [NSDictionary dictionaryWithContentsOfFile:path];
-    
-    NSArray *insulas = [root valueForKey:@"insulas"];
+- (void)loadDataFromPropertyList {    
+    NSArray *insulas = [self.propertyList valueForKey:@"insulas"];
     for (NSDictionary *insula in insulas) {
         [self loadInsulaFromDictionary:insula];
     }
     
-    NSLog(@"I'm here!!!");
-
     NSError *err = nil;
     [self.managedObjectContext save:&err];
     if (err != nil) {

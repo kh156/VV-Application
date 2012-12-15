@@ -26,7 +26,7 @@
 @synthesize dates;
 @synthesize myApp = _myApp;
 @synthesize sliderDates;
-
+@synthesize IVGeneralImage = _IVGeneralImage;
 
 /**
  * Retrieve the app delegate
@@ -93,6 +93,9 @@
     NSPredicate *query = [NSPredicate predicateWithFormat:@"landmark_name = %@", self.myApp.coreData.landmarkName];
     NSArray *fetchResults = [self entity:@"Landmark" predicate: query];
     Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
+    
+    // Set landmark general image
+    self.IVGeneralImage.image = [self.myApp.lib getImageFromFile:lmark.landmark_general_picture];
     
     /* Need to handle the case when no timeslot found! */
     if (lmark.timeslots == NULL || lmark.timeslots.count == 0) {

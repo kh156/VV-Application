@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="20" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" image="VisualizingVeniceLogo.jpg" id="JKO-Ec-7uL">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" id="JKO-Ec-7uL">
                                 <rect key="frame" x="0.0" y="44" width="270" height="250"/>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="8tR-sE-6kw">
@@ -113,6 +113,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="HSButton" destination="M7e-Ve-Av4" id="3qh-zs-OmM"/>
+                        <outlet property="HSGeneralImage" destination="JKO-Ec-7uL" id="qFP-mY-Vhc"/>
                         <outlet property="HSMapView" destination="8tR-sE-6kw" id="Uhe-IR-97t"/>
                         <outlet property="HSSearchBar" destination="Px0-dF-prm" id="g2Y-n6-G3n"/>
                         <outlet property="HSSlider" destination="Ecg-0e-gTf" id="PQz-YJ-jFq"/>
@@ -141,7 +142,7 @@
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="VisualizingVeniceLogo.jpg" id="mgd-Di-j1Z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="mgd-Di-j1Z">
                                 <rect key="frame" x="0.0" y="44" width="269" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -236,6 +237,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="IVButton" destination="4bi-p6-hY7" id="fCV-e3-vzb"/>
+                        <outlet property="IVGeneralImage" destination="mgd-Di-j1Z" id="rud-qT-0z3"/>
                         <outlet property="IVMapView" destination="1IY-0D-rsy" id="jjz-h2-AII"/>
                         <outlet property="IVSearchBar" destination="0o2-gb-6N9" id="bpf-2L-sPB"/>
                         <outlet property="IVSlider" destination="y1F-Xn-4hu" id="y7t-Sk-feM"/>
@@ -262,32 +264,7 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Does the digital age demand a re-evaluation of traditional research methodologies? What can
-technology do for the humanities? Can it be a tool for answering research questions related to art and
-urban history? The Visualizing Venice project interrogates the limitations of methodologies, based
-on the static image and written word, and explores technology not only as a means of representing
-research but as a research tool in itself.
-
-Visualizing Venice interrogates growth and change in the city of Venice. Our team combines onsite
-and archival research in Venice with web tools and visualization technologies to create a mobile app,
-website, and database designed to help visitors to Venice (both physical and virtual) better understand
-how centuries of change and development produced the city that we experience today.
-
-Our team consists of faculty and students from Duke University, the Università IUAV di Venezia, the
-Università degli Studi di Padova, and Nesting Scrl. (click here: http://visualizingvenice.org/people/ for
-a list of individual participants). As educators, we are committed to training our undergraduate and
-graduate students not only in historical research, but also in the technologies that will shape the future
-of our discipline. We also stress the importance of international collaboration, and regularly organize
-training seminars and workshops in Venice and in the United States. For more information, please
-seehttp://www.dukewired.org/.                                                                                                                                                     </string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
@@ -309,7 +286,7 @@ seehttp://www.dukewired.org/.                                                   
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="VisualizingVeniceLogo.jpg" id="IHU-zK-WEP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="IHU-zK-WEP">
                                 <rect key="frame" x="-12.5" y="44" width="265" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -319,6 +296,10 @@ seehttp://www.dukewired.org/.                                                   
                     </view>
                     <navigationItem key="navigationItem" id="OrT-ds-pJM"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imageView" destination="IHU-zK-WEP" id="ZXH-xe-qF0"/>
+                        <outlet property="textView" destination="Ehd-a7-nUk" id="nR3-0D-SBf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pZ-H3-A1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -441,9 +422,58 @@ seehttp://www.dukewired.org/.                                                   
             <point key="canvasLocation" x="1318" y="-107"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="VisualizingVeniceLogo.jpg" width="180" height="185"/>
-    </resources>
+    <classes>
+        <class className="HomescreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomescreenViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="insulaSearch:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="HSButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="HSGeneralImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="HSMapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="HSSearchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="HSSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="HSSummary" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="HSTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="insulaImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="InsulaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InsulaViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="landmarkSearch:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="IVButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="IVGeneralImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="IVMapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="IVSearchBar" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="IVSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="IVSummary" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="IVTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="landmarkImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="IntermediateViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IntermediateViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="playVideo:"/>
+                <relationship kind="action" name="rotateView:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="landmarkImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="LandmarkViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LandmarkViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="panHorizontal:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="action" name="twoFingerRotate:" candidateClass="UIRotationGestureRecognizer"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

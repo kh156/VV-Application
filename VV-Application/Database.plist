@@ -2,19 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>logo</key>
+	<string>VisualizingVeniceLogo.jpg</string>
+	<key>about</key>
+	<string>About.txt</string>
 	<key>insulas</key>
 	<array>
 		<dict>
+			<key>insula_name</key>
+			<string>Gesuiti</string>
 			<key>insula_annotation_description</key>
 			<string>Gesuiti_annotation_description.txt</string>
 			<key>insula_annotation_picture</key>
-			<string>Gesuiti_annotation_picture.jpg</string>
+			<string></string>
 			<key>insula_general_description</key>
 			<string>Gesuiti_general_description.txt</string>
 			<key>insula_general_picture</key>
-			<string>VisualizingVeniceLogo.jpg</string>
-			<key>insula_name</key>
-			<string>Gesuiti</string>
+			<string>Gesuiti_general_picture.png</string>
 			<key>latitude</key>
 			<real>45.4333</real>
 			<key>longitude</key>
@@ -52,7 +56,7 @@
 					<key>landmark_annotation_description</key>
 					<string>Basilica_annotation_description.txt</string>
 					<key>landmark_annotation_picture</key>
-					<string>Basilica_annotation_picture.jpg</string>
+					<string></string>
 					<key>landmark_general_description</key>
 					<string>Basilica_general_description.txt</string>
 					<key>landmark_general_picture</key>
@@ -89,7 +93,7 @@
 					<key>landmark_annotation_description</key>
 					<string>Cistern_annotation_description.txt</string>
 					<key>landmark_annotation_picture</key>
-					<string>Cistern_annotation_picture.jpg</string>
+					<string></string>
 					<key>landmark_general_description</key>
 					<string>Cistern_general_description.txt</string>
 					<key>landmark_general_picture</key>
@@ -126,7 +130,7 @@
 					<key>landmark_annotation_description</key>
 					<string>Equestrian_annotation_description.txt</string>
 					<key>landmark_annotation_picture</key>
-					<string>Equestrian_annotation_picture.jpg</string>
+					<string></string>
 					<key>landmark_general_description</key>
 					<string>Equestrian_general_description.txt</string>
 					<key>landmark_general_picture</key>
@@ -303,7 +307,7 @@
 					<key>landmark_annotation_description</key>
 					<string>Scuola_annotation_description.txt</string>
 					<key>landmark_annotation_picture</key>
-					<string>Scuola_annotation_picture.jpg</string>
+					<string></string>
 					<key>landmark_general_description</key>
 					<string>Scuola_general_description.txt</string>
 					<key>landmark_general_picture</key>

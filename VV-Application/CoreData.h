@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) NSString* insulaName;
 @property (nonatomic, strong) NSString* landmarkName;
+@property (nonatomic, strong) NSDictionary *propertyList;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AppDelegate.h"
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, weak) AppDelegate *myApp;
+@property (nonatomic, weak) IBOutlet UITextView *textView;
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
 
 /**
  * Additional set up after loading the view

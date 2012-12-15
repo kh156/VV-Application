@@ -23,16 +23,11 @@
 @property(nonatomic, weak) IBOutlet UISlider *IVSlider;
 @property(nonatomic, weak) IBOutlet UIImageView *landmarkImage;
 @property(nonatomic, weak) IBOutlet UITableView *IVTableView;
+@property(nonatomic, weak) IBOutlet UIImageView *IVGeneralImage;
 @property(nonatomic, strong) NSMutableArray *dates;
 @property(nonatomic, weak) AppDelegate *myApp;
 @property(nonatomic, strong) NSMutableArray *sliderDates;
 
-
-/**
- * Retrieve the app delegate
- * return: App delegate instance
- */
--(AppDelegate *) myApp;
 
 /**
  * Additional set up of view. Specifically, initialize buttons, set up map, initialize map annotations,

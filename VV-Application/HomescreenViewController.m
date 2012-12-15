@@ -29,7 +29,7 @@
 @synthesize myApp = _myApp;
 @synthesize HSTableView;
 @synthesize dates;
-
+@synthesize HSGeneralImage = _HSGeneralImage;
 
 /**
  * Retrieve the app delegate
@@ -87,6 +87,10 @@
     NSPredicate *query = [NSPredicate predicateWithFormat:@"insula_name = %@", self.myApp.coreData.insulaName];
     NSArray *fetchResults = [self entity:@"Insula" predicate: query];
     Insula *insula = ((Insula *) [fetchResults objectAtIndex:0]);
+    
+    // Set insula general image
+    self.HSGeneralImage.image = [self.myApp.lib getImageFromFile:insula.insula_general_picture];
+    
     for (Timeslot *slot in insula.timeslots) {
         [dates addObject:slot.year];
     }

@@ -15,6 +15,9 @@
 @synthesize text, title;
 @end
 
+@interface IntermediateViewController()
+@end
+
 @implementation IntermediateViewController
 @synthesize myApp = _myApp;
 @synthesize landmarkImage;

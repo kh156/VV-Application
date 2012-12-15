@@ -12,8 +12,8 @@
 #import "PublicLibrary.h"
 
 @interface IButton : UIButton
-@property (atomic, strong) NSString *text;
-@property (atomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong) NSString *title;
 @end
 
 
@@ -23,11 +23,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *landmarkImage;
 @property NSString *rotation;
 @property (nonatomic, strong) UIPopoverController *popover;
-/**
- * Retrieve the app delegate
- * return: App delegate instance
- */
-- (AppDelegate *)myApp;
+
 
 /**
  * Additional set up of view. Specifically, loads an image of the landmark being viewed.

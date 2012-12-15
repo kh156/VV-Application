@@ -45,7 +45,6 @@
 		6CE1787C161EE1A8007A6004 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE1787B161EE1A8007A6004 /* MapKit.framework */; };
 		6CE1787F161EE1AD007A6004 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE1787D161EE1AD007A6004 /* CoreImage.framework */; };
 		6CE17880161EE1AD007A6004 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE1787E161EE1AD007A6004 /* ImageIO.framework */; };
-		6CECA0F016262A09002C4A4D /* VisualizingVeniceLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CECA0EF16262A09002C4A4D /* VisualizingVeniceLogo.jpg */; };
 		E7F2A3E3162672C800948EBD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F2A3E2162672C800948EBD /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,7 +113,6 @@
 		6CE1787B161EE1A8007A6004 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6CE1787D161EE1AD007A6004 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		6CE1787E161EE1AD007A6004 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		6CECA0EF16262A09002C4A4D /* VisualizingVeniceLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VisualizingVeniceLogo.jpg; sourceTree = "<group>"; };
 		E7F2A3E2162672C800948EBD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -309,7 +307,6 @@
 			children = (
 				080818C3167C051B00AF1694 /* Database.plist */,
 				08CB734E1640CDCF00204214 /* Materials */,
-				6CECA0EF16262A09002C4A4D /* VisualizingVeniceLogo.jpg */,
 				6CE17846161EDE60007A6004 /* Default.png */,
 				6CE17848161EDE60007A6004 /* Default@2x.png */,
 				6CE1784A161EDE60007A6004 /* Default-568h@2x.png */,
@@ -393,7 +390,6 @@
 				6CE17849161EDE60007A6004 /* Default@2x.png in Resources */,
 				6CE1784B161EDE60007A6004 /* Default-568h@2x.png in Resources */,
 				6CE1784E161EDE60007A6004 /* MainStoryboard_iPhone.storyboard in Resources */,
-				6CECA0F016262A09002C4A4D /* VisualizingVeniceLogo.jpg in Resources */,
 				08CB734F1640CDCF00204214 /* Materials in Resources */,
 				6CBCA9A81675BC56009953D2 /* MainStoryboard_iPad.storyboard in Resources */,
 				080818C4167C051B00AF1694 /* Database.plist in Resources */,

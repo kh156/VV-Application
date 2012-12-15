@@ -24,12 +24,6 @@
 @property(nonatomic, weak) AppDelegate *myApp;
 
 /**
- * Retrieve the app delegate
- * return: App delegate instance
- */
-- (AppDelegate *)myApp;
-
-/**
  * Additional set up of view. Specifically, initialize view, and NGL framework for displaying 3D object
  */
 - (void) viewDidLoad;
