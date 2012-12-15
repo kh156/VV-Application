@@ -38,6 +38,7 @@
     return self;
 }
 
+/* Overrider this to add support for server-side update */
 - (void)initializeData {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     request.entity = [NSEntityDescription entityForName:@"Insula" inManagedObjectContext:self.managedObjectContext];
