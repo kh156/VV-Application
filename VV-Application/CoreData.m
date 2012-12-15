@@ -47,9 +47,6 @@
     NSLog(@"fetch result has size of %u", fetchResults.count);
     if (fetchResults.count == 0) {
         [self loadDataFromPropertyList];
-        
-        self.insulaName = @"Gesuiti";
-        self.landmarkName = @"Scuola Grande di San Marco";
     }
 }
 
