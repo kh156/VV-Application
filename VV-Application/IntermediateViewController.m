@@ -56,7 +56,7 @@
     NSArray *fetchResults = [self.myApp.coreData.managedObjectContext executeFetchRequest:request error:&error];
     Landmark *lmark = ((Landmark *) [fetchResults objectAtIndex:0]);
     for (Intermediate *interm in lmark.intermediates) {
-        if ([interm.num isEqualToString:self.rotation]) {
+        if ([interm.index isEqualToString:self.rotation]) {
             self.landmarkImage.image = [self.myApp.lib getImageFromFile: interm.image];
             [self updatePopovers:interm];
             [self nextRotation];
