@@ -13,8 +13,6 @@
 			<string>Gesuiti</string>
 			<key>insula_annotation_description</key>
 			<string>Gesuiti_annotation_description.txt</string>
-			<key>insula_annotation_picture</key>
-			<string></string>
 			<key>insula_general_description</key>
 			<string>Gesuiti_general_description.txt</string>
 			<key>insula_general_picture</key>
@@ -30,8 +28,6 @@
 					<string>Gesuiti_general_description.txt</string>
 					<key>insula_general_picture</key>
 					<string>Gesuiti_general_picture_1508.png</string>
-					<key>month</key>
-					<integer>0</integer>
 					<key>year</key>
 					<integer>1508</integer>
 				</dict>
@@ -40,8 +36,6 @@
 					<string>Gesuiti_general_description.txt</string>
 					<key>insula_general_picture</key>
 					<string>Gesuiti_general_picture_2012.png</string>
-					<key>month</key>
-					<integer>0</integer>
 					<key>year</key>
 					<integer>2012</integer>
 				</dict>
@@ -55,8 +49,6 @@
 					<string>Gesuiti</string>
 					<key>landmark_annotation_description</key>
 					<string>Basilica_annotation_description.txt</string>
-					<key>landmark_annotation_picture</key>
-					<string></string>
 					<key>landmark_general_description</key>
 					<string>Basilica_general_description.txt</string>
 					<key>landmark_general_picture</key>
@@ -78,8 +70,6 @@
 							<string></string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>2012</integer>
 						</dict>
@@ -92,8 +82,6 @@
 					<string>Gesuiti</string>
 					<key>landmark_annotation_description</key>
 					<string>Cistern_annotation_description.txt</string>
-					<key>landmark_annotation_picture</key>
-					<string></string>
 					<key>landmark_general_description</key>
 					<string>Cistern_general_description.txt</string>
 					<key>landmark_general_picture</key>
@@ -115,8 +103,6 @@
 							<string></string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>2012</integer>
 						</dict>
@@ -129,8 +115,6 @@
 					<string>Gesuiti</string>
 					<key>landmark_annotation_description</key>
 					<string>Equestrian_annotation_description.txt</string>
-					<key>landmark_annotation_picture</key>
-					<string></string>
 					<key>landmark_general_description</key>
 					<string>Equestrian_general_description.txt</string>
 					<key>landmark_general_picture</key>
@@ -152,8 +136,6 @@
 							<string>Equestrian_general_description_1475.txt</string>
 							<key>landmark_general_picture</key>
 							<string>Equestrian_general_picture_1475.jpg</string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1475</integer>
 						</dict>
@@ -162,8 +144,6 @@
 							<string>Equestrian_general_description_1478.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1478</integer>
 						</dict>
@@ -172,8 +152,6 @@
 							<string>Equestrian_general_description_1481.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1481</integer>
 						</dict>
@@ -182,8 +160,6 @@
 							<string>Equestrian_general_description_1482.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1482</integer>
 						</dict>
@@ -192,8 +168,6 @@
 							<string>Equestrian_general_description_1488.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1488</integer>
 						</dict>
@@ -202,8 +176,6 @@
 							<string>Equestrian_general_description_1489.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1489</integer>
 						</dict>
@@ -212,8 +184,6 @@
 							<string>Equestrian_general_description_1492.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1492</integer>
 						</dict>
@@ -222,8 +192,6 @@
 							<string>Equestrian_general_description_1495.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1495</integer>
 						</dict>
@@ -232,8 +200,6 @@
 							<string>Equestrian_general_description_1496.txt</string>
 							<key>landmark_general_picture</key>
 							<string>Equestrian_general_picture_1496.jpg</string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1496</integer>
 						</dict>
@@ -242,8 +208,6 @@
 							<string>Equestrian_general_description_1782.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1782</integer>
 						</dict>
@@ -252,8 +216,6 @@
 							<string>Equestrian_general_description_1796.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1796</integer>
 						</dict>
@@ -262,8 +224,6 @@
 							<string>Equestrian_general_description_1829.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1829</integer>
 						</dict>
@@ -272,8 +232,6 @@
 							<string>Equestrian_general_description_1917.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1917</integer>
 						</dict>
@@ -282,8 +240,6 @@
 							<string>Equestrian_general_description_1940.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1940</integer>
 						</dict>
@@ -292,8 +248,6 @@
 							<string>Equestrian_general_description_1990.txt</string>
 							<key>landmark_general_picture</key>
 							<string>Equestrian_general_picture_1990.jpg</string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1990</integer>
 						</dict>
@@ -306,8 +260,6 @@
 					<string>Gesuiti</string>
 					<key>landmark_annotation_description</key>
 					<string>Scuola_annotation_description.txt</string>
-					<key>landmark_annotation_picture</key>
-					<string></string>
 					<key>landmark_general_description</key>
 					<string>Scuola_general_description.txt</string>
 					<key>landmark_general_picture</key>
@@ -660,8 +612,6 @@
 							<string>Scuola_general_description_1260.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1260</integer>
 						</dict>
@@ -670,8 +620,6 @@
 							<string>Scuola_general_description_1421.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1421</integer>
 						</dict>
@@ -680,8 +628,6 @@
 							<string>Scuola_general_description_1437.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1437</integer>
 						</dict>
@@ -690,8 +636,6 @@
 							<string>Scuola_general_description_1438.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1438</integer>
 						</dict>
@@ -700,8 +644,6 @@
 							<string>Scuola_general_description_1485.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1485</integer>
 						</dict>
@@ -710,8 +652,6 @@
 							<string>Scuola_general_description_1486.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1486</integer>
 						</dict>
@@ -720,8 +660,6 @@
 							<string>Scuola_general_description_1489.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1489</integer>
 						</dict>
@@ -730,8 +668,6 @@
 							<string>Scuola_general_description_1490.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1490</integer>
 						</dict>
@@ -740,8 +676,6 @@
 							<string>Scuola_general_description_1495.txt</string>
 							<key>landmark_general_picture</key>
 							<string></string>
-							<key>month</key>
-							<integer>0</integer>
 							<key>year</key>
 							<integer>1495</integer>
 						</dict>
