@@ -118,6 +118,7 @@
                         <outlet property="HSSearchBar" destination="Px0-dF-prm" id="g2Y-n6-G3n"/>
                         <outlet property="HSSlider" destination="Ecg-0e-gTf" id="PQz-YJ-jFq"/>
                         <outlet property="HSSummary" destination="7Gw-qP-uux" id="a52-fu-ZYS"/>
+                        <outlet property="HSTableView" destination="fdz-AI-g3E" id="fTG-hL-bcz"/>
                         <outlet property="insulaImage" destination="W8A-bV-uN6" id="0pn-hJ-0Uh"/>
                         <outlet property="searchDisplayController" destination="bar-O9-pOr" id="Yyz-Xx-0pa"/>
                     </connections>
@@ -242,6 +243,7 @@
                         <outlet property="IVSearchBar" destination="0o2-gb-6N9" id="bpf-2L-sPB"/>
                         <outlet property="IVSlider" destination="y1F-Xn-4hu" id="y7t-Sk-feM"/>
                         <outlet property="IVSummary" destination="waT-mm-uFV" id="H6p-kR-YGX"/>
+                        <outlet property="IVTableView" destination="2ZV-lr-yLL" id="6DJ-cs-z0k"/>
                         <outlet property="landmarkImage" destination="wbO-ab-8t2" id="Cp6-Sz-eDg"/>
                     </connections>
                 </viewController>
