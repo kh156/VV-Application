@@ -27,6 +27,7 @@
 @synthesize myApp = _myApp;
 @synthesize sliderDates;
 @synthesize IVGeneralImage = _IVGeneralImage;
+@synthesize titleBar;
 
 /**
  * Retrieve the app delegate
@@ -56,6 +57,7 @@
     
     [IVTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:0];
     [self tableView:IVTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] name: @"Equestrian Monument to Bartolommeo Colleoni"];
+    titleBar.topItem.title = self.myApp.coreData.insulaName;
 }
 
 #pragma mark - fetch from core data utility method

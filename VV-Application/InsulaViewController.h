@@ -27,6 +27,7 @@
 @property(nonatomic, strong) NSMutableArray *dates;
 @property(nonatomic, weak) AppDelegate *myApp;
 @property(nonatomic, strong) NSMutableArray *sliderDates;
+@property(nonatomic, strong) IBOutlet UINavigationBar *titleBar;
 
 
 /**
